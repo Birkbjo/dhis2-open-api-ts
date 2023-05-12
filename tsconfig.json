@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "lib": ["dom", "ESNext"],
+      "module": "NodeNext",
+      "moduleResolution": "nodenext",
+      "noImplicitReturns": true,
+      "outDir": "./dist",
+      "removeComments": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": "ESNext",
+      "types": ["vitest/globals", "node"],
+      "useDefineForClassFields": true,
+      "noImplicitAny": false,
+    },
+    "ts-node": {
+        // Tell ts-node CLI to install the --loader automatically, explained below
+        "esm": true
+      },
+    "exclude": ["examples", "node_modules"]
+  }
