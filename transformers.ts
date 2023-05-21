@@ -3,34 +3,51 @@ import {
     ImportDeclaration,
     SourceFile,
     ExportDeclaration,
+    Identifier,
+    Structure,
+    Structures,
+    StructureKind,
+    SymbolFlags,
+    forEachStructureChild,
+    ts,
 } from "ts-morph";
 
 const REF = "Ref_";
 const replaceRef = (name: string) => name.replace(REF, "");
 
-export async function replaceRefsWithModelType(project: Project) {
+export function replaceRefsWithModelType(project: Project) {
     const files = project.getSourceFiles();
 
     const refsPerFile = files
         .map((sf) => getExpandedRefs(project, sf))
         .filter((sf) => sf.length > 0);
 
+    const renames: [Identifier, string][] = [];
+    const importSpecifierRenames: [ImportDeclaration, string][] = [];
+
     refsPerFile.forEach((refsInFile) => {
-        const firstRef = refsInFile[0];
+        refsInFile.forEach((expandedRef) => {
+            const fullModelImportSpecifier =
+                expandedRef.originalSourceFile.getRelativePathAsModuleSpecifierTo(
+                    expandedRef.expandedSourceFile.getFilePath()
+                );
+            importSpecifierRenames.push([
+                expandedRef.refImport,
+                fullModelImportSpecifier,
+            ]);
 
-        const originalText = firstRef.originalSourceFile.getText();
-        const replaced = originalText.replaceAll(REF, "");
-
-        // this would be the TS-morph way to do it, but it takes way too long
-        // around 40s for all files
-        // .rename() is the bottleneck
-        // ref.refImport.getNamedImports().forEach((ni) => {
-        //     if (ni.getName() === ref.refName) {
-        //         ni.getNameNode().rename(ref.expandedName);
-        //     }
-        // });
-        firstRef.originalSourceFile.replaceWithText(replaced);
+            expandedRef.refImport.getNamedImports().forEach((ni) => {
+                if (ni.getName() === expandedRef.refName) {
+                    renames.push([ni.getNameNode(), expandedRef.expandedName]);
+                }
+            });
+        });
     });
+    // this also renames references in the same file
+    renames.forEach(([identifier, name]) => identifier.rename(name));
+    importSpecifierRenames.forEach(([importDeclaration, moduleSpecifier]) =>
+        importDeclaration.setModuleSpecifier(moduleSpecifier)
+    );
 }
 
 export function removeUnusedFiles(patterns: RegExp[]) {
