@@ -48,6 +48,7 @@ export class TSTransformer {
             }
             console.timeEnd(name);
         });
-        return this.project.saveSync();
+        console.log("All transformers done. Saving files...");
+        return this.project.save();
     }
 }

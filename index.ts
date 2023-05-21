@@ -2,7 +2,11 @@ import * as OpenAPI from "openapi-typescript-codegen";
 import { parseArgs } from "node:util";
 import fs from "fs";
 import { TSTransformer, TransformerObject } from "./transformer";
-import { replaceRefsWithModelType, removeUnusedFiles } from "./transformers";
+import {
+    replaceRefsWithModelType,
+    removeUnusedFiles,
+    setPropertiesRequired,
+} from "./transformers";
 
 const getOpenApiSchemaFileName = (version: string): string =>
     `openapi-dhis2-${version}.json`;
@@ -105,6 +109,7 @@ async function main() {
         const transformers = [
             replaceRefsWithModelType,
             removeUnusedFilesTranformer,
+            setPropertiesRequired,
         ];
         const transformer = new TSTransformer(
             "./generated/index.ts",

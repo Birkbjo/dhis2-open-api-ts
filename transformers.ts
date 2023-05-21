@@ -4,11 +4,6 @@ import {
     SourceFile,
     ExportDeclaration,
     Identifier,
-    Structure,
-    Structures,
-    StructureKind,
-    SymbolFlags,
-    forEachStructureChild,
     ts,
 } from "ts-morph";
 
@@ -86,6 +81,35 @@ export function removeUnusedFiles(patterns: RegExp[]) {
         console.log(`Deleted ${deletedFiles.length} files`);
         return;
     };
+}
+
+export function setPropertiesRequired(project: Project) {
+    const files = project.getSourceFiles();
+
+    files.forEach((sf) => {
+        const typeAliases = sf
+            .getTypeAliases()
+            .filter((t) => t.getType().isObject());
+
+        // could not find an easy way to update properties using ts-morph
+        // so use the ts compiler api directly
+        // https://ts-morph.com/manipulation/transforms
+        typeAliases.forEach((ta) => {
+            ta.transform((traversal) => {
+                const node = traversal.visitChildren();
+                if (ts.isPropertySignature(node)) {
+                    return traversal.factory.updatePropertySignature(
+                        node,
+                        [],
+                        node.name,
+                        undefined, // removes question token
+                        node.type
+                    );
+                }
+                return node;
+            });
+        });
+    });
 }
 
 function getExportDeclarationForFile(
