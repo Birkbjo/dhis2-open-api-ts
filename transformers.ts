@@ -5,7 +5,11 @@ import {
     ExportDeclaration,
     Identifier,
     ts,
+    Structure,
+    ExportDeclarationStructure,
+    OptionalKind,
 } from "ts-morph";
+import fs from "fs";
 
 const REF = "Ref_";
 const replaceRef = (name: string) => name.replace(REF, "");
@@ -110,6 +114,41 @@ export function setPropertiesRequired(project: Project) {
             });
         });
     });
+}
+
+/**
+ * Adds types defined in ./customTypes to the project
+ * @param project
+ */
+export function includeCustomTypes(project: Project) {
+    fs.cpSync("./customTypes", "./generated", { recursive: true });
+    const files = fs.readdirSync("./customTypes");
+    const fileNames = files.map((f) => `./generated/${f}`);
+    const addedSourceFiles = project.addSourceFilesAtPaths(fileNames);
+
+    const indexFile = project.getSourceFileOrThrow("index.ts");
+
+    // add exported declarations for added files to indexFile
+    const exportedDeclarations: OptionalKind<ExportDeclarationStructure>[] = [];
+    addedSourceFiles.forEach((sf) => {
+        const exportedNames = Array.from(sf.getExportedDeclarations().keys());
+        const specifier = indexFile.getRelativePathAsModuleSpecifierTo(
+            sf.getFilePath()
+        );
+        // update custom types imports
+        sf.getImportDeclarations().forEach((importDecl) => {
+            const moduleSpecifier = importDecl.getModuleSpecifierValue();
+            importDecl.setModuleSpecifier(
+                moduleSpecifier.replace("../generated", ".")
+            );
+        });
+        exportedDeclarations.push({
+            isTypeOnly: true,
+            namedExports: exportedNames,
+            moduleSpecifier: specifier,
+        });
+    });
+    indexFile.addExportDeclarations(exportedDeclarations);
 }
 
 function getExportDeclarationForFile(

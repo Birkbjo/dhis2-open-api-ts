@@ -6,6 +6,7 @@ import {
     replaceRefsWithModelType,
     removeUnusedFiles,
     setPropertiesRequired,
+    includeCustomTypes,
 } from "./transformers";
 
 const getOpenApiSchemaFileName = (version: string): string =>
@@ -107,6 +108,7 @@ async function main() {
             tranformFunc: removeUnusedFiles([/UID_/, /Ref_/, /PropertyNames_/]),
         };
         const transformers = [
+            includeCustomTypes,
             replaceRefsWithModelType,
             removeUnusedFilesTranformer,
             setPropertiesRequired,
