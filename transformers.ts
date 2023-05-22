@@ -5,7 +5,6 @@ import {
     ExportDeclaration,
     Identifier,
     ts,
-    Structure,
     ExportDeclarationStructure,
     OptionalKind,
 } from "ts-morph";
