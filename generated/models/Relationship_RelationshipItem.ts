@@ -1,12 +1,16 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Event } from './Event';
-import type { Program_Enrollment } from './Program_Enrollment';
-import type { Relationship_Relationship } from './Relationship_Relationship';
+import type { Ref_Program_Enrollment } from './Ref_Program_Enrollment';
+import type { Ref_Relationship_Relationship } from './Ref_Relationship_Relationship';
 import type { TrackedEntity } from './TrackedEntity';
 
 export type Relationship_RelationshipItem = {
-    enrollment?: Program_Enrollment;
-    event?: Event;
-    relationship?: Relationship_Relationship;
-    trackedEntity?: TrackedEntity;
+    enrollment: Ref_Program_Enrollment;
+    event: Event;
+    relationship: Ref_Relationship_Relationship;
+    trackedEntity: TrackedEntity;
 };
 

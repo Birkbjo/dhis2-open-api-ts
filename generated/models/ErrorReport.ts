@@ -4,17 +4,17 @@
 
 export type ErrorReport = {
     errorCode: ErrorReport.errorCode;
-    errorKlass?: string;
-    errorProperties?: Array<Record<string, any>>;
-    errorProperty?: string;
-    mainId?: string;
-    mainKlass?: string;
-    message?: string;
+    errorKlass: string;
+    errorProperties: Array<Record<string, any>>;
+    errorProperty: string;
+    mainId: string;
+    mainKlass: string;
+    message: string;
     /**
-     * The actual type is unknown.
-     * (Java type was: `class java.lang.Object`)
-     */
-    value?: Record<string, any>;
+ * The actual type is unknown.
+ * (Java type was: `class java.lang.Object`)
+ */
+value: Record<string, any>;
 };
 
 export namespace ErrorReport {

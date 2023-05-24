@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type Api = {
-    accessToken?: string;
-    password?: string;
-    url?: string;
-    username?: string;
+    accessToken: string;
+    password: string;
+    url: string;
+    username: string;
 };
 

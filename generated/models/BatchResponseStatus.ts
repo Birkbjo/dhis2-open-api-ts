@@ -5,6 +5,6 @@
 import type { OutboundMessageResponseSummary } from './OutboundMessageResponseSummary';
 
 export type BatchResponseStatus = {
-    summaries?: Array<OutboundMessageResponseSummary>;
+    summaries: Array<OutboundMessageResponseSummary>;
 };
 

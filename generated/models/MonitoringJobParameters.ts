@@ -7,6 +7,6 @@ export type MonitoringJobParameters = {
     relativeEnd: number;
     relativeStart: number;
     sendNotifications: boolean;
-    validationRuleGroups?: Array<Record<string, any>>;
+    validationRuleGroups: Array<Record<string, any>>;
 };
 

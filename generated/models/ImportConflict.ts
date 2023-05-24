@@ -4,11 +4,11 @@
 
 export type ImportConflict = {
     errorCode: ImportConflict.errorCode;
-    indexes?: Array<number>;
-    object?: string;
-    objects?: Record<string, string>;
-    property?: string;
-    value?: string;
+    indexes: Array<number>;
+    object: string;
+    objects: Record<string, string>;
+    property: string;
+    value: string;
 };
 
 export namespace ImportConflict {

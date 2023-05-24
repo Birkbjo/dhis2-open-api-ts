@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { DataSet } from './DataSet';
@@ -11,39 +15,39 @@ import type { SMSSpecialCharacter } from './SMSSpecialCharacter';
 import type { Translation } from './Translation';
 
 export type SMSCommand = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    codeValueSeparator?: string;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    codeValueSeparator: string;
     completenessMethod: SMSCommand.completenessMethod;
-    created?: string;
-    createdBy?: User;
+    created: string;
+    createdBy: User;
     currentPeriodUsedForReporting: boolean;
-    dataset?: DataSet;
-    defaultMessage?: string;
-    displayName?: string;
+    dataset: DataSet;
+    defaultMessage: string;
+    displayName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    moreThanOneOrgUnitMessage?: string;
-    name?: string;
-    noUserMessage?: string;
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    moreThanOneOrgUnitMessage: string;
+    name: string;
+    noUserMessage: string;
     parserType: SMSCommand.parserType;
-    program?: Program;
-    programStage?: ProgramStage;
-    receivedMessage?: string;
-    separator?: string;
-    sharing?: Sharing;
-    smsCodes?: Array<SMSCode>;
-    specialCharacters?: Array<SMSSpecialCharacter>;
-    successMessage?: string;
-    translations?: Array<Translation>;
-    user?: User;
-    userGroup?: UserGroup;
-    wrongFormatMessage?: string;
+    program: Program;
+    programStage: ProgramStage;
+    receivedMessage: string;
+    separator: string;
+    sharing: Sharing;
+    smsCodes: Array<SMSCode>;
+    specialCharacters: Array<SMSSpecialCharacter>;
+    successMessage: string;
+    translations: Array<Translation>;
+    user: User;
+    userGroup: UserGroup;
+    wrongFormatMessage: string;
 };
 
 export namespace SMSCommand {

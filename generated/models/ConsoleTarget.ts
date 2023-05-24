@@ -4,6 +4,6 @@
 
 export type ConsoleTarget = {
     clientId: string;
-    type?: string;
+    type: string;
 };
 

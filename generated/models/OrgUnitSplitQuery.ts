@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type OrgUnitSplitQuery = {
-    deleteSource?: boolean;
-    primaryTarget?: string;
-    source?: string;
-    targets?: Array<string>;
+    deleteSource: boolean;
+    primaryTarget: string;
+    source: string;
+    targets: Array<string>;
 };
 

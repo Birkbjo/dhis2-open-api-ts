@@ -5,13 +5,13 @@
 export type Notification = {
     category: Notification.category;
     completed: boolean;
-    data?: Record<string, any>;
+    data: Record<string, any>;
     dataType: Notification.dataType;
-    id?: string;
+    id: string;
     level: Notification.level;
-    message?: string;
-    time?: string;
-    uid?: string;
+    message: string;
+    time: string;
+    uid: string;
 };
 
 export namespace Notification {

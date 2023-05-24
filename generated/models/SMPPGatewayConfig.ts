@@ -5,21 +5,21 @@
 export type SMPPGatewayConfig = {
     bindType: SMPPGatewayConfig.bindType;
     compressed: boolean;
-    host?: string;
-    id?: string;
+    host: string;
+    id: string;
     isDefault: boolean;
-    maxSmsLength?: string;
-    name?: string;
+    maxSmsLength: string;
+    name: string;
     numberPlanIndicator: SMPPGatewayConfig.numberPlanIndicator;
-    password?: string;
+    password: string;
     port: number;
     sendUrlParameters: boolean;
-    systemId?: string;
-    systemType?: string;
+    systemId: string;
+    systemType: string;
     typeOfNumber: SMPPGatewayConfig.typeOfNumber;
-    uid?: string;
-    urlTemplate?: string;
-    username?: string;
+    uid: string;
+    urlTemplate: string;
+    username: string;
 };
 
 export namespace SMPPGatewayConfig {

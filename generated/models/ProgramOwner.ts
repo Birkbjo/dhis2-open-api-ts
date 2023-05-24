@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type ProgramOwner = {
-    ownerOrgUnit?: string;
-    program?: string;
-    trackedEntityInstance?: string;
+    ownerOrgUnit: string;
+    program: string;
+    trackedEntityInstance: string;
 };
 

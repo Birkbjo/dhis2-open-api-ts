@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { User } from './User';
@@ -5,26 +9,26 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type AnalyticsTableHook = {
-    access?: Access;
+    access: Access;
     analyticsTableType: AnalyticsTableHook.analyticsTableType;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    displayName?: string;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    displayName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    name?: string;
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    name: string;
     phase: AnalyticsTableHook.phase;
     resourceTableType: AnalyticsTableHook.resourceTableType;
-    sharing?: Sharing;
-    sql?: string;
-    translations?: Array<Translation>;
-    user?: User;
+    sharing: Sharing;
+    sql: string;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace AnalyticsTableHook {

@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type SimpleDimension = {
-    dimension?: string;
+    dimension: string;
     parent: SimpleDimension.parent;
-    values?: Array<string>;
+    values: Array<string>;
 };
 
 export namespace SimpleDimension {

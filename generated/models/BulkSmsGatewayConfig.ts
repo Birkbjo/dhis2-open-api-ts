@@ -3,14 +3,14 @@
 /* eslint-disable */
 
 export type BulkSmsGatewayConfig = {
-    id?: string;
+    id: string;
     isDefault: boolean;
-    maxSmsLength?: string;
-    name?: string;
-    password?: string;
+    maxSmsLength: string;
+    name: string;
+    password: string;
     sendUrlParameters: boolean;
-    uid?: string;
-    urlTemplate?: string;
-    username?: string;
+    uid: string;
+    urlTemplate: string;
+    username: string;
 };
 

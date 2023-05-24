@@ -5,6 +5,6 @@
 import type { IndexResource } from './IndexResource';
 
 export type IndexResources = {
-    resources?: Array<IndexResource>;
+    resources: Array<IndexResource>;
 };
 

@@ -4,9 +4,9 @@
 
 export type CompleteStatusDto = {
     complete: boolean;
-    created?: string;
-    createdBy?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: string;
+    created: string;
+    createdBy: string;
+    lastUpdated: string;
+    lastUpdatedBy: string;
 };
 

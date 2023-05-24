@@ -4,12 +4,12 @@
 
 export type OutlierDetectionMetadata = {
     algorithm: OutlierDetectionMetadata.algorithm;
-    count?: number;
-    dataEndDate?: string;
-    dataStartDate?: string;
-    maxResults?: number;
+    count: number;
+    dataEndDate: string;
+    dataStartDate: string;
+    maxResults: number;
     orderBy: OutlierDetectionMetadata.orderBy;
-    threshold?: number;
+    threshold: number;
 };
 
 export namespace OutlierDetectionMetadata {

@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type MergeObject = {
-    enrollments?: Array<string>;
-    relationships?: Array<string>;
-    trackedEntityAttributes?: Array<string>;
+    enrollments: Array<string>;
+    relationships: Array<string>;
+    trackedEntityAttributes: Array<string>;
 };
 

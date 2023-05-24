@@ -1,21 +1,25 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { ObjectStyle } from './ObjectStyle';
 import type { IndicatorType } from './IndicatorType';
 
 export type MetadataItem = {
     aggregationType: MetadataItem.aggregationType;
-    code?: string;
-    description?: string;
+    code: string;
+    description: string;
     dimensionItemType: MetadataItem.dimensionItemType;
     dimensionType: MetadataItem.dimensionType;
-    endDate?: string;
-    expression?: string;
-    indicatorType?: IndicatorType;
-    legendSet?: string;
-    name?: string;
-    startDate?: string;
-    style?: ObjectStyle;
+    endDate: string;
+    expression: string;
+    indicatorType: IndicatorType;
+    legendSet: string;
+    name: string;
+    startDate: string;
+    style: ObjectStyle;
     totalAggregationType: MetadataItem.totalAggregationType;
-    uid?: string;
+    uid: string;
     valueType: MetadataItem.valueType;
 };
 

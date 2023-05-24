@@ -1,44 +1,48 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
-import type { Message } from './Message';
+import type { Ref_Message } from './Ref_Message';
 import type { User } from './User';
 import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 import type { UserMessage } from './UserMessage';
 
 export type MessageConversation = {
-    access?: Access;
-    assignee?: User;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    displayName?: string;
-    extMessageId?: string;
+    access: Access;
+    assignee: User;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    displayName: string;
+    extMessageId: string;
     favorite: boolean;
-    favorites?: Array<string>;
+    favorites: Array<string>;
     followUp: boolean;
-    href?: string;
-    id?: string;
-    lastMessage?: string;
-    lastSender?: User;
-    lastSenderFirstname?: string;
-    lastSenderSurname?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
+    href: string;
+    id: string;
+    lastMessage: string;
+    lastSender: User;
+    lastSenderFirstname: string;
+    lastSenderSurname: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
     messageCount: number;
     messageType: MessageConversation.messageType;
-    messages?: Array<Message>;
+    messages: Array<Ref_Message>;
     priority: MessageConversation.priority;
     read: boolean;
-    sharing?: Sharing;
+    sharing: Sharing;
     status: MessageConversation.status;
-    subject?: string;
-    translations?: Array<Translation>;
-    user?: User;
-    userFirstname?: string;
-    userMessages?: Array<UserMessage>;
-    userSurname?: string;
+    subject: string;
+    translations: Array<Translation>;
+    user: User;
+    userFirstname: string;
+    userMessages: Array<UserMessage>;
+    userSurname: string;
 };
 
 export namespace MessageConversation {

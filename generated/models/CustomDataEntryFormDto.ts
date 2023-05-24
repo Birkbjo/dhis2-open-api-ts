@@ -3,11 +3,11 @@
 /* eslint-disable */
 
 export type CustomDataEntryFormDto = {
-    dataSetId?: string;
+    dataSetId: string;
     displayDensity: CustomDataEntryFormDto.displayDensity;
-    form?: string;
-    id?: string;
-    version?: number;
+    form: string;
+    id: string;
+    version: number;
 };
 
 export namespace CustomDataEntryFormDto {

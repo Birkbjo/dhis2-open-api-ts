@@ -3,6 +3,6 @@
 /* eslint-disable */
 
 export type TimingsStats = {
-    timers?: Record<string, string>;
+    timers: Record<string, string>;
 };
 

@@ -6,8 +6,8 @@ import type { Api } from './Api';
 import type { TargetRequest } from './TargetRequest';
 
 export type Target = {
-    api?: Api;
-    request?: TargetRequest;
+    api: Api;
+    request: TargetRequest;
     type: Target.type;
 };
 

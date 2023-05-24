@@ -5,10 +5,10 @@
 import type { Error } from './Error';
 
 export type Entity = {
-    errorReports?: Array<Error>;
-    index?: number;
+    errorReports: Array<Error>;
+    index: number;
     trackerType: Entity.trackerType;
-    uid?: string;
+    uid: string;
 };
 
 export namespace Entity {

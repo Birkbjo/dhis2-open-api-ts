@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type UserAccess = {
-    access?: string;
-    displayName?: string;
-    id?: string;
+    access: string;
+    displayName: string;
+    id: string;
 };
 

@@ -6,14 +6,14 @@ import type { Item } from './Item';
 
 export type Stage = {
     complete: boolean;
-    completedTime?: string;
-    description?: string;
+    completedTime: string;
+    description: string;
     duration: number;
-    error?: string;
-    items?: Array<Item>;
+    error: string;
+    items: Array<Item>;
     onFailure: Stage.onFailure;
     status: Stage.status;
-    summary?: string;
+    summary: string;
     totalItems: number;
 };
 

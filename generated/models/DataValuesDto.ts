@@ -7,10 +7,10 @@ import type { DataValueDto } from './DataValueDto';
 import type { MinMaxValueDto } from './MinMaxValueDto';
 
 export type DataValuesDto = {
-    completeStatus?: CompleteStatusDto;
-    dataValues?: Array<DataValueDto>;
+    completeStatus: CompleteStatusDto;
+    dataValues: Array<DataValueDto>;
     lockStatus: DataValuesDto.lockStatus;
-    minMaxValues?: Array<MinMaxValueDto>;
+    minMaxValues: Array<MinMaxValueDto>;
 };
 
 export namespace DataValuesDto {

@@ -6,14 +6,14 @@ import type { SchedulerEntryJob } from './SchedulerEntryJob';
 
 export type SchedulerEntry = {
     configurable: boolean;
-    cronExpression?: string;
-    delay?: number;
+    cronExpression: string;
+    delay: number;
     enabled: boolean;
-    name?: string;
-    nextExecutionTime?: string;
-    sequence?: Array<SchedulerEntryJob>;
+    name: string;
+    nextExecutionTime: string;
+    sequence: Array<SchedulerEntryJob>;
     status: SchedulerEntry.status;
-    type?: string;
+    type: string;
 };
 
 export namespace SchedulerEntry {

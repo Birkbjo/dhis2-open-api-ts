@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type Translation = {
-    locale?: string;
-    property?: string;
-    value?: string;
+    locale: string;
+    property: string;
+    value: string;
 };
 

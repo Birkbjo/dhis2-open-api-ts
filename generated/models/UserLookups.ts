@@ -5,6 +5,6 @@
 import type { UserLookup } from './UserLookup';
 
 export type UserLookups = {
-    users?: Array<UserLookup>;
+    users: Array<UserLookup>;
 };
 

@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type Mention = {
-    created?: string;
-    username?: string;
+    created: string;
+    username: string;
 };
 

@@ -3,13 +3,13 @@
 /* eslint-disable */
 
 export type Field = {
-    categoryOptionCombo?: string;
-    comment?: string;
-    dataElement?: string;
-    label?: string;
-    optionSet?: string;
+    categoryOptionCombo: string;
+    comment: string;
+    dataElement: string;
+    label: string;
+    optionSet: string;
     type: Field.type;
-    value?: string;
+    value: string;
 };
 
 export namespace Field {

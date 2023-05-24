@@ -3,10 +3,10 @@
 /* eslint-disable */
 
 export type DeletedObject = {
-    code?: string;
-    deletedAt?: string;
-    deletedBy?: string;
-    klass?: string;
-    uid?: string;
+    code: string;
+    deletedAt: string;
+    deletedBy: string;
+    klass: string;
+    uid: string;
 };
 

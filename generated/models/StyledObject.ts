@@ -5,8 +5,8 @@
 import type { FontStyle } from './FontStyle';
 
 export type StyledObject = {
-    fontStyle?: FontStyle;
-    text?: string;
+    fontStyle: FontStyle;
+    text: string;
     textMode: StyledObject.textMode;
 };
 

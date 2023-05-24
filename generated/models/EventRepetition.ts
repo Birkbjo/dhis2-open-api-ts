@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type EventRepetition = {
-    dimension?: string;
-    indexes?: Array<number>;
+    dimension: string;
+    indexes: Array<number>;
     parent: EventRepetition.parent;
 };
 

@@ -4,8 +4,8 @@
 
 export type QueryModifiers = {
     aggregationType: QueryModifiers.aggregationType;
-    maxDate?: string;
-    minDate?: string;
+    maxDate: string;
+    minDate: string;
     periodOffset: number;
     valueType: QueryModifiers.valueType;
     yearToDate: boolean;

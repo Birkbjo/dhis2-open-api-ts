@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { EntityQueryCriteria } from './EntityQueryCriteria';
@@ -10,32 +14,32 @@ import type { Trackedentityfilter_EventFilter } from './Trackedentityfilter_Even
 import type { Translation } from './Translation';
 
 export type TrackedEntityFilter = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    description?: string;
-    displayDescription?: string;
-    displayName?: string;
-    enrollmentCreatedPeriod?: FilterPeriod;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    description: string;
+    displayDescription: string;
+    displayName: string;
+    enrollmentCreatedPeriod: FilterPeriod;
     enrollmentStatus: TrackedEntityFilter.enrollmentStatus;
-    entityQueryCriteria?: EntityQueryCriteria;
-    eventFilters?: Array<Trackedentityfilter_EventFilter>;
+    entityQueryCriteria: EntityQueryCriteria;
+    eventFilters: Array<Trackedentityfilter_EventFilter>;
     favorite: boolean;
-    favorites?: Array<string>;
-    followup?: boolean;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    name?: string;
-    program?: Program;
-    sharing?: Sharing;
+    favorites: Array<string>;
+    followup: boolean;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    name: string;
+    program: Program;
+    sharing: Sharing;
     sortOrder: number;
-    style?: ObjectStyle;
-    translations?: Array<Translation>;
-    user?: User;
+    style: ObjectStyle;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace TrackedEntityFilter {

@@ -4,6 +4,6 @@
 
 export type Rectangle = {
     count: number;
-    extent?: string;
+    extent: string;
 };
 

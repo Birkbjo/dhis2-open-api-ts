@@ -6,7 +6,7 @@ import type { SourceParams } from './SourceParams';
 import type { SourceRequest } from './SourceRequest';
 
 export type Source = {
-    params?: SourceParams;
-    requests?: Array<SourceRequest>;
+    params: SourceParams;
+    requests: Array<SourceRequest>;
 };
 

@@ -6,51 +6,51 @@ import type { GistPreferences } from './GistPreferences';
 
 export type Property = {
     analyticalObject: boolean;
-    apiEndpoint?: string;
+    apiEndpoint: string;
     attribute: boolean;
-    cascade?: string;
+    cascade: string;
     collection: boolean;
-    collectionName?: string;
-    collectionWrapping?: boolean;
-    constants?: Array<string>;
+    collectionName: string;
+    collectionWrapping: boolean;
+    constants: Array<string>;
     /**
-     * The actual type is unknown.
-     * (Java type was: `class java.lang.Object`)
-     */
-    defaultValue?: Record<string, any>;
-    description?: string;
+ * The actual type is unknown.
+ * (Java type was: `class java.lang.Object`)
+ */
+defaultValue: Record<string, any>;
+    description: string;
     embeddedObject: boolean;
-    fieldName?: string;
-    gistPreferences?: GistPreferences;
-    href?: string;
-    i18nTranslationKey?: string;
+    fieldName: string;
+    gistPreferences: GistPreferences;
+    href: string;
+    i18nTranslationKey: string;
     identifiableObject: boolean;
-    inverseRole?: string;
-    itemKlass?: string;
+    inverseRole: string;
+    itemKlass: string;
     itemPropertyType: Property.itemPropertyType;
-    klass?: string;
-    length?: number;
+    klass: string;
+    length: number;
     manyToMany: boolean;
     manyToOne: boolean;
-    max?: number;
-    min?: number;
-    name?: string;
+    max: number;
+    min: number;
+    name: string;
     nameableObject: boolean;
-    namespace?: string;
+    namespace: string;
     oneToMany: boolean;
     oneToOne: boolean;
     ordered: boolean;
     owner: boolean;
-    owningRole?: string;
+    owningRole: string;
     persisted: boolean;
     propertyTransformer: boolean;
     propertyType: Property.propertyType;
     readable: boolean;
-    relativeApiEndpoint?: string;
+    relativeApiEndpoint: string;
     required: boolean;
     simple: boolean;
     translatable: boolean;
-    translationKey?: string;
+    translationKey: string;
     unique: boolean;
     writable: boolean;
 };

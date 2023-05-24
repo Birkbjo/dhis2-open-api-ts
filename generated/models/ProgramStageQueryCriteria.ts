@@ -8,19 +8,19 @@ import type { EventDataFilter } from './EventDataFilter';
 
 export type ProgramStageQueryCriteria = {
     assignedUserMode: ProgramStageQueryCriteria.assignedUserMode;
-    assignedUsers?: Array<string>;
-    attributeValueFilters?: Array<AttributeValueFilter>;
-    dataFilters?: Array<EventDataFilter>;
-    displayColumnOrder?: Array<string>;
-    enrolledAt?: DateFilterPeriod;
-    enrollmentOccurredAt?: DateFilterPeriod;
+    assignedUsers: Array<string>;
+    attributeValueFilters: Array<AttributeValueFilter>;
+    dataFilters: Array<EventDataFilter>;
+    displayColumnOrder: Array<string>;
+    enrolledAt: DateFilterPeriod;
+    enrollmentOccurredAt: DateFilterPeriod;
     enrollmentStatus: ProgramStageQueryCriteria.enrollmentStatus;
-    eventCreatedAt?: DateFilterPeriod;
-    eventOccurredAt?: DateFilterPeriod;
-    eventScheduledAt?: DateFilterPeriod;
+    eventCreatedAt: DateFilterPeriod;
+    eventOccurredAt: DateFilterPeriod;
+    eventScheduledAt: DateFilterPeriod;
     eventStatus: ProgramStageQueryCriteria.eventStatus;
-    order?: string;
-    orgUnit?: string;
+    order: string;
+    orgUnit: string;
     ouMode: ProgramStageQueryCriteria.ouMode;
 };
 

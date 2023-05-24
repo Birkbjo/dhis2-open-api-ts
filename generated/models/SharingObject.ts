@@ -7,13 +7,13 @@ import type { SharingUserAccess } from './SharingUserAccess';
 import type { SharingUserGroupAccess } from './SharingUserGroupAccess';
 
 export type SharingObject = {
-    displayName?: string;
+    displayName: string;
     externalAccess: boolean;
-    id?: string;
-    name?: string;
-    publicAccess?: string;
-    user?: SharingUser;
-    userAccesses?: Array<SharingUserAccess>;
-    userGroupAccesses?: Array<SharingUserGroupAccess>;
+    id: string;
+    name: string;
+    publicAccess: string;
+    user: SharingUser;
+    userAccesses: Array<SharingUserAccess>;
+    userGroupAccesses: Array<SharingUserGroupAccess>;
 };
 

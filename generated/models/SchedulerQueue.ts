@@ -4,7 +4,7 @@
 
 export type SchedulerQueue = {
     cronExpression: string;
-    name?: string;
+    name: string;
     sequence: Array<Record<string, any>>;
 };
 

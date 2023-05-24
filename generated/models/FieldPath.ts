@@ -7,13 +7,13 @@ import type { Property } from './Property';
 
 export type FieldPath = {
     exclude: boolean;
-    fullPath?: string;
-    name?: string;
-    path?: Array<string>;
+    fullPath: string;
+    name: string;
+    path: Array<string>;
     preset: boolean;
-    property?: Property;
+    property: Property;
     root: boolean;
     transformer: boolean;
-    transformers?: Array<FieldPathTransformer>;
+    transformers: Array<FieldPathTransformer>;
 };
 

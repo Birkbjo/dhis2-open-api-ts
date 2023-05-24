@@ -3,11 +3,11 @@
 /* eslint-disable */
 
 export type ReservedValue = {
-    created?: string;
-    expiryDate?: string;
-    key?: string;
-    ownerObject?: string;
-    ownerUid?: string;
-    value?: string;
+    created: string;
+    expiryDate: string;
+    key: string;
+    ownerObject: string;
+    ownerUid: string;
+    value: string;
 };
 

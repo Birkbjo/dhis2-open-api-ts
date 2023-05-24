@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type LockExceptionDto = {
-    dataSet?: string;
-    orgUnit?: string;
-    period?: string;
+    dataSet: string;
+    orgUnit: string;
+    period: string;
 };
 

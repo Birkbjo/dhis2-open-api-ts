@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { LegendSet } from './LegendSet';
@@ -6,30 +10,30 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type ExternalMapLayer = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    attribution?: string;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    displayName?: string;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    attribution: string;
+    code: string;
+    created: string;
+    createdBy: User;
+    displayName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
+    favorites: Array<string>;
+    href: string;
+    id: string;
     imageFormat: ExternalMapLayer.imageFormat;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    layers?: string;
-    legendSet?: LegendSet;
-    legendSetUrl?: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    layers: string;
+    legendSet: LegendSet;
+    legendSetUrl: string;
     mapLayerPosition: ExternalMapLayer.mapLayerPosition;
     mapService: ExternalMapLayer.mapService;
-    name?: string;
-    sharing?: Sharing;
-    translations?: Array<Translation>;
-    url?: string;
-    user?: User;
+    name: string;
+    sharing: Sharing;
+    translations: Array<Translation>;
+    url: string;
+    user: User;
 };
 
 export namespace ExternalMapLayer {

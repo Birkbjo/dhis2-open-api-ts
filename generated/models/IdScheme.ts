@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type IdScheme = {
-    attribute?: string;
+    attribute: string;
     identifiableProperty: IdScheme.identifiableProperty;
-    identifiableString?: string;
+    identifiableString: string;
     notNull: boolean;
     null: boolean;
 };

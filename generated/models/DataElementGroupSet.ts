@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { DimensionItemKeywords } from './DimensionItemKeywords';
@@ -12,42 +16,42 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type DataElementGroupSet = {
-    access?: Access;
+    access: Access;
     aggregationType: DataElementGroupSet.aggregationType;
     allItems: boolean;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    compulsory?: boolean;
-    created?: string;
-    createdBy?: User;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    compulsory: boolean;
+    created: string;
+    createdBy: User;
     dataDimension: boolean;
     dataDimensionType: DataElementGroupSet.dataDimensionType;
-    dataElementGroups?: Array<DataElementGroup>;
-    description?: string;
-    dimension?: string;
-    dimensionItemKeywords?: DimensionItemKeywords;
-    displayDescription?: string;
-    displayFormName?: string;
-    displayName?: string;
-    displayShortName?: string;
+    dataElementGroups: Array<DataElementGroup>;
+    description: string;
+    dimension: string;
+    dimensionItemKeywords: DimensionItemKeywords;
+    displayDescription: string;
+    displayFormName: string;
+    displayName: string;
+    displayShortName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    filter?: string;
-    formName?: string;
-    href?: string;
-    id?: string;
-    items?: Array<DimensionalItemObject>;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    legendSet?: LegendSet;
-    name?: string;
-    optionSet?: OptionSet;
-    programStage?: ProgramStage;
-    repetition?: EventRepetition;
-    sharing?: Sharing;
-    shortName?: string;
-    translations?: Array<Translation>;
-    user?: User;
+    favorites: Array<string>;
+    filter: string;
+    formName: string;
+    href: string;
+    id: string;
+    items: Array<DimensionalItemObject>;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    legendSet: LegendSet;
+    name: string;
+    optionSet: OptionSet;
+    programStage: ProgramStage;
+    repetition: EventRepetition;
+    sharing: Sharing;
+    shortName: string;
+    translations: Array<Translation>;
+    user: User;
     valueType: DataElementGroupSet.valueType;
 };
 

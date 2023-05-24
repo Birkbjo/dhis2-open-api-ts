@@ -7,9 +7,9 @@ export type JmsTarget = {
     brokerUrl: string;
     clientId: string;
     groupId: string;
-    password?: string;
-    type?: string;
+    password: string;
+    type: string;
     useQueue: boolean;
-    username?: string;
+    username: string;
 };
 

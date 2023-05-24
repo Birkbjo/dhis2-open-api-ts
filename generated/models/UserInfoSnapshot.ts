@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type UserInfoSnapshot = {
-    firstName?: string;
-    surname?: string;
-    uid?: string;
-    username?: string;
+    firstName: string;
+    surname: string;
+    uid: string;
+    username: string;
 };
 

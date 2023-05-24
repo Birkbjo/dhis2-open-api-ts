@@ -4,7 +4,7 @@
 
 export type HttpBasicAuth = {
     password: string;
-    type?: string;
+    type: string;
     username: string;
 };
 

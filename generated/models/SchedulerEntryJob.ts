@@ -5,11 +5,11 @@
 import type { UID_JobConfiguration } from './UID_JobConfiguration';
 
 export type SchedulerEntryJob = {
-    cronExpression?: string;
-    delay?: number;
-    id?: UID_JobConfiguration;
-    name?: string;
-    nextExecutionTime?: string;
+    cronExpression: string;
+    delay: number;
+    id: UID_JobConfiguration;
+    name: string;
+    nextExecutionTime: string;
     status: SchedulerEntryJob.status;
     type: SchedulerEntryJob.type;
 };

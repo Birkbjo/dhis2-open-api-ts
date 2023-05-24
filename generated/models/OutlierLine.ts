@@ -4,6 +4,6 @@
 
 export type OutlierLine = {
     enabled: boolean;
-    value?: number;
+    value: number;
 };
 

@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type DataIntegrityJobParameters = {
-    checks?: Array<string>;
+    checks: Array<string>;
     type: DataIntegrityJobParameters.type;
 };
 

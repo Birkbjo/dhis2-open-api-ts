@@ -3,10 +3,10 @@
 /* eslint-disable */
 
 export type DatabaseInfo = {
-    databaseVersion?: string;
-    name?: string;
+    databaseVersion: string;
+    name: string;
     spatialSupport: boolean;
-    url?: string;
-    user?: string;
+    url: string;
+    user: string;
 };
 

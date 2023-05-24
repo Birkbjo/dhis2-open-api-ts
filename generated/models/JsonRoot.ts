@@ -3,6 +3,6 @@
 /* eslint-disable */
 
 export type JsonRoot = {
-    properties?: Record<string, Record<string, any>>;
+    properties: Record<string, Record<string, any>>;
 };
 

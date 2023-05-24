@@ -6,7 +6,7 @@ import type { EventRow } from './EventRow';
 import type { Pager } from './Pager';
 
 export type EventRows = {
-    eventRows?: Array<EventRow>;
-    pager?: Pager;
+    eventRows: Array<EventRow>;
+    pager: Pager;
 };
 

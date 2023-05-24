@@ -5,6 +5,6 @@
 import type { AppDhis } from './AppDhis';
 
 export type AppActivities = {
-    dhis?: AppDhis;
+    dhis: AppDhis;
 };
 

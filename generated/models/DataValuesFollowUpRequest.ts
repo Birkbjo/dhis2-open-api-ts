@@ -5,6 +5,6 @@
 import type { DataValueFollowUpRequest } from './DataValueFollowUpRequest';
 
 export type DataValuesFollowUpRequest = {
-    values?: Array<DataValueFollowUpRequest>;
+    values: Array<DataValueFollowUpRequest>;
 };
 

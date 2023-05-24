@@ -5,9 +5,9 @@
 export type OrgUnitMergeQuery = {
     dataApprovalMergeStrategy: OrgUnitMergeQuery.dataApprovalMergeStrategy;
     dataValueMergeStrategy: OrgUnitMergeQuery.dataValueMergeStrategy;
-    deleteSources?: boolean;
-    sources?: Array<string>;
-    target?: string;
+    deleteSources: boolean;
+    sources: Array<string>;
+    target: string;
 };
 
 export namespace OrgUnitMergeQuery {

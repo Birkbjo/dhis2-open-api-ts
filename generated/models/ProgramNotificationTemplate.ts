@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { DataElement } from './DataElement';
@@ -8,36 +12,36 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type ProgramNotificationTemplate = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    deliveryChannels?: Array<'SMS' | 'EMAIL' | 'HTTP'>;
-    displayMessageTemplate?: string;
-    displayName?: string;
-    displaySubjectTemplate?: string;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    deliveryChannels: Array<'SMS' | 'EMAIL' | 'HTTP'>;
+    displayMessageTemplate: string;
+    displayName: string;
+    displaySubjectTemplate: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    messageTemplate?: string;
-    name?: string;
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    messageTemplate: string;
+    name: string;
     notificationRecipient: ProgramNotificationTemplate.notificationRecipient;
     notificationTrigger: ProgramNotificationTemplate.notificationTrigger;
-    notifyParentOrganisationUnitOnly?: boolean;
-    notifyUsersInHierarchyOnly?: boolean;
-    recipientDataElement?: DataElement;
-    recipientProgramAttribute?: TrackedEntityAttribute;
-    recipientUserGroup?: UserGroup;
-    relativeScheduledDays?: number;
+    notifyParentOrganisationUnitOnly: boolean;
+    notifyUsersInHierarchyOnly: boolean;
+    recipientDataElement: DataElement;
+    recipientProgramAttribute: TrackedEntityAttribute;
+    recipientUserGroup: UserGroup;
+    relativeScheduledDays: number;
     sendRepeatable: boolean;
-    sharing?: Sharing;
-    subjectTemplate?: string;
-    translations?: Array<Translation>;
-    user?: User;
+    sharing: Sharing;
+    subjectTemplate: string;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace ProgramNotificationTemplate {

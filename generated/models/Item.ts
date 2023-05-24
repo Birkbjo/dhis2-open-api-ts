@@ -4,13 +4,13 @@
 
 export type Item = {
     complete: boolean;
-    completedTime?: string;
-    description?: string;
+    completedTime: string;
+    description: string;
     duration: number;
-    error?: string;
+    error: string;
     onFailure: Item.onFailure;
     status: Item.status;
-    summary?: string;
+    summary: string;
 };
 
 export namespace Item {

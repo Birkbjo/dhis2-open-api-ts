@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type Spacing = {
-    column?: number;
-    row?: number;
+    column: number;
+    row: number;
 };
 

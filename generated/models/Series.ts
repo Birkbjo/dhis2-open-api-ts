@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type Series = {
-    axis?: number;
-    dimensionItem?: string;
+    axis: number;
+    dimensionItem: string;
     type: Series.type;
 };
 

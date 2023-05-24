@@ -1,7 +1,11 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { LegendSet } from './LegendSet';
 
 export type LegendDefinitions = {
-    set?: LegendSet;
+    set: LegendSet;
     showKey: boolean;
     strategy: LegendDefinitions.strategy;
     style: LegendDefinitions.style;

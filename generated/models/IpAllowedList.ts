@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type IpAllowedList = {
-    allowedIps?: Array<string>;
-    type?: string;
+    allowedIps: Array<string>;
+    type: string;
 };
 

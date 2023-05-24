@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type RefererAllowedList = {
-    allowedReferrers?: Array<string>;
-    type?: string;
+    allowedReferrers: Array<string>;
+    type: string;
 };
 

@@ -1,8 +1,12 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { Document } from './Document';
-import type { EventChart } from './EventChart';
-import type { EventReport } from './EventReport';
+import type { Ref_EventChart } from './Ref_EventChart';
+import type { Ref_EventReport } from './Ref_EventReport';
 import type { EventVisualization } from './EventVisualization';
 import type { Map } from './Map';
 import type { Report } from './Report';
@@ -12,42 +16,42 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type DashboardItem = {
-    access?: Access;
-    appKey?: string;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
+    access: Access;
+    appKey: string;
+    attributeValues: Array<AttributeValue>;
+    code: string;
     contentCount: number;
-    created?: string;
-    createdBy?: User;
-    displayName?: string;
-    eventChart?: EventChart;
-    eventReport?: EventReport;
-    eventVisualization?: EventVisualization;
+    created: string;
+    createdBy: User;
+    displayName: string;
+    eventChart: Ref_EventChart;
+    eventReport: Ref_EventReport;
+    eventVisualization: EventVisualization;
     favorite: boolean;
-    favorites?: Array<string>;
-    height?: number;
-    href?: string;
-    id?: string;
+    favorites: Array<string>;
+    height: number;
+    href: string;
+    id: string;
     interpretationCount: number;
     interpretationLikeCount: number;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    map?: Map;
-    messages?: boolean;
-    name?: string;
-    reports?: Array<Report>;
-    resources?: Array<Document>;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    map: Map;
+    messages: boolean;
+    name: string;
+    reports: Array<Report>;
+    resources: Array<Document>;
     shape: DashboardItem.shape;
-    sharing?: Sharing;
-    text?: string;
-    translations?: Array<Translation>;
+    sharing: Sharing;
+    text: string;
+    translations: Array<Translation>;
     type: DashboardItem.type;
-    user?: User;
-    users?: Array<User>;
-    visualization?: Visualization;
-    width?: number;
-    'x'?: number;
-    'y'?: number;
+    user: User;
+    users: Array<User>;
+    visualization: Visualization;
+    width: number;
+    'x': number;
+    'y': number;
 };
 
 export namespace DashboardItem {

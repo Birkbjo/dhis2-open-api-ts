@@ -4,7 +4,7 @@
 
 export type OrderCriteria = {
     direction: OrderCriteria.direction;
-    field?: string;
+    field: string;
 };
 
 export namespace OrderCriteria {

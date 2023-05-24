@@ -3,13 +3,13 @@
 /* eslint-disable */
 
 export type Dxf2DeprecatedTrackerTrackedentity_Attribute = {
-    attribute?: string;
-    code?: string;
-    created?: string;
-    displayName?: string;
-    lastUpdated?: string;
-    storedBy?: string;
-    value?: string;
+    attribute: string;
+    code: string;
+    created: string;
+    displayName: string;
+    lastUpdated: string;
+    storedBy: string;
+    value: string;
     valueType: Dxf2DeprecatedTrackerTrackedentity_Attribute.valueType;
 };
 

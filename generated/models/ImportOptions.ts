@@ -6,19 +6,19 @@ import type { IdSchemes } from './IdSchemes';
 
 export type ImportOptions = {
     async: boolean;
-    dataSet?: string;
+    dataSet: string;
     datasetAllowsPeriods: boolean;
     dryRun: boolean;
-    filename?: string;
+    filename: string;
     firstRowIsHeader: boolean;
     force: boolean;
-    idSchemes?: IdSchemes;
+    idSchemes: IdSchemes;
     ignoreEmptyCollection: boolean;
     importStrategy: ImportOptions.importStrategy;
     mergeDataValues: boolean;
     mergeMode: ImportOptions.mergeMode;
     notificationLevel: ImportOptions.notificationLevel;
-    preheatCache?: boolean;
+    preheatCache: boolean;
     reportMode: ImportOptions.reportMode;
     requireAttributeOptionCombo: boolean;
     requireCategoryOptionCombo: boolean;

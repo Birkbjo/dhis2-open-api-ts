@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { User } from './User';
@@ -8,28 +12,28 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type Report = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
     cacheStrategy: Report.cacheStrategy;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    designContent?: string;
-    displayName?: string;
+    code: string;
+    created: string;
+    createdBy: User;
+    designContent: string;
+    displayName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    name?: string;
-    relativePeriods?: RelativePeriods;
-    reportParams?: ReportingParams;
-    sharing?: Sharing;
-    translations?: Array<Translation>;
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    name: string;
+    relativePeriods: RelativePeriods;
+    reportParams: ReportingParams;
+    sharing: Sharing;
+    translations: Array<Translation>;
     type: Report.type;
-    user?: User;
-    visualization?: Visualization;
+    user: User;
+    visualization: Visualization;
 };
 
 export namespace Report {

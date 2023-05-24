@@ -2,14 +2,16 @@
 /* tslint:disable */
 /* eslint-disable */
 
+import type { UID_WebapiControllerTrackerView_Attribute } from './UID_WebapiControllerTrackerView_Attribute';
+
 export type WebapiControllerTrackerView_Attribute = {
-    attribute?: string;
-    code?: string;
-    createdAt?: (string | number);
-    displayName?: string;
-    storedBy?: string;
-    updatedAt?: (string | number);
-    value?: string;
+    attribute: UID_WebapiControllerTrackerView_Attribute;
+    code: string;
+    createdAt: (string | number);
+    displayName: string;
+    storedBy: string;
+    updatedAt: (string | number);
+    value: string;
     valueType: WebapiControllerTrackerView_Attribute.valueType;
 };
 

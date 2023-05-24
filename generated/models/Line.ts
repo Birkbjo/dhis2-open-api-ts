@@ -5,7 +5,7 @@
 import type { StyledObject } from './StyledObject';
 
 export type Line = {
-    title?: StyledObject;
-    value?: number;
+    title: StyledObject;
+    value: number;
 };
 

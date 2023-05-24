@@ -5,19 +5,19 @@
 import type { GenericGatewayParameter } from './GenericGatewayParameter';
 
 export type GenericHttpGatewayConfig = {
-    configurationTemplate?: string;
+    configurationTemplate: string;
     contentType: GenericHttpGatewayConfig.contentType;
-    id?: string;
+    id: string;
     isDefault: boolean;
-    maxSmsLength?: string;
-    name?: string;
-    parameters?: Array<GenericGatewayParameter>;
-    password?: string;
+    maxSmsLength: string;
+    name: string;
+    parameters: Array<GenericGatewayParameter>;
+    password: string;
     sendUrlParameters: boolean;
-    uid?: string;
-    urlTemplate?: string;
+    uid: string;
+    urlTemplate: string;
     useGet: boolean;
-    username?: string;
+    username: string;
 };
 
 export namespace GenericHttpGatewayConfig {

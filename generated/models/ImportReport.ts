@@ -7,10 +7,10 @@ import type { Stats } from './Stats';
 import type { TypeReport } from './TypeReport';
 
 export type ImportReport = {
-    importParams?: MetadataImportParams;
-    stats?: Stats;
+    importParams: MetadataImportParams;
+    stats: Stats;
     status: ImportReport.status;
-    typeReports?: Array<TypeReport>;
+    typeReports: Array<TypeReport>;
 };
 
 export namespace ImportReport {

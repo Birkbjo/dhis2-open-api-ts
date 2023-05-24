@@ -2,11 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Ref_DataElementOperand } from './Ref_DataElementOperand';
+import type { DataElementOperand } from './DataElementOperand';
 import type { ValidationResult } from './ValidationResult';
 
 export type ValidationSummary = {
-    commentRequiredViolations?: Array<Ref_DataElementOperand>;
-    validationRuleViolations?: Array<ValidationResult>;
+    commentRequiredViolations: Array<DataElementOperand>;
+    validationRuleViolations: Array<ValidationResult>;
 };
 

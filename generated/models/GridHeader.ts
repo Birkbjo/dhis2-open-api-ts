@@ -3,16 +3,16 @@
 /* eslint-disable */
 
 export type GridHeader = {
-    column?: string;
+    column: string;
     hidden: boolean;
-    legendSet?: string;
+    legendSet: string;
     meta: boolean;
-    name?: string;
-    optionSet?: string;
-    programStage?: string;
-    repeatableStageParams?: string;
-    stageOffset?: number;
-    type?: string;
+    name: string;
+    optionSet: string;
+    programStage: string;
+    repeatableStageParams: string;
+    stageOffset: number;
+    type: string;
     valueType: GridHeader.valueType;
 };
 

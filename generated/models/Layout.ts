@@ -6,7 +6,7 @@ import type { Column } from './Column';
 import type { Spacing } from './Spacing';
 
 export type Layout = {
-    columns?: Array<Column>;
-    spacing?: Spacing;
+    columns: Array<Column>;
+    spacing: Spacing;
 };
 

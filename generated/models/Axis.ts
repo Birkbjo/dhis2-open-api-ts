@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type Axis = {
-    axis?: number;
-    dimensionalItem?: string;
+    axis: number;
+    dimensionalItem: string;
 };
 

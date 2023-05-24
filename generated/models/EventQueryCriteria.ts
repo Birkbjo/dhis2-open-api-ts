@@ -7,17 +7,17 @@ import type { EventDataFilter } from './EventDataFilter';
 
 export type EventQueryCriteria = {
     assignedUserMode: EventQueryCriteria.assignedUserMode;
-    assignedUsers?: Array<string>;
-    completedDate?: DateFilterPeriod;
-    dataFilters?: Array<EventDataFilter>;
-    displayColumnOrder?: Array<string>;
-    dueDate?: DateFilterPeriod;
-    eventDate?: DateFilterPeriod;
-    events?: Array<string>;
-    followUp?: boolean;
-    lastUpdatedDate?: DateFilterPeriod;
-    order?: string;
-    organisationUnit?: string;
+    assignedUsers: Array<string>;
+    completedDate: DateFilterPeriod;
+    dataFilters: Array<EventDataFilter>;
+    displayColumnOrder: Array<string>;
+    dueDate: DateFilterPeriod;
+    eventDate: DateFilterPeriod;
+    events: Array<string>;
+    followUp: boolean;
+    lastUpdatedDate: DateFilterPeriod;
+    order: string;
+    organisationUnit: string;
     ouMode: EventQueryCriteria.ouMode;
     status: EventQueryCriteria.status;
 };

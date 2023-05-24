@@ -6,10 +6,10 @@ import type { OutlierLine } from './OutlierLine';
 
 export type OutlierAnalysis = {
     enabled: boolean;
-    extremeLines?: OutlierLine;
+    extremeLines: OutlierLine;
     normalizationMethod: OutlierAnalysis.normalizationMethod;
     outlierMethod: OutlierAnalysis.outlierMethod;
-    thresholdFactor?: number;
+    thresholdFactor: number;
 };
 
 export namespace OutlierAnalysis {

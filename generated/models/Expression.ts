@@ -5,12 +5,12 @@
 import type { Translation } from './Translation';
 
 export type Expression = {
-    description?: string;
-    displayDescription?: string;
-    expression?: string;
+    description: string;
+    displayDescription: string;
+    expression: string;
     missingValueStrategy: Expression.missingValueStrategy;
-    slidingWindow?: boolean;
-    translations?: Array<Translation>;
+    slidingWindow: boolean;
+    translations: Array<Translation>;
 };
 
 export namespace Expression {

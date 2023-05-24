@@ -1,24 +1,28 @@
-import type { DataElement } from './DataElement';
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { DataElementOperand } from './DataElementOperand';
+import type { ProgramDataElementDimensionItem } from './ProgramDataElementDimensionItem';
+import type { ProgramTrackedEntityAttributeDimensionItem } from './ProgramTrackedEntityAttributeDimensionItem';
+import type { DataElement } from './DataElement';
 import type { ExpressionDimensionItem } from './ExpressionDimensionItem';
 import type { Indicator } from './Indicator';
-import type { ProgramDataElementDimensionItem } from './ProgramDataElementDimensionItem';
 import type { ProgramIndicator } from './ProgramIndicator';
-import type { ProgramTrackedEntityAttributeDimensionItem } from './ProgramTrackedEntityAttributeDimensionItem';
+import type { Ref_SubexpressionDimensionItem } from './Ref_SubexpressionDimensionItem';
 import type { ReportingRate } from './ReportingRate';
-import type { SubexpressionDimensionItem } from './SubexpressionDimensionItem';
 
 export type DataDimensionItem = {
     dataDimensionItemType: DataDimensionItem.dataDimensionItemType;
-    dataElement?: DataElement;
-    dataElementOperand?: DataElementOperand;
-    expressionDimensionItem?: ExpressionDimensionItem;
-    indicator?: Indicator;
-    programAttribute?: ProgramTrackedEntityAttributeDimensionItem;
-    programDataElement?: ProgramDataElementDimensionItem;
-    programIndicator?: ProgramIndicator;
-    reportingRate?: ReportingRate;
-    subexpressionDimensionItem?: SubexpressionDimensionItem;
+    dataElement: DataElement;
+    dataElementOperand: DataElementOperand;
+    expressionDimensionItem: ExpressionDimensionItem;
+    indicator: Indicator;
+    programAttribute: ProgramTrackedEntityAttributeDimensionItem;
+    programDataElement: ProgramDataElementDimensionItem;
+    programIndicator: ProgramIndicator;
+    reportingRate: ReportingRate;
+    subexpressionDimensionItem: Ref_SubexpressionDimensionItem;
 };
 
 export namespace DataDimensionItem {

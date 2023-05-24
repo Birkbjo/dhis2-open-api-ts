@@ -9,18 +9,18 @@ import type { Review } from './Review';
 
 export type WebApp = {
     appType: WebApp.appType;
-    created?: string;
-    description?: string;
-    developer?: Developer;
-    id?: string;
-    images?: Array<ImageResource>;
-    lastUpdated?: string;
-    name?: string;
-    owner?: string;
-    reviews?: Array<Review>;
-    sourceUrl?: string;
+    created: string;
+    description: string;
+    developer: Developer;
+    id: string;
+    images: Array<ImageResource>;
+    lastUpdated: string;
+    name: string;
+    owner: string;
+    reviews: Array<Review>;
+    sourceUrl: string;
     status: WebApp.status;
-    versions?: Array<AppVersion>;
+    versions: Array<AppVersion>;
 };
 
 export namespace WebApp {

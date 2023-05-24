@@ -3,26 +3,26 @@
 /* eslint-disable */
 
 export type OrgUnitInfo = {
-    address?: string;
-    closedDate?: string;
-    code?: string;
-    comment?: string;
-    contactPerson?: string;
-    description?: string;
-    email?: string;
+    address: string;
+    closedDate: string;
+    code: string;
+    comment: string;
+    contactPerson: string;
+    description: string;
+    email: string;
     featureType: OrgUnitInfo.featureType;
-    id?: string;
-    imageId?: string;
-    latitude?: number;
-    level?: number;
-    levelName?: string;
-    longitude?: number;
-    name?: string;
-    openingDate?: string;
-    parentName?: string;
-    phoneNumber?: string;
-    shortName?: string;
-    url?: string;
+    id: string;
+    imageId: string;
+    latitude: number;
+    level: number;
+    levelName: string;
+    longitude: number;
+    name: string;
+    openingDate: string;
+    parentName: string;
+    phoneNumber: string;
+    shortName: string;
+    url: string;
 };
 
 export namespace OrgUnitInfo {

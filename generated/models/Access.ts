@@ -5,7 +5,7 @@
 import type { AccessData } from './AccessData';
 
 export type Access = {
-    data?: AccessData;
+    data: AccessData;
     delete: boolean;
     externalize: boolean;
     manage: boolean;

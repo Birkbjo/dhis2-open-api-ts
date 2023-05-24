@@ -8,6 +8,6 @@ import type { RemoveOperation } from './RemoveOperation';
 import type { ReplaceOperation } from './ReplaceOperation';
 
 export type JsonPatch = {
-    operations?: Array<(AddOperation | RemoveOperation | RemoveByIdOperation | ReplaceOperation)>;
+    operations: Array<(AddOperation | RemoveOperation | RemoveByIdOperation | ReplaceOperation)>;
 };
 

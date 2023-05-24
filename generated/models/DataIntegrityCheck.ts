@@ -3,15 +3,15 @@
 /* eslint-disable */
 
 export type DataIntegrityCheck = {
-    code?: string;
-    description?: string;
-    displayName?: string;
-    introduction?: string;
+    code: string;
+    description: string;
+    displayName: string;
+    introduction: string;
     isSlow: boolean;
-    issuesIdType?: string;
-    name?: string;
-    recommendation?: string;
-    section?: string;
+    issuesIdType: string;
+    name: string;
+    recommendation: string;
+    section: string;
     severity: DataIntegrityCheck.severity;
 };
 

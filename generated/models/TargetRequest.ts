@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type TargetRequest = {
-    categoryOptionComboIdScheme?: string;
-    dataElementIdScheme?: string;
-    idScheme?: string;
-    orgUnitIdScheme?: string;
+    categoryOptionComboIdScheme: string;
+    dataElementIdScheme: string;
+    idScheme: string;
+    orgUnitIdScheme: string;
 };
 

@@ -5,6 +5,6 @@
 import type { FollowupParams } from './FollowupParams';
 
 export type UpdateFollowUpForDataValuesRequest = {
-    followups?: Array<FollowupParams>;
+    followups: Array<FollowupParams>;
 };
 

@@ -5,7 +5,7 @@
 import type { ExecutionPlan } from './ExecutionPlan';
 
 export type PerformanceMetrics = {
-    executionPlans?: Array<ExecutionPlan>;
+    executionPlans: Array<ExecutionPlan>;
     totalTimeInMillis: number;
 };
 

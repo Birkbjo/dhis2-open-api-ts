@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type ItemConfig = {
-    insertHeight?: number;
+    insertHeight: number;
     insertPosition: ItemConfig.insertPosition;
 };
 

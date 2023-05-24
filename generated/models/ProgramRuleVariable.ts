@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { DataElement } from './DataElement';
@@ -9,28 +13,28 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type ProgramRuleVariable = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    dataElement?: DataElement;
-    displayName?: string;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    dataElement: DataElement;
+    displayName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    name?: string;
-    program?: Program;
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    name: string;
+    program: Program;
     programRuleVariableSourceType: ProgramRuleVariable.programRuleVariableSourceType;
-    programStage?: ProgramStage;
-    sharing?: Sharing;
-    trackedEntityAttribute?: TrackedEntityAttribute;
-    translations?: Array<Translation>;
+    programStage: ProgramStage;
+    sharing: Sharing;
+    trackedEntityAttribute: TrackedEntityAttribute;
+    translations: Array<Translation>;
     useCodeForOptionSet: boolean;
-    user?: User;
+    user: User;
     valueType: ProgramRuleVariable.valueType;
 };
 

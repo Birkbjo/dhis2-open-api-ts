@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AggregateDataExchangeJobParameters } from './AggregateDataExchangeJobParameters';
 import type { AnalyticsJobParameters } from './AnalyticsJobParameters';
@@ -21,37 +25,37 @@ import type { TrackerTrigramIndexJobParameters } from './TrackerTrigramIndexJobP
 import type { Translation } from './Translation';
 
 export type JobConfiguration = {
-    access?: Access;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
+    access: Access;
+    attributeValues: Array<AttributeValue>;
+    code: string;
     configurable: boolean;
-    created?: string;
-    createdBy?: User;
-    cronExpression?: string;
-    delay?: number;
-    displayName?: string;
+    created: string;
+    createdBy: User;
+    cronExpression: string;
+    delay: number;
+    displayName: string;
     enabled: boolean;
-    executedBy?: string;
+    executedBy: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    href?: string;
-    id?: string;
-    jobParameters?: (AnalyticsJobParameters | ContinuousAnalyticsJobParameters | MonitoringJobParameters | PredictorJobParameters | PushAnalysisJobParameters | SmsJobParameters | MetadataSyncJobParameters | EventProgramsDataSynchronizationJobParameters | TrackerProgramsDataSynchronizationJobParameters | DataSynchronizationJobParameters | DisableInactiveUsersJobParameters | TrackerTrigramIndexJobParameters | DataIntegrityJobParameters | AggregateDataExchangeJobParameters | SqlViewUpdateParameters | TestJobParameters);
+    favorites: Array<string>;
+    href: string;
+    id: string;
+    jobParameters: (AnalyticsJobParameters | ContinuousAnalyticsJobParameters | MonitoringJobParameters | PredictorJobParameters | PushAnalysisJobParameters | SmsJobParameters | MetadataSyncJobParameters | EventProgramsDataSynchronizationJobParameters | TrackerProgramsDataSynchronizationJobParameters | DataSynchronizationJobParameters | DisableInactiveUsersJobParameters | TrackerTrigramIndexJobParameters | DataIntegrityJobParameters | AggregateDataExchangeJobParameters | SqlViewUpdateParameters | TestJobParameters);
     jobStatus: JobConfiguration.jobStatus;
     jobType: JobConfiguration.jobType;
-    lastExecuted?: string;
+    lastExecuted: string;
     lastExecutedStatus: JobConfiguration.lastExecutedStatus;
-    lastRuntimeExecution?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
+    lastRuntimeExecution: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
     leaderOnlyJob: boolean;
-    name?: string;
-    nextExecutionTime?: string;
+    name: string;
+    nextExecutionTime: string;
     schedulingType: JobConfiguration.schedulingType;
-    sharing?: Sharing;
-    translations?: Array<Translation>;
-    user?: User;
-    userUid?: string;
+    sharing: Sharing;
+    translations: Array<Translation>;
+    user: User;
+    userUid: string;
 };
 
 export namespace JobConfiguration {

@@ -4,6 +4,6 @@
 
 export type DisableInactiveUsersJobParameters = {
     inactiveMonths: number;
-    reminderDaysBefore?: number;
+    reminderDaysBefore: number;
 };
 

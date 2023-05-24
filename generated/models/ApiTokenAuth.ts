@@ -4,6 +4,6 @@
 
 export type ApiTokenAuth = {
     token: string;
-    type?: string;
+    type: string;
 };
 

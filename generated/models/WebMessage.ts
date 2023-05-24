@@ -3,13 +3,13 @@
 /* eslint-disable */
 
 export type WebMessage = {
-    code?: number;
-    devMessage?: string;
+    code: number;
+    devMessage: string;
     errorCode: WebMessage.errorCode;
-    httpStatus?: string;
-    httpStatusCode?: number;
-    message?: string;
-    response?: WebMessage;
+    httpStatus: string;
+    httpStatusCode: number;
+    message: string;
+    response: WebMessage;
     status: WebMessage.status;
 };
 

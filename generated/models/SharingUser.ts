@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type SharingUser = {
-    id?: string;
-    name?: string;
+    id: string;
+    name: string;
 };
 

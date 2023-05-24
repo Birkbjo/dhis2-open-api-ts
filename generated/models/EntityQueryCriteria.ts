@@ -7,22 +7,22 @@ import type { DateFilterPeriod } from './DateFilterPeriod';
 
 export type EntityQueryCriteria = {
     assignedUserMode: EntityQueryCriteria.assignedUserMode;
-    assignedUsers?: Array<string>;
-    attributeValueFilters?: Array<AttributeValueFilter>;
-    displayColumnOrder?: Array<string>;
-    enrollmentCreatedDate?: DateFilterPeriod;
-    enrollmentIncidentDate?: DateFilterPeriod;
+    assignedUsers: Array<string>;
+    attributeValueFilters: Array<AttributeValueFilter>;
+    displayColumnOrder: Array<string>;
+    enrollmentCreatedDate: DateFilterPeriod;
+    enrollmentIncidentDate: DateFilterPeriod;
     enrollmentStatus: EntityQueryCriteria.enrollmentStatus;
-    eventDate?: DateFilterPeriod;
+    eventDate: DateFilterPeriod;
     eventStatus: EntityQueryCriteria.eventStatus;
-    followUp?: boolean;
-    lastUpdatedDate?: DateFilterPeriod;
-    order?: string;
-    organisationUnit?: string;
+    followUp: boolean;
+    lastUpdatedDate: DateFilterPeriod;
+    order: string;
+    organisationUnit: string;
     ouMode: EntityQueryCriteria.ouMode;
-    programStage?: string;
-    trackedEntityInstances?: Array<string>;
-    trackedEntityType?: string;
+    programStage: string;
+    trackedEntityInstances: Array<string>;
+    trackedEntityType: string;
 };
 
 export namespace EntityQueryCriteria {

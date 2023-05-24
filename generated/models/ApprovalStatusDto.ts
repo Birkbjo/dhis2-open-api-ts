@@ -8,14 +8,14 @@ import type { UID_DataApprovalWorkflow } from './UID_DataApprovalWorkflow';
 import type { UID_OrganisationUnit } from './UID_OrganisationUnit';
 
 export type ApprovalStatusDto = {
-    aoc?: UID_CategoryOptionCombo;
-    level?: string;
-    ou?: UID_OrganisationUnit;
-    ouName?: string;
-    pe?: string;
-    permissions?: DataApprovalPermissions;
+    aoc: UID_CategoryOptionCombo;
+    level: string;
+    ou: UID_OrganisationUnit;
+    ouName: string;
+    pe: string;
+    permissions: DataApprovalPermissions;
     state: ApprovalStatusDto.state;
-    wf?: UID_DataApprovalWorkflow;
+    wf: UID_DataApprovalWorkflow;
 };
 
 export namespace ApprovalStatusDto {

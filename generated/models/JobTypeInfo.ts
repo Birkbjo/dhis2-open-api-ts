@@ -5,9 +5,9 @@
 import type { Property } from './Property';
 
 export type JobTypeInfo = {
-    jobParameters?: Array<Property>;
+    jobParameters: Array<Property>;
     jobType: JobTypeInfo.jobType;
-    name?: string;
+    name: string;
     schedulingType: JobTypeInfo.schedulingType;
 };
 

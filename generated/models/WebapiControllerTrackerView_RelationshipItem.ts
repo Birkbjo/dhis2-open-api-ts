@@ -7,8 +7,8 @@ import type { WebapiControllerTrackerViewRelationshipItem_Event } from './Webapi
 import type { WebapiControllerTrackerViewRelationshipItem_TrackedEntity } from './WebapiControllerTrackerViewRelationshipItem_TrackedEntity';
 
 export type WebapiControllerTrackerView_RelationshipItem = {
-    enrollment?: WebapiControllerTrackerViewRelationshipItem_Enrollment;
-    event?: WebapiControllerTrackerViewRelationshipItem_Event;
-    trackedEntity?: WebapiControllerTrackerViewRelationshipItem_TrackedEntity;
+    enrollment: WebapiControllerTrackerViewRelationshipItem_Enrollment;
+    event: WebapiControllerTrackerViewRelationshipItem_Event;
+    trackedEntity: WebapiControllerTrackerViewRelationshipItem_TrackedEntity;
 };
 

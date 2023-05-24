@@ -8,18 +8,18 @@ import type { ImportOptions } from './ImportOptions';
 import type { ImportSummaries } from './ImportSummaries';
 
 export type ImportSummary = {
-    conflicts?: Array<ImportConflict>;
-    dataSetComplete?: string;
-    description?: string;
-    enrollments?: ImportSummaries;
-    events?: ImportSummaries;
-    href?: string;
-    importCount?: ImportCount;
-    importOptions?: ImportOptions;
-    reference?: string;
-    rejectedIndexes?: Array<number>;
-    relationships?: ImportSummaries;
-    responseType?: string;
+    conflicts: Array<ImportConflict>;
+    dataSetComplete: string;
+    description: string;
+    enrollments: ImportSummaries;
+    events: ImportSummaries;
+    href: string;
+    importCount: ImportCount;
+    importOptions: ImportOptions;
+    reference: string;
+    rejectedIndexes: Array<number>;
+    relationships: ImportSummaries;
+    responseType: string;
     status: ImportSummary.status;
 };
 

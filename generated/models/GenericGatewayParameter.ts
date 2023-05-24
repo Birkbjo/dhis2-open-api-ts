@@ -6,7 +6,7 @@ export type GenericGatewayParameter = {
     confidential: boolean;
     encode: boolean;
     header: boolean;
-    key?: string;
-    value?: string;
+    key: string;
+    value: string;
 };
 

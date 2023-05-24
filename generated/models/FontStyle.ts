@@ -3,13 +3,13 @@
 /* eslint-disable */
 
 export type FontStyle = {
-    bold?: boolean;
+    bold: boolean;
     font: FontStyle.font;
-    fontSize?: number;
-    italic?: boolean;
+    fontSize: number;
+    italic: boolean;
     textAlign: FontStyle.textAlign;
-    textColor?: string;
-    underline?: boolean;
+    textColor: string;
+    underline: boolean;
 };
 
 export namespace FontStyle {

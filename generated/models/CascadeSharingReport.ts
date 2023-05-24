@@ -7,7 +7,7 @@ import type { IdObject } from './IdObject';
 
 export type CascadeSharingReport = {
     countUpdatedDashboardItems: number;
-    errorReports?: Array<ErrorReport>;
-    updateObjects?: Record<string, Array<IdObject>>;
+    errorReports: Array<ErrorReport>;
+    updateObjects: Record<string, Array<IdObject>>;
 };
 

@@ -4,10 +4,10 @@
 
 export type OutboundMessageResponseSummary = {
     batchType: OutboundMessageResponseSummary.batchType;
-    errorMessage?: string;
+    errorMessage: string;
     failed: number;
     pending: number;
-    responseMessage?: string;
+    responseMessage: string;
     sent: number;
     status: OutboundMessageResponseSummary.status;
     total: number;

@@ -3,12 +3,12 @@
 /* eslint-disable */
 
 export type FileResourceOwner = {
-    co?: string;
-    de?: string;
+    co: string;
+    de: string;
     domain: FileResourceOwner.domain;
-    id?: string;
-    ou?: string;
-    pe?: string;
+    id: string;
+    ou: string;
+    pe: string;
 };
 
 export namespace FileResourceOwner {

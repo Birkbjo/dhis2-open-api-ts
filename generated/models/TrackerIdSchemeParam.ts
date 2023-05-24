@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type TrackerIdSchemeParam = {
-    attributeUid?: string;
+    attributeUid: string;
     idScheme: TrackerIdSchemeParam.idScheme;
 };
 

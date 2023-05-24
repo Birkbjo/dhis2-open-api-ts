@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type Column = {
-    index?: number;
-    span?: number;
+    index: number;
+    span: number;
 };
 

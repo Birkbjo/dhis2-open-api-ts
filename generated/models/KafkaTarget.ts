@@ -5,9 +5,9 @@
 export type KafkaTarget = {
     bootstrapServers: string;
     clientId: string;
-    password?: string;
+    password: string;
     topic: string;
-    type?: string;
-    username?: string;
+    type: string;
+    username: string;
 };
 

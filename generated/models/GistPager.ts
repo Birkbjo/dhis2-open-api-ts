@@ -3,11 +3,11 @@
 /* eslint-disable */
 
 export type GistPager = {
-    nextPage?: string;
+    nextPage: string;
     page: number;
-    pageCount?: number;
+    pageCount: number;
     pageSize: number;
-    prevPage?: string;
-    total?: number;
+    prevPage: string;
+    total: number;
 };
 

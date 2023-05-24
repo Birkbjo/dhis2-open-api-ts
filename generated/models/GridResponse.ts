@@ -6,7 +6,7 @@ import type { Grid } from './Grid';
 import type { Pager } from './Pager';
 
 export type GridResponse = {
-    listGrid?: Grid;
-    pager?: Pager;
+    listGrid: Grid;
+    pager: Pager;
 };
 

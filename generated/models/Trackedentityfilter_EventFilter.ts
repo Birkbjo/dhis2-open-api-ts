@@ -6,10 +6,10 @@ import type { FilterPeriod } from './FilterPeriod';
 
 export type Trackedentityfilter_EventFilter = {
     assignedUserMode: Trackedentityfilter_EventFilter.assignedUserMode;
-    assignedUsers?: Array<string>;
-    eventCreatedPeriod?: FilterPeriod;
+    assignedUsers: Array<string>;
+    eventCreatedPeriod: FilterPeriod;
     eventStatus: Trackedentityfilter_EventFilter.eventStatus;
-    programStage?: string;
+    programStage: string;
 };
 
 export namespace Trackedentityfilter_EventFilter {

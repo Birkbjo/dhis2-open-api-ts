@@ -4,12 +4,12 @@
 
 export type UserSettings = {
     analysisDisplayProperty: UserSettings.analysisDisplayProperty;
-    dbLocale?: string;
-    messageEmailNotification?: boolean;
-    messageSmsNotification?: boolean;
-    style?: string;
-    trackerDashboardLayout?: string;
-    uiLocale?: string;
+    dbLocale: string;
+    messageEmailNotification: boolean;
+    messageSmsNotification: boolean;
+    style: string;
+    trackerDashboardLayout: string;
+    uiLocale: string;
 };
 
 export namespace UserSettings {

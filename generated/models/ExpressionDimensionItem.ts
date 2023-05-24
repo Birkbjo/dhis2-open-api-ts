@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { QueryModifiers } from './QueryModifiers';
@@ -7,38 +11,38 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type ExpressionDimensionItem = {
-    access?: Access;
-    aggregateExportAttributeOptionCombo?: string;
-    aggregateExportCategoryOptionCombo?: string;
+    access: Access;
+    aggregateExportAttributeOptionCombo: string;
+    aggregateExportCategoryOptionCombo: string;
     aggregationType: ExpressionDimensionItem.aggregationType;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    description?: string;
-    dimensionItem?: string;
-    displayDescription?: string;
-    displayFormName?: string;
-    displayName?: string;
-    displayShortName?: string;
-    expression?: string;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    description: string;
+    dimensionItem: string;
+    displayDescription: string;
+    displayFormName: string;
+    displayName: string;
+    displayShortName: string;
+    expression: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    formName?: string;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    legendSet?: LegendSet;
-    legendSets?: Array<LegendSet>;
+    favorites: Array<string>;
+    formName: string;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    legendSet: LegendSet;
+    legendSets: Array<LegendSet>;
     missingValueStrategy: ExpressionDimensionItem.missingValueStrategy;
-    name?: string;
-    queryMods?: QueryModifiers;
-    sharing?: Sharing;
-    shortName?: string;
-    slidingWindow?: boolean;
-    translations?: Array<Translation>;
-    user?: User;
+    name: string;
+    queryMods: QueryModifiers;
+    sharing: Sharing;
+    shortName: string;
+    slidingWindow: boolean;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace ExpressionDimensionItem {

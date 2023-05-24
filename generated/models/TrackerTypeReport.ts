@@ -6,8 +6,8 @@ import type { Entity } from './Entity';
 import type { TrackerImportsReport_Stats } from './TrackerImportsReport_Stats';
 
 export type TrackerTypeReport = {
-    objectReports?: Array<Entity>;
-    stats?: TrackerImportsReport_Stats;
+    objectReports: Array<Entity>;
+    stats: TrackerImportsReport_Stats;
     trackerType: TrackerTypeReport.trackerType;
 };
 

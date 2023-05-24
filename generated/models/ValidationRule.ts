@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { Expression } from './Expression';
@@ -10,47 +14,47 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type ValidationRule = {
-    access?: Access;
-    aggregateExportAttributeOptionCombo?: string;
-    aggregateExportCategoryOptionCombo?: string;
+    access: Access;
+    aggregateExportAttributeOptionCombo: string;
+    aggregateExportCategoryOptionCombo: string;
     aggregationType: ValidationRule.aggregationType;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    description?: string;
-    dimensionItem?: string;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    description: string;
+    dimensionItem: string;
     dimensionItemType: ValidationRule.dimensionItemType;
-    displayDescription?: string;
-    displayFormName?: string;
-    displayInstruction?: string;
-    displayName?: string;
-    displayShortName?: string;
+    displayDescription: string;
+    displayFormName: string;
+    displayInstruction: string;
+    displayName: string;
+    displayShortName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    formName?: string;
-    href?: string;
-    id?: string;
+    favorites: Array<string>;
+    formName: string;
+    href: string;
+    id: string;
     importance: ValidationRule.importance;
-    instruction?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    leftSide?: Expression;
-    legendSet?: LegendSet;
-    legendSets?: Array<LegendSet>;
-    name?: string;
-    notificationTemplates?: Array<ValidationNotificationTemplate>;
+    instruction: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    leftSide: Expression;
+    legendSet: LegendSet;
+    legendSets: Array<LegendSet>;
+    name: string;
+    notificationTemplates: Array<ValidationNotificationTemplate>;
     operator: ValidationRule.operator;
-    organisationUnitLevels?: Array<number>;
-    periodType?: ValidationRule.periodType;
-    queryMods?: QueryModifiers;
-    rightSide?: Expression;
-    sharing?: Sharing;
-    shortName?: string;
+    organisationUnitLevels: Array<number>;
+    periodType: ValidationRule.periodType;
+    queryMods: QueryModifiers;
+    rightSide: Expression;
+    sharing: Sharing;
+    shortName: string;
     skipFormValidation: boolean;
-    translations?: Array<Translation>;
-    user?: User;
-    validationRuleGroups?: Array<ValidationRuleGroup>;
+    translations: Array<Translation>;
+    user: User;
+    validationRuleGroups: Array<ValidationRuleGroup>;
 };
 
 export namespace ValidationRule {

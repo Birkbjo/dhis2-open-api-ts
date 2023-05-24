@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { ObjectStyle } from './ObjectStyle';
@@ -12,41 +16,41 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type CategoryOption = {
-    access?: Access;
+    access: Access;
     aggregationType: CategoryOption.aggregationType;
-    attributeValues?: Array<AttributeValue>;
-    categories?: Array<Category>;
-    categoryOptionCombos?: Array<CategoryOptionCombo>;
-    categoryOptionGroups?: Array<CategoryOptionGroup>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    description?: string;
-    dimensionItem?: string;
-    displayDescription?: string;
-    displayFormName?: string;
-    displayName?: string;
-    displayShortName?: string;
-    endDate?: string;
+    attributeValues: Array<AttributeValue>;
+    categories: Array<Category>;
+    categoryOptionCombos: Array<CategoryOptionCombo>;
+    categoryOptionGroups: Array<CategoryOptionGroup>;
+    code: string;
+    created: string;
+    createdBy: User;
+    description: string;
+    dimensionItem: string;
+    displayDescription: string;
+    displayFormName: string;
+    displayName: string;
+    displayShortName: string;
+    endDate: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    formName?: string;
-    href?: string;
-    id?: string;
+    favorites: Array<string>;
+    formName: string;
+    href: string;
+    id: string;
     isDefault: boolean;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    legendSet?: LegendSet;
-    legendSets?: Array<LegendSet>;
-    name?: string;
-    organisationUnits?: Array<OrganisationUnit>;
-    queryMods?: QueryModifiers;
-    sharing?: Sharing;
-    shortName?: string;
-    startDate?: string;
-    style?: ObjectStyle;
-    translations?: Array<Translation>;
-    user?: User;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    legendSet: LegendSet;
+    legendSets: Array<LegendSet>;
+    name: string;
+    organisationUnits: Array<OrganisationUnit>;
+    queryMods: QueryModifiers;
+    sharing: Sharing;
+    shortName: string;
+    startDate: string;
+    style: ObjectStyle;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace CategoryOption {

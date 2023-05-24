@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type TrackerTrigramIndexJobParameters = {
-    attributes?: Array<Record<string, any>>;
+    attributes: Array<Record<string, any>>;
     skipIndexDeletion: boolean;
 };
 

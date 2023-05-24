@@ -4,10 +4,10 @@
 
 export type DateFilterPeriod = {
     endBuffer: number;
-    endDate?: string;
+    endDate: string;
     period: DateFilterPeriod.period;
     startBuffer: number;
-    startDate?: string;
+    startDate: string;
     type: DateFilterPeriod.type;
 };
 

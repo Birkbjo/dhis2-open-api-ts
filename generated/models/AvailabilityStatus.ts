@@ -4,8 +4,8 @@
 
 export type AvailabilityStatus = {
     available: boolean;
-    message?: string;
+    message: string;
     statusCode: number;
-    statusPhrase?: string;
+    statusPhrase: string;
 };
 

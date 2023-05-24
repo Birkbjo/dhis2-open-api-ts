@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 export type ObjectValueTypeRenderingOption = {
-    clazz?: string;
+    clazz: string;
     hasOptionSet: boolean;
-    renderingTypes?: Array<'DEFAULT' | 'DROPDOWN' | 'VERTICAL_RADIOBUTTONS' | 'HORIZONTAL_RADIOBUTTONS' | 'VERTICAL_CHECKBOXES' | 'HORIZONTAL_CHECKBOXES' | 'SHARED_HEADER_RADIOBUTTONS' | 'ICONS_AS_BUTTONS' | 'SPINNER' | 'ICON' | 'TOGGLE' | 'VALUE' | 'SLIDER' | 'LINEAR_SCALE' | 'AUTOCOMPLETE' | 'QR_CODE' | 'BAR_CODE' | 'GS1_DATAMATRIX' | 'CANVAS'>;
+    renderingTypes: Array<'DEFAULT' | 'DROPDOWN' | 'VERTICAL_RADIOBUTTONS' | 'HORIZONTAL_RADIOBUTTONS' | 'VERTICAL_CHECKBOXES' | 'HORIZONTAL_CHECKBOXES' | 'SHARED_HEADER_RADIOBUTTONS' | 'ICONS_AS_BUTTONS' | 'SPINNER' | 'ICON' | 'TOGGLE' | 'VALUE' | 'SLIDER' | 'LINEAR_SCALE' | 'AUTOCOMPLETE' | 'QR_CODE' | 'BAR_CODE' | 'GS1_DATAMATRIX' | 'CANVAS'>;
     valueType: ObjectValueTypeRenderingOption.valueType;
 };
 

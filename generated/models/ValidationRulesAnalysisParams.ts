@@ -3,11 +3,11 @@
 /* eslint-disable */
 
 export type ValidationRulesAnalysisParams = {
-    endDate?: string;
+    endDate: string;
     notification: boolean;
-    ou?: string;
+    ou: string;
     persist: boolean;
-    startDate?: string;
-    vrg?: string;
+    startDate: string;
+    vrg: string;
 };
 

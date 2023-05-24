@@ -3,16 +3,16 @@
 /* eslint-disable */
 
 export type TestJobParameters = {
-    failAtItem?: number;
-    failAtStage?: number;
+    failAtItem: number;
+    failAtStage: number;
     failWithException: boolean;
-    failWithMessage?: string;
+    failWithMessage: string;
     failWithPolicy: TestJobParameters.failWithPolicy;
-    itemDuration?: number;
-    items?: number;
+    itemDuration: number;
+    items: number;
     runStagesParallel: boolean;
-    stages?: number;
-    waitMillis?: number;
+    stages: number;
+    waitMillis: number;
 };
 
 export namespace TestJobParameters {

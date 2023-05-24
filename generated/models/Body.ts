@@ -8,9 +8,9 @@ import type { WebapiControllerTrackerView_Relationship } from './WebapiControlle
 import type { WebapiControllerTrackerView_TrackedEntity } from './WebapiControllerTrackerView_TrackedEntity';
 
 export type Body = {
-    enrollments?: Array<WebapiControllerTrackerView_Enrollment>;
-    events?: Array<WebapiControllerTrackerView_Event>;
-    relationships?: Array<WebapiControllerTrackerView_Relationship>;
-    trackedEntities?: Array<WebapiControllerTrackerView_TrackedEntity>;
+    enrollments: Array<WebapiControllerTrackerView_Enrollment>;
+    events: Array<WebapiControllerTrackerView_Event>;
+    relationships: Array<WebapiControllerTrackerView_Relationship>;
+    trackedEntities: Array<WebapiControllerTrackerView_TrackedEntity>;
 };
 

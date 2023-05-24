@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type RemoveOperation = {
-    op?: string;
-    path?: string;
+    op: string;
+    path: string;
 };
 

@@ -9,18 +9,18 @@ import type { UID_DataSet } from './UID_DataSet';
 import type { UID_OrganisationUnit } from './UID_OrganisationUnit';
 
 export type DataValueDto = {
-    attribute?: DataValueCategoryDto;
-    categoryOptionCombo?: UID_CategoryOptionCombo;
-    comment?: string;
-    created?: string;
-    dataElement?: UID_DataElement;
-    dataSet?: UID_DataSet;
-    followUp?: boolean;
-    force?: boolean;
-    lastUpdated?: string;
-    orgUnit?: UID_OrganisationUnit;
-    period?: string;
-    storedBy?: string;
-    value?: string;
+    attribute: DataValueCategoryDto;
+    categoryOptionCombo: UID_CategoryOptionCombo;
+    comment: string;
+    created: string;
+    dataElement: UID_DataElement;
+    dataSet: UID_DataSet;
+    followUp: boolean;
+    force: boolean;
+    lastUpdated: string;
+    orgUnit: UID_OrganisationUnit;
+    period: string;
+    storedBy: string;
+    value: string;
 };
 

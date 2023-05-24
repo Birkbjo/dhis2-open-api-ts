@@ -3,8 +3,8 @@
 /* eslint-disable */
 
 export type SmsJobParameters = {
-    message?: string;
-    recipientsList?: Array<string>;
-    smsSubject?: string;
+    message: string;
+    recipientsList: Array<string>;
+    smsSubject: string;
 };
 

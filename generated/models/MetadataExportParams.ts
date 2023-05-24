@@ -1,19 +1,23 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { IdentifiableObject } from './IdentifiableObject';
 import type { User } from './User';
 
 export type MetadataExportParams = {
-    classes?: Array<string>;
-    defaultFields?: Array<string>;
-    defaultFilter?: Array<string>;
-    defaultOrder?: Array<string>;
+    classes: Array<string>;
+    defaultFields: Array<string>;
+    defaultFilter: Array<string>;
+    defaultOrder: Array<string>;
     defaults: MetadataExportParams.defaults;
     download: boolean;
     exportWithDependencies: boolean;
-    inclusionStrategy?: MetadataExportParams.inclusionStrategy;
-    objectExportWithDependencies?: IdentifiableObject;
+    inclusionStrategy: MetadataExportParams.inclusionStrategy;
+    objectExportWithDependencies: IdentifiableObject;
     skipSharing: boolean;
-    user?: User;
-    username?: string;
+    user: User;
+    username: string;
 };
 
 export namespace MetadataExportParams {

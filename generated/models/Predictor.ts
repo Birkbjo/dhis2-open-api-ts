@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { Expression } from './Expression';
@@ -10,39 +14,39 @@ import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
 export type Predictor = {
-    access?: Access;
-    annualSampleCount?: number;
-    attributeValues?: Array<AttributeValue>;
-    code?: string;
-    created?: string;
-    createdBy?: User;
-    description?: string;
-    displayDescription?: string;
-    displayFormName?: string;
-    displayName?: string;
-    displayShortName?: string;
+    access: Access;
+    annualSampleCount: number;
+    attributeValues: Array<AttributeValue>;
+    code: string;
+    created: string;
+    createdBy: User;
+    description: string;
+    displayDescription: string;
+    displayFormName: string;
+    displayName: string;
+    displayShortName: string;
     favorite: boolean;
-    favorites?: Array<string>;
-    formName?: string;
-    generator?: Expression;
-    href?: string;
-    id?: string;
-    lastUpdated?: string;
-    lastUpdatedBy?: User;
-    name?: string;
+    favorites: Array<string>;
+    formName: string;
+    generator: Expression;
+    href: string;
+    id: string;
+    lastUpdated: string;
+    lastUpdatedBy: User;
+    name: string;
     organisationUnitDescendants: Predictor.organisationUnitDescendants;
-    organisationUnitLevels?: Array<OrganisationUnitLevel>;
-    output?: DataElement;
-    outputCombo?: CategoryOptionCombo;
-    periodType?: Predictor.periodType;
-    predictorGroups?: Array<PredictorGroup>;
-    sampleSkipTest?: Expression;
-    sequentialSampleCount?: number;
-    sequentialSkipCount?: number;
-    sharing?: Sharing;
-    shortName?: string;
-    translations?: Array<Translation>;
-    user?: User;
+    organisationUnitLevels: Array<OrganisationUnitLevel>;
+    output: DataElement;
+    outputCombo: CategoryOptionCombo;
+    periodType: Predictor.periodType;
+    predictorGroups: Array<PredictorGroup>;
+    sampleSkipTest: Expression;
+    sequentialSampleCount: number;
+    sequentialSkipCount: number;
+    sharing: Sharing;
+    shortName: string;
+    translations: Array<Translation>;
+    user: User;
 };
 
 export namespace Predictor {

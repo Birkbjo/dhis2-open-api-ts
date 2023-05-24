@@ -8,10 +8,10 @@ import type { ImportSummary } from './ImportSummary';
 export type ImportSummaries = {
     deleted: number;
     ignored: number;
-    importOptions?: ImportOptions;
-    importSummaries?: Array<ImportSummary>;
+    importOptions: ImportOptions;
+    importSummaries: Array<ImportSummary>;
     imported: number;
-    responseType?: string;
+    responseType: string;
     status: ImportSummaries.status;
     total: number;
     updated: number;

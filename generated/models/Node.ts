@@ -5,19 +5,19 @@
 import type { Property } from './Property';
 
 export type Node = {
-    children?: Array<Node>;
+    children: Array<Node>;
     collection: boolean;
-    comment?: string;
+    comment: string;
     complex: boolean;
     metadata: boolean;
-    name?: string;
-    namespace?: string;
+    name: string;
+    namespace: string;
     order: number;
-    parent?: Node;
-    property?: Property;
+    parent: Node;
+    property: Property;
     simple: boolean;
     type: Node.type;
-    unorderedChildren?: Array<Node>;
+    unorderedChildren: Array<Node>;
 };
 
 export namespace Node {
