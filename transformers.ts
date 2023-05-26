@@ -22,6 +22,7 @@ export function replaceRefsWithModelType(project: Project) {
 
     const renames: [Identifier, string][] = [];
     const importSpecifierRenames: [ImportDeclaration, string][] = [];
+    const importsToDelete: ImportDeclaration[] = [];
 
     refsPerFile.forEach((refsInFile) => {
         refsInFile.forEach((expandedRef) => {
@@ -29,6 +30,14 @@ export function replaceRefsWithModelType(project: Project) {
                 expandedRef.originalSourceFile.getRelativePathAsModuleSpecifierTo(
                     expandedRef.expandedSourceFile.getFilePath()
                 );
+            const isSameFile =
+                expandedRef.originalSourceFile.getFilePath() ===
+                expandedRef.expandedSourceFile.getFilePath();
+            // if the expanded type now refers to itself, delete the import rather than rename it
+            if (isSameFile) {
+                importsToDelete.push(expandedRef.refImport);
+                return;
+            }
             importSpecifierRenames.push([
                 expandedRef.refImport,
                 fullModelImportSpecifier,
@@ -41,6 +50,8 @@ export function replaceRefsWithModelType(project: Project) {
             });
         });
     });
+
+    importsToDelete.forEach((importDeclaration) => importDeclaration.remove());
     // this also renames references in the same file
     renames.forEach(([identifier, name]) => identifier.rename(name));
     importSpecifierRenames.forEach(([importDeclaration, moduleSpecifier]) =>
