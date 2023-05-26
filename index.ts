@@ -7,6 +7,8 @@ import {
     removeUnusedFiles,
     setPropertiesRequired,
     includeCustomTypes,
+    RenameExport,
+    renameExports,
 } from "./transformers";
 
 const getOpenApiSchemaFileName = (version: string): string =>
@@ -103,15 +105,14 @@ async function main() {
     }
 
     if (!values["no-transform"]) {
-        const removeUnusedFilesTranformer: TransformerObject = {
-            name: "removeUnusedFiles",
-            tranformFunc: removeUnusedFiles([/UID_/, /Ref_/, /PropertyNames_/]),
-        };
+        const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
+        const renames: RenameExport[] = [{ from: /MeDto/, to: "CurrentUser" }];
         const transformers = [
             includeCustomTypes,
             replaceRefsWithModelType,
-            removeUnusedFilesTranformer,
+            removeUnusedFiles(removeFilePatterns),
             setPropertiesRequired,
+            renameExports(renames),
         ];
         const transformer = new TSTransformer(
             "./generated/index.ts",

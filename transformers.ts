@@ -7,6 +7,7 @@ import {
     ts,
     ExportDeclarationStructure,
     OptionalKind,
+    ExportSpecifier,
 } from "ts-morph";
 import fs from "fs";
 
@@ -59,10 +60,24 @@ export function replaceRefsWithModelType(project: Project) {
     );
 }
 
-export function removeUnusedFiles(patterns: RegExp[]) {
-    return (project: Project) => {
-        const files = project.getSourceFiles();
+export type RemoveUnusedFilesOptions = {
+    // if true, files that are only referenced by other files that match the patterns
+    // will also be removed
+    removeReferencedFilesMatchingPattern: boolean;
+};
+const removedUnusedFilesDefaultOptions: RemoveUnusedFilesOptions = {
+    removeReferencedFilesMatchingPattern: true,
+};
 
+export function removeUnusedFiles(
+    patterns: RegExp[],
+    options: RemoveUnusedFilesOptions = removedUnusedFilesDefaultOptions
+) {
+    return function removeUnusedFilesTransformer(project: Project) {
+        const files = project.getSourceFiles();
+        const referencingFilePatterns = [/index.ts/].concat(
+            options.removeReferencedFilesMatchingPattern ? patterns : []
+        );
         const matchingFiles = files.filter((sf) =>
             patterns.some((p) => p.test(sf.getBaseName()))
         );
@@ -74,10 +89,11 @@ export function removeUnusedFiles(patterns: RegExp[]) {
         const deletedFiles: SourceFile[] = [];
         matchingFiles.forEach((sf) => {
             const referencingFiles = sf.getReferencingSourceFiles();
-            const onlyIndex = referencingFiles.every(
-                (rf) => rf.getBaseName() === "index.ts"
+
+            const matchesReferencesFilePattern = referencingFiles.every((rf) =>
+                referencingFilePatterns.some((p) => p.test(rf.getBaseName()))
             );
-            if (referencingFiles.length === 0 || onlyIndex) {
+            if (referencingFiles.length === 0 || matchesReferencesFilePattern) {
                 const indexExportDeclaration = getExportDeclarationForFile(
                     indexFile,
                     sf
@@ -159,6 +175,33 @@ export function includeCustomTypes(project: Project) {
         });
     });
     indexFile.addExportDeclarations(exportedDeclarations);
+}
+
+export type RenameExport = {
+    from: RegExp;
+    to: string;
+};
+
+export function renameExports(patterns: RenameExport[]) {
+    return function renameTransformer(project: Project) {
+        const indexFile = project.getSourceFileOrThrow("index.ts");
+
+        const exportDeclarations = indexFile.getExportDeclarations();
+        const renames: [RenameExport, ExportSpecifier][] = [];
+        exportDeclarations.forEach((ed) => {
+            ed.getNamedExports().forEach((ne) => {
+                const name = ne.getName();
+                const rename = patterns.find((p) => p.from.test(name));
+
+                if (rename) {
+                    renames.push([rename, ne]);
+                }
+            });
+        });
+        renames.forEach(([rename, namedExport]) => {
+            namedExport.setAlias(rename.to);
+        });
+    };
 }
 
 function getExportDeclarationForFile(
