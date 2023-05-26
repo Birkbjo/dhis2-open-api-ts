@@ -37,12 +37,12 @@ export function replaceRefsWithModelType(project: Project) {
             // if the expanded type now refers to itself, delete the import rather than rename it
             if (isSameFile) {
                 importsToDelete.push(expandedRef.refImport);
-                return;
+            } else {
+                importSpecifierRenames.push([
+                    expandedRef.refImport,
+                    fullModelImportSpecifier,
+                ]);
             }
-            importSpecifierRenames.push([
-                expandedRef.refImport,
-                fullModelImportSpecifier,
-            ]);
 
             expandedRef.refImport.getNamedImports().forEach((ni) => {
                 if (ni.getName() === expandedRef.refName) {
@@ -52,9 +52,9 @@ export function replaceRefsWithModelType(project: Project) {
         });
     });
 
-    importsToDelete.forEach((importDeclaration) => importDeclaration.remove());
     // this also renames references in the same file
     renames.forEach(([identifier, name]) => identifier.rename(name));
+    importsToDelete.forEach((importDeclaration) => importDeclaration.remove());
     importSpecifierRenames.forEach(([importDeclaration, moduleSpecifier]) =>
         importDeclaration.setModuleSpecifier(moduleSpecifier)
     );
@@ -87,13 +87,14 @@ export function removeUnusedFiles(
         // https://ts-morph.com/manipulation/performance#performance-tip-analyze-then-manipulate
         const deletedExportsFromIndex: ExportDeclaration[] = [];
         const deletedFiles: SourceFile[] = [];
-        matchingFiles.forEach((sf) => {
-            const referencingFiles = sf.getReferencingSourceFiles();
 
-            const matchesReferencesFilePattern = referencingFiles.every((rf) =>
-                referencingFilePatterns.some((p) => p.test(rf.getBaseName()))
-            );
-            if (referencingFiles.length === 0 || matchesReferencesFilePattern) {
+        matchingFiles.forEach((sf) => {
+            const matchesReferencesFilePattern =
+                checkAllTransitiveReferencesMatches(
+                    sf,
+                    referencingFilePatterns
+                );
+            if (matchesReferencesFilePattern) {
                 const indexExportDeclaration = getExportDeclarationForFile(
                     indexFile,
                     sf
@@ -202,6 +203,28 @@ export function renameExports(patterns: RenameExport[]) {
             namedExport.setAlias(rename.to);
         });
     };
+}
+
+/** Helpers */
+
+/**
+ * Checks if all files that reference the sourceFile match the referencingFilePatterns
+ * This is a recursive function that checks all transitive references as well
+ */
+function checkAllTransitiveReferencesMatches(
+    sourceFile: SourceFile,
+    referencingFilePatterns: RegExp[]
+) {
+    const referencingFiles = sourceFile.getReferencingSourceFiles();
+    if (referencingFiles.length === 0) {
+        return true;
+    }
+    const allMatches = referencingFiles.every(
+        (rf) =>
+            referencingFilePatterns.some((p) => p.test(rf.getBaseName())) &&
+            checkAllTransitiveReferencesMatches(rf, referencingFilePatterns)
+    );
+    return allMatches;
 }
 
 function getExportDeclarationForFile(
