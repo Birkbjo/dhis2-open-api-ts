@@ -38,14 +38,11 @@ export class TSTransformer {
         });
     }
 
-    async runTransformers(): Promise<void> {
-        await this.transformers.forEach(async (transformer, name) => {
+    runTransformers(): Promise<void> {
+        this.transformers.forEach((transformer, name) => {
             console.log("Running transformer: ", name);
             console.time(name);
-            const res = transformer(this.project, this);
-            if (res && typeof res.then === "function") {
-                await res;
-            }
+            transformer(this.project, this);
             console.timeEnd(name);
         });
         console.log("All transformers done. Saving files...");
