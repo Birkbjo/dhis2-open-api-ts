@@ -9,6 +9,7 @@ import {
     includeCustomTypes,
     RenameExport,
     renameExports,
+    addGeneratedByComment,
 } from "./transformers";
 
 const getOpenApiSchemaFileName = (version: string): string =>
@@ -108,6 +109,7 @@ async function main() {
         const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
         const renames: RenameExport[] = [{ from: /MeDto/, to: "CurrentUser" }];
         const transformers = [
+            addGeneratedByComment,
             includeCustomTypes,
             replaceRefsWithModelType,
             removeUnusedFiles(removeFilePatterns),

@@ -2,6 +2,7 @@
     "name": "dhis2-open-api-ts",
     "version": "1.0.0",
     "description": "Tool to generate typescript types from dhis2 open-api",
+    "homepage": "https://github.com/Birkbjo/dhis2-open-api-ts",
     "main": "index.ts",
     "scripts": {
         "generate": "ts-node index.ts",
