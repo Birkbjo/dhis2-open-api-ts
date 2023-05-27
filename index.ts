@@ -109,12 +109,12 @@ async function main() {
         const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
         const renames: RenameExport[] = [{ from: /MeDto/, to: "CurrentUser" }];
         const transformers = [
-            addGeneratedByComment,
             includeCustomTypes,
             replaceRefsWithModelType,
             removeUnusedFiles(removeFilePatterns),
             setPropertiesRequired,
             renameExports(renames),
+            addGeneratedByComment(),
         ];
         const transformer = new TSTransformer(
             "./generated/index.ts",
