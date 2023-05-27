@@ -9,7 +9,6 @@ import type { ProgramTrackedEntityAttribute } from './ProgramTrackedEntityAttrib
 import type { CategoryCombo } from './CategoryCombo';
 import type { DataEntryForm } from './DataEntryForm';
 import type { OrganisationUnit } from './OrganisationUnit';
-import type { Program } from './Program';
 import type { ProgramIndicator } from './ProgramIndicator';
 import type { ProgramNotificationTemplate } from './ProgramNotificationTemplate';
 import type { ProgramRuleVariable } from './ProgramRuleVariable';

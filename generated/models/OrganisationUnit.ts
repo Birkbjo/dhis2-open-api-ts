@@ -8,7 +8,6 @@ import type { QueryModifiers } from './QueryModifiers';
 import type { DataSet } from './DataSet';
 import type { FileResource } from './FileResource';
 import type { LegendSet } from './LegendSet';
-import type { OrganisationUnit } from './OrganisationUnit';
 import type { OrganisationUnitGroup } from './OrganisationUnitGroup';
 import type { Program } from './Program';
 import type { User } from './User';

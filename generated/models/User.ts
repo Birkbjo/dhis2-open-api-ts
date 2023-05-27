@@ -8,7 +8,6 @@ import type { Category } from './Category';
 import type { CategoryOptionGroupSet } from './CategoryOptionGroupSet';
 import type { FileResource } from './FileResource';
 import type { OrganisationUnit } from './OrganisationUnit';
-import type { User } from './User';
 import type { UserGroup } from './UserGroup';
 import type { UserRole } from './UserRole';
 import type { Sharing } from './Sharing';

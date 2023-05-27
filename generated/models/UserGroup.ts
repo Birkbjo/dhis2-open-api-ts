@@ -5,7 +5,6 @@
 import type { Access } from './Access';
 import type { AttributeValue } from './AttributeValue';
 import type { User } from './User';
-import type { UserGroup } from './UserGroup';
 import type { Sharing } from './Sharing';
 import type { Translation } from './Translation';
 
