@@ -10,6 +10,7 @@ import {
     RenameExport,
     renameExports,
     addGeneratedByComment,
+    formatFiles,
 } from "./transformers";
 
 const getOpenApiSchemaFileName = (version: string): string =>
@@ -85,6 +86,11 @@ async function main() {
             short: "n",
             default: false,
         },
+        clean: {
+            type: "boolean",
+            short: "c",
+            default: false,
+        },
     } as const;
 
     const { values } = parseArgs({ options });
@@ -94,7 +100,7 @@ async function main() {
         force: values.force,
     });
 
-    if (!cached || !values.force) {
+    if (!cached || values.force) {
         console.log("Generating types");
         await OpenAPI.generate({
             input: openApiSchema,
@@ -115,6 +121,7 @@ async function main() {
             setPropertiesRequired,
             renameExports(renames),
             addGeneratedByComment(),
+            formatFiles,
         ];
         const transformer = new TSTransformer(
             "./generated/index.ts",

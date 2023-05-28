@@ -10,6 +10,9 @@ import {
     ExportSpecifier,
 } from "ts-morph";
 import fs from "fs";
+import type { Transformer } from "./transformer";
+import * as prettier from "prettier";
+import prettierConfig from "./generated.prettierrc.js";
 
 const REF = "Ref_";
 const replaceRef = (name: string) => name.replace(REF, "");
@@ -23,7 +26,7 @@ const addGenerateByDefaultOptions: AddGeneratedByCommentOptions = {
 
 export function addGeneratedByComment(
     options: AddGeneratedByCommentOptions = addGenerateByDefaultOptions
-) {
+): Transformer {
     return function addGenerateByCommentTransformer(project: Project) {
         const generatedBy =
             process.env.npm_package_homepage ??
@@ -101,7 +104,7 @@ const removedUnusedFilesDefaultOptions: RemoveUnusedFilesOptions = {
 export function removeUnusedFiles(
     patterns: RegExp[],
     options: RemoveUnusedFilesOptions = removedUnusedFilesDefaultOptions
-) {
+): Transformer {
     return function removeUnusedFilesTransformer(project: Project) {
         const files = project.getSourceFiles();
         const referencingFilePatterns = [/index.ts/].concat(
@@ -212,7 +215,7 @@ export type RenameExport = {
     to: string;
 };
 
-export function renameExports(patterns: RenameExport[]) {
+export function renameExports(patterns: RenameExport[]): Transformer {
     return function renameTransformer(project: Project) {
         const indexFile = project.getSourceFileOrThrow("index.ts");
 
@@ -232,6 +235,15 @@ export function renameExports(patterns: RenameExport[]) {
             namedExport.setAlias(rename.to);
         });
     };
+}
+
+export async function formatFiles(project: Project) {
+    const files = project.getSourceFiles();
+    files.forEach(async (sf) => {
+        const fileText = sf.getFullText();
+        const formattedText = prettier.format(fileText, prettierConfig);
+        sf.replaceWithText(formattedText);
+    });
 }
 
 /** Helpers */
