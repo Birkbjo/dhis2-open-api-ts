@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type Meta = {
-    allowExternalAccess: boolean;
-    allowPublicAccess: boolean;
-};
-
+    allowExternalAccess: boolean
+    allowPublicAccess: boolean
+}

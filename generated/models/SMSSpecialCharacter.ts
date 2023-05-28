@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type SMSSpecialCharacter = {
-    name: string;
-    value: string;
-};
-
+    name: string
+    value: string
+}

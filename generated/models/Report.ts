@@ -2,42 +2,41 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { User } from './User';
-import type { Visualization } from './Visualization';
-import type { RelativePeriods } from './RelativePeriods';
-import type { ReportingParams } from './ReportingParams';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { User } from './User'
+import type { Visualization } from './Visualization'
+import type { RelativePeriods } from './RelativePeriods'
+import type { ReportingParams } from './ReportingParams'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type Report = {
-    access: Access;
-    attributeValues: Array<AttributeValue>;
-    cacheStrategy: Report.cacheStrategy;
-    code: string;
-    created: string;
-    createdBy: User;
-    designContent: string;
-    displayName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    name: string;
-    relativePeriods: RelativePeriods;
-    reportParams: ReportingParams;
-    sharing: Sharing;
-    translations: Array<Translation>;
-    type: Report.type;
-    user: User;
-    visualization: Visualization;
-};
+    access: Access
+    attributeValues: Array<AttributeValue>
+    cacheStrategy: Report.cacheStrategy
+    code: string
+    created: string
+    createdBy: User
+    designContent: string
+    displayName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    name: string
+    relativePeriods: RelativePeriods
+    reportParams: ReportingParams
+    sharing: Sharing
+    translations: Array<Translation>
+    type: Report.type
+    user: User
+    visualization: Visualization
+}
 
 export namespace Report {
-
     export enum cacheStrategy {
         NO_CACHE = 'NO_CACHE',
         CACHE_1_MINUTE = 'CACHE_1_MINUTE',
@@ -56,7 +55,4 @@ export namespace Report {
         JASPER_JDBC = 'JASPER_JDBC',
         HTML = 'HTML',
     }
-
-
 }
-

@@ -3,12 +3,11 @@
 /* eslint-disable */
 
 export type GistPreferences = {
-    included: GistPreferences.included;
-    transformation: GistPreferences.transformation;
-};
+    included: GistPreferences.included
+    transformation: GistPreferences.transformation
+}
 
 export namespace GistPreferences {
-
     export enum included {
         FALSE = 'FALSE',
         TRUE = 'TRUE',
@@ -28,7 +27,4 @@ export namespace GistPreferences {
         PLUCK = 'PLUCK',
         FROM = 'FROM',
     }
-
-
 }
-

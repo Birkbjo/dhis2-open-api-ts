@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type AccessData = {
-    read: boolean;
-    write: boolean;
-};
-
+    read: boolean
+    write: boolean
+}

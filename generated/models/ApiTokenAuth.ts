@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type ApiTokenAuth = {
-    token: string;
-    type: string;
-};
-
+    token: string
+    type: string
+}

@@ -2,31 +2,30 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { AttributeValueFilter } from './AttributeValueFilter';
-import type { DateFilterPeriod } from './DateFilterPeriod';
+import type { AttributeValueFilter } from './AttributeValueFilter'
+import type { DateFilterPeriod } from './DateFilterPeriod'
 
 export type EntityQueryCriteria = {
-    assignedUserMode: EntityQueryCriteria.assignedUserMode;
-    assignedUsers: Array<string>;
-    attributeValueFilters: Array<AttributeValueFilter>;
-    displayColumnOrder: Array<string>;
-    enrollmentCreatedDate: DateFilterPeriod;
-    enrollmentIncidentDate: DateFilterPeriod;
-    enrollmentStatus: EntityQueryCriteria.enrollmentStatus;
-    eventDate: DateFilterPeriod;
-    eventStatus: EntityQueryCriteria.eventStatus;
-    followUp: boolean;
-    lastUpdatedDate: DateFilterPeriod;
-    order: string;
-    organisationUnit: string;
-    ouMode: EntityQueryCriteria.ouMode;
-    programStage: string;
-    trackedEntityInstances: Array<string>;
-    trackedEntityType: string;
-};
+    assignedUserMode: EntityQueryCriteria.assignedUserMode
+    assignedUsers: Array<string>
+    attributeValueFilters: Array<AttributeValueFilter>
+    displayColumnOrder: Array<string>
+    enrollmentCreatedDate: DateFilterPeriod
+    enrollmentIncidentDate: DateFilterPeriod
+    enrollmentStatus: EntityQueryCriteria.enrollmentStatus
+    eventDate: DateFilterPeriod
+    eventStatus: EntityQueryCriteria.eventStatus
+    followUp: boolean
+    lastUpdatedDate: DateFilterPeriod
+    order: string
+    organisationUnit: string
+    ouMode: EntityQueryCriteria.ouMode
+    programStage: string
+    trackedEntityInstances: Array<string>
+    trackedEntityType: string
+}
 
 export namespace EntityQueryCriteria {
-
     export enum assignedUserMode {
         CURRENT = 'CURRENT',
         PROVIDED = 'PROVIDED',
@@ -58,7 +57,4 @@ export namespace EntityQueryCriteria {
         CAPTURE = 'CAPTURE',
         ALL = 'ALL',
     }
-
-
 }
-

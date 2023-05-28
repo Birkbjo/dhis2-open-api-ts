@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type CodeList = {
-    codes: Array<string>;
-};
-
+    codes: Array<string>
+}

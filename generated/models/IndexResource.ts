@@ -3,9 +3,8 @@
 /* eslint-disable */
 
 export type IndexResource = {
-    displayName: string;
-    href: string;
-    plural: string;
-    singular: string;
-};
-
+    displayName: string
+    href: string
+    plural: string
+    singular: string
+}

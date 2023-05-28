@@ -2,12 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User } from './User';
+import type { User } from './User'
 
 export type Email = {
-    recipients: Array<User>;
-    sender: User;
-    subject: string;
-    text: string;
-};
-
+    recipients: Array<User>
+    sender: User
+    subject: string
+    text: string
+}

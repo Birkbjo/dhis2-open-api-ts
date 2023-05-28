@@ -2,44 +2,43 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { DataElement } from './DataElement';
-import type { Program } from './Program';
-import type { ProgramStage } from './ProgramStage';
-import type { TrackedEntityAttribute } from './TrackedEntityAttribute';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { DataElement } from './DataElement'
+import type { Program } from './Program'
+import type { ProgramStage } from './ProgramStage'
+import type { TrackedEntityAttribute } from './TrackedEntityAttribute'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type ProgramRuleVariable = {
-    access: Access;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    created: string;
-    createdBy: User;
-    dataElement: DataElement;
-    displayName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    name: string;
-    program: Program;
-    programRuleVariableSourceType: ProgramRuleVariable.programRuleVariableSourceType;
-    programStage: ProgramStage;
-    sharing: Sharing;
-    trackedEntityAttribute: TrackedEntityAttribute;
-    translations: Array<Translation>;
-    useCodeForOptionSet: boolean;
-    user: User;
-    valueType: ProgramRuleVariable.valueType;
-};
+    access: Access
+    attributeValues: Array<AttributeValue>
+    code: string
+    created: string
+    createdBy: User
+    dataElement: DataElement
+    displayName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    name: string
+    program: Program
+    programRuleVariableSourceType: ProgramRuleVariable.programRuleVariableSourceType
+    programStage: ProgramStage
+    sharing: Sharing
+    trackedEntityAttribute: TrackedEntityAttribute
+    translations: Array<Translation>
+    useCodeForOptionSet: boolean
+    user: User
+    valueType: ProgramRuleVariable.valueType
+}
 
 export namespace ProgramRuleVariable {
-
     export enum programRuleVariableSourceType {
         DATAELEMENT_NEWEST_EVENT_PROGRAM_STAGE = 'DATAELEMENT_NEWEST_EVENT_PROGRAM_STAGE',
         DATAELEMENT_NEWEST_EVENT_PROGRAM = 'DATAELEMENT_NEWEST_EVENT_PROGRAM',
@@ -79,7 +78,4 @@ export namespace ProgramRuleVariable {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

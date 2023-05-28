@@ -3,22 +3,21 @@
 /* eslint-disable */
 
 export type ErrorReport = {
-    errorCode: ErrorReport.errorCode;
-    errorKlass: string;
-    errorProperties: Array<Record<string, any>>;
-    errorProperty: string;
-    mainId: string;
-    mainKlass: string;
-    message: string;
+    errorCode: ErrorReport.errorCode
+    errorKlass: string
+    errorProperties: Array<Record<string, any>>
+    errorProperty: string
+    mainId: string
+    mainKlass: string
+    message: string
     /**
- * The actual type is unknown.
- * (Java type was: `class java.lang.Object`)
- */
-value: Record<string, any>;
-};
+     * The actual type is unknown.
+     * (Java type was: `class java.lang.Object`)
+     */
+    value: Record<string, any>
+}
 
 export namespace ErrorReport {
-
     export enum errorCode {
         E1000 = 'E1000',
         E1001 = 'E1001',
@@ -435,7 +434,4 @@ export namespace ErrorReport {
         E7711 = 'E7711',
         E7712 = 'E7712',
     }
-
-
 }
-

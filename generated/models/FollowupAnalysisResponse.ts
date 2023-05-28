@@ -2,11 +2,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { FollowupAnalysisMetadata } from './FollowupAnalysisMetadata';
-import type { FollowupValue } from './FollowupValue';
+import type { FollowupAnalysisMetadata } from './FollowupAnalysisMetadata'
+import type { FollowupValue } from './FollowupValue'
 
 export type FollowupAnalysisResponse = {
-    followupValues: Array<FollowupValue>;
-    metadata: FollowupAnalysisMetadata;
-};
-
+    followupValues: Array<FollowupValue>
+    metadata: FollowupAnalysisMetadata
+}

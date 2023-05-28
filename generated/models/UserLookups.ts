@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { UserLookup } from './UserLookup';
+import type { UserLookup } from './UserLookup'
 
 export type UserLookups = {
-    users: Array<UserLookup>;
-};
-
+    users: Array<UserLookup>
+}

@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type FieldPathTransformer = {
-    name: string;
-    parameters: Array<string>;
-};
-
+    name: string
+    parameters: Array<string>
+}

@@ -3,11 +3,10 @@
 /* eslint-disable */
 
 export type Pager = {
-    nextPage: string;
-    page: number;
-    pageCount: number;
-    pageSize: number;
-    prevPage: string;
-    total: number;
-};
-
+    nextPage: string
+    page: number
+    pageCount: number
+    pageSize: number
+    prevPage: string
+    total: number
+}

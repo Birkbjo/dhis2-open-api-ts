@@ -2,11 +2,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { WebapiWebdomainForm_Option } from './WebapiWebdomainForm_Option';
+import type { WebapiWebdomainForm_Option } from './WebapiWebdomainForm_Option'
 
 export type WebapiWebdomainForm_Category = {
-    categoryOptions: Array<WebapiWebdomainForm_Option>;
-    id: string;
-    label: string;
-};
-
+    categoryOptions: Array<WebapiWebdomainForm_Option>
+    id: string
+    label: string
+}

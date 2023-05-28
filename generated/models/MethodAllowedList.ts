@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type MethodAllowedList = {
-    allowedMethods: Array<string>;
-    type: string;
-};
-
+    allowedMethods: Array<string>
+    type: string
+}

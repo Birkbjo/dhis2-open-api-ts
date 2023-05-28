@@ -2,148 +2,147 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { CategoryDimension } from './CategoryDimension';
-import type { CategoryOptionGroupSetDimension } from './CategoryOptionGroupSetDimension';
-import type { DataDimensionItem } from './DataDimensionItem';
-import type { DataElementGroupSetDimension } from './DataElementGroupSetDimension';
-import type { EventRepetition } from './EventRepetition';
-import type { LegendDefinitions } from './LegendDefinitions';
-import type { OrganisationUnitGroupSetDimension } from './OrganisationUnitGroupSetDimension';
-import type { DataElement } from './DataElement';
-import type { DimensionalItemObject } from './DimensionalItemObject';
-import type { DimensionalObject } from './DimensionalObject';
-import type { Interpretation } from './Interpretation';
-import type { OrganisationUnit } from './OrganisationUnit';
-import type { OrganisationUnitGroup } from './OrganisationUnitGroup';
-import type { Program } from './Program';
-import type { ProgramStage } from './ProgramStage';
-import type { TrackedEntityAttribute } from './TrackedEntityAttribute';
-import type { User } from './User';
-import type { RelativePeriods } from './RelativePeriods';
-import type { Sharing } from './Sharing';
-import type { SimpleDimension } from './SimpleDimension';
-import type { TrackedEntityAttributeDimension } from './TrackedEntityAttributeDimension';
-import type { TrackedEntityDataElementDimension } from './TrackedEntityDataElementDimension';
-import type { TrackedEntityProgramIndicatorDimension } from './TrackedEntityProgramIndicatorDimension';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { CategoryDimension } from './CategoryDimension'
+import type { CategoryOptionGroupSetDimension } from './CategoryOptionGroupSetDimension'
+import type { DataDimensionItem } from './DataDimensionItem'
+import type { DataElementGroupSetDimension } from './DataElementGroupSetDimension'
+import type { EventRepetition } from './EventRepetition'
+import type { LegendDefinitions } from './LegendDefinitions'
+import type { OrganisationUnitGroupSetDimension } from './OrganisationUnitGroupSetDimension'
+import type { DataElement } from './DataElement'
+import type { DimensionalItemObject } from './DimensionalItemObject'
+import type { DimensionalObject } from './DimensionalObject'
+import type { Interpretation } from './Interpretation'
+import type { OrganisationUnit } from './OrganisationUnit'
+import type { OrganisationUnitGroup } from './OrganisationUnitGroup'
+import type { Program } from './Program'
+import type { ProgramStage } from './ProgramStage'
+import type { TrackedEntityAttribute } from './TrackedEntityAttribute'
+import type { User } from './User'
+import type { RelativePeriods } from './RelativePeriods'
+import type { Sharing } from './Sharing'
+import type { SimpleDimension } from './SimpleDimension'
+import type { TrackedEntityAttributeDimension } from './TrackedEntityAttributeDimension'
+import type { TrackedEntityDataElementDimension } from './TrackedEntityDataElementDimension'
+import type { TrackedEntityProgramIndicatorDimension } from './TrackedEntityProgramIndicatorDimension'
+import type { Translation } from './Translation'
 
 export type EventVisualization = {
-    access: Access;
-    aggregationType: EventVisualization.aggregationType;
-    attributeDimensions: Array<TrackedEntityAttributeDimension>;
-    attributeValueDimension: TrackedEntityAttribute;
-    attributeValues: Array<AttributeValue>;
-    baseLineLabel: string;
-    baseLineValue: number;
-    categoryDimensions: Array<CategoryDimension>;
-    categoryOptionGroupSetDimensions: Array<CategoryOptionGroupSetDimension>;
-    code: string;
-    colSubTotals: boolean;
-    colTotals: boolean;
-    collapseDataDimensions: boolean;
-    columnDimensions: Array<string>;
-    columns: Array<DimensionalObject>;
-    completedOnly: boolean;
-    created: string;
-    createdBy: User;
-    cumulativeValues: boolean;
-    dataDimensionItems: Array<DataDimensionItem>;
-    dataElementDimensions: Array<TrackedEntityDataElementDimension>;
-    dataElementGroupSetDimensions: Array<DataElementGroupSetDimension>;
-    dataElementValueDimension: DataElement;
-    dataType: EventVisualization.dataType;
-    description: string;
-    digitGroupSeparator: EventVisualization.digitGroupSeparator;
-    displayBaseLineLabel: string;
-    displayDensity: EventVisualization.displayDensity;
-    displayDescription: string;
-    displayDomainAxisLabel: string;
-    displayFormName: string;
-    displayName: string;
-    displayRangeAxisLabel: string;
-    displayShortName: string;
-    displaySubtitle: string;
-    displayTargetLineLabel: string;
-    displayTitle: string;
-    domainAxisLabel: string;
-    endDate: string;
-    eventStatus: EventVisualization.eventStatus;
-    favorite: boolean;
-    favorites: Array<string>;
-    filterDimensions: Array<string>;
-    filters: Array<DimensionalObject>;
-    fontSize: EventVisualization.fontSize;
-    formName: string;
-    hideEmptyRowItems: EventVisualization.hideEmptyRowItems;
-    hideEmptyRows: boolean;
-    hideLegend: boolean;
-    hideNaData: boolean;
-    hideSubtitle: boolean;
-    hideTitle: boolean;
-    href: string;
-    id: string;
-    interpretations: Array<Interpretation>;
-    itemOrganisationUnitGroups: Array<OrganisationUnitGroup>;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legacy: boolean;
-    legend: LegendDefinitions;
-    name: string;
-    noSpaceBetweenColumns: boolean;
-    orgUnitField: string;
-    organisationUnitGroupSetDimensions: Array<OrganisationUnitGroupSetDimension>;
-    organisationUnitLevels: Array<number>;
-    organisationUnits: Array<OrganisationUnit>;
-    outputType: EventVisualization.outputType;
-    parentGraphMap: Record<string, string>;
-    percentStackedValues: boolean;
-    periods: Array<string>;
-    program: Program;
-    programIndicatorDimensions: Array<TrackedEntityProgramIndicatorDimension>;
-    programStage: ProgramStage;
-    programStatus: EventVisualization.programStatus;
-    rangeAxisDecimals: number;
-    rangeAxisLabel: string;
-    rangeAxisMaxValue: number;
-    rangeAxisMinValue: number;
-    rangeAxisSteps: number;
-    regressionType: EventVisualization.regressionType;
-    relativePeriods: RelativePeriods;
-    repetitions: Array<EventRepetition>;
-    rowDimensions: Array<string>;
-    rowSubTotals: boolean;
-    rowTotals: boolean;
-    rows: Array<DimensionalObject>;
-    sharing: Sharing;
-    shortName: string;
-    showData: boolean;
-    showDimensionLabels: boolean;
-    showHierarchy: boolean;
-    simpleDimensions: Array<SimpleDimension>;
-    sortOrder: number;
-    startDate: string;
-    subscribed: boolean;
-    subscribers: Array<string>;
-    subtitle: string;
-    targetLineLabel: string;
-    targetLineValue: number;
-    timeField: string;
-    title: string;
-    topLimit: number;
-    translations: Array<Translation>;
-    type: EventVisualization.type;
-    user: User;
-    userOrgUnitType: EventVisualization.userOrgUnitType;
-    userOrganisationUnit: boolean;
-    userOrganisationUnitChildren: boolean;
-    userOrganisationUnitGrandChildren: boolean;
-    value: DimensionalItemObject;
-};
+    access: Access
+    aggregationType: EventVisualization.aggregationType
+    attributeDimensions: Array<TrackedEntityAttributeDimension>
+    attributeValueDimension: TrackedEntityAttribute
+    attributeValues: Array<AttributeValue>
+    baseLineLabel: string
+    baseLineValue: number
+    categoryDimensions: Array<CategoryDimension>
+    categoryOptionGroupSetDimensions: Array<CategoryOptionGroupSetDimension>
+    code: string
+    colSubTotals: boolean
+    colTotals: boolean
+    collapseDataDimensions: boolean
+    columnDimensions: Array<string>
+    columns: Array<DimensionalObject>
+    completedOnly: boolean
+    created: string
+    createdBy: User
+    cumulativeValues: boolean
+    dataDimensionItems: Array<DataDimensionItem>
+    dataElementDimensions: Array<TrackedEntityDataElementDimension>
+    dataElementGroupSetDimensions: Array<DataElementGroupSetDimension>
+    dataElementValueDimension: DataElement
+    dataType: EventVisualization.dataType
+    description: string
+    digitGroupSeparator: EventVisualization.digitGroupSeparator
+    displayBaseLineLabel: string
+    displayDensity: EventVisualization.displayDensity
+    displayDescription: string
+    displayDomainAxisLabel: string
+    displayFormName: string
+    displayName: string
+    displayRangeAxisLabel: string
+    displayShortName: string
+    displaySubtitle: string
+    displayTargetLineLabel: string
+    displayTitle: string
+    domainAxisLabel: string
+    endDate: string
+    eventStatus: EventVisualization.eventStatus
+    favorite: boolean
+    favorites: Array<string>
+    filterDimensions: Array<string>
+    filters: Array<DimensionalObject>
+    fontSize: EventVisualization.fontSize
+    formName: string
+    hideEmptyRowItems: EventVisualization.hideEmptyRowItems
+    hideEmptyRows: boolean
+    hideLegend: boolean
+    hideNaData: boolean
+    hideSubtitle: boolean
+    hideTitle: boolean
+    href: string
+    id: string
+    interpretations: Array<Interpretation>
+    itemOrganisationUnitGroups: Array<OrganisationUnitGroup>
+    lastUpdated: string
+    lastUpdatedBy: User
+    legacy: boolean
+    legend: LegendDefinitions
+    name: string
+    noSpaceBetweenColumns: boolean
+    orgUnitField: string
+    organisationUnitGroupSetDimensions: Array<OrganisationUnitGroupSetDimension>
+    organisationUnitLevels: Array<number>
+    organisationUnits: Array<OrganisationUnit>
+    outputType: EventVisualization.outputType
+    parentGraphMap: Record<string, string>
+    percentStackedValues: boolean
+    periods: Array<string>
+    program: Program
+    programIndicatorDimensions: Array<TrackedEntityProgramIndicatorDimension>
+    programStage: ProgramStage
+    programStatus: EventVisualization.programStatus
+    rangeAxisDecimals: number
+    rangeAxisLabel: string
+    rangeAxisMaxValue: number
+    rangeAxisMinValue: number
+    rangeAxisSteps: number
+    regressionType: EventVisualization.regressionType
+    relativePeriods: RelativePeriods
+    repetitions: Array<EventRepetition>
+    rowDimensions: Array<string>
+    rowSubTotals: boolean
+    rowTotals: boolean
+    rows: Array<DimensionalObject>
+    sharing: Sharing
+    shortName: string
+    showData: boolean
+    showDimensionLabels: boolean
+    showHierarchy: boolean
+    simpleDimensions: Array<SimpleDimension>
+    sortOrder: number
+    startDate: string
+    subscribed: boolean
+    subscribers: Array<string>
+    subtitle: string
+    targetLineLabel: string
+    targetLineValue: number
+    timeField: string
+    title: string
+    topLimit: number
+    translations: Array<Translation>
+    type: EventVisualization.type
+    user: User
+    userOrgUnitType: EventVisualization.userOrgUnitType
+    userOrganisationUnit: boolean
+    userOrganisationUnitChildren: boolean
+    userOrganisationUnitGrandChildren: boolean
+    value: DimensionalItemObject
+}
 
 export namespace EventVisualization {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -253,7 +252,4 @@ export namespace EventVisualization {
         DATA_OUTPUT = 'DATA_OUTPUT',
         TEI_SEARCH = 'TEI_SEARCH',
     }
-
-
 }
-

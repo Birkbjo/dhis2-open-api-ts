@@ -3,21 +3,20 @@
 /* eslint-disable */
 
 export type GridHeader = {
-    column: string;
-    hidden: boolean;
-    legendSet: string;
-    meta: boolean;
-    name: string;
-    optionSet: string;
-    programStage: string;
-    repeatableStageParams: string;
-    stageOffset: number;
-    type: string;
-    valueType: GridHeader.valueType;
-};
+    column: string
+    hidden: boolean
+    legendSet: string
+    meta: boolean
+    name: string
+    optionSet: string
+    programStage: string
+    repeatableStageParams: string
+    stageOffset: number
+    type: string
+    valueType: GridHeader.valueType
+}
 
 export namespace GridHeader {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -48,7 +47,4 @@ export namespace GridHeader {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

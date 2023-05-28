@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type EventProgramsDataSynchronizationJobParameters = {
-    pageSize: number;
-};
-
+    pageSize: number
+}

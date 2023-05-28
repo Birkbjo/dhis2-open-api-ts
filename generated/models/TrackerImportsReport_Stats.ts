@@ -3,10 +3,9 @@
 /* eslint-disable */
 
 export type TrackerImportsReport_Stats = {
-    created: number;
-    deleted: number;
-    ignored: number;
-    total: number;
-    updated: number;
-};
-
+    created: number
+    deleted: number
+    ignored: number
+    total: number
+    updated: number
+}

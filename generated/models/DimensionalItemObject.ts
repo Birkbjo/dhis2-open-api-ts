@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type DimensionalItemObject = {
-    id: string;
-};
-
+    id: string
+}

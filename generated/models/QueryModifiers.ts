@@ -3,16 +3,15 @@
 /* eslint-disable */
 
 export type QueryModifiers = {
-    aggregationType: QueryModifiers.aggregationType;
-    maxDate: string;
-    minDate: string;
-    periodOffset: number;
-    valueType: QueryModifiers.valueType;
-    yearToDate: boolean;
-};
+    aggregationType: QueryModifiers.aggregationType
+    maxDate: string
+    minDate: string
+    periodOffset: number
+    valueType: QueryModifiers.valueType
+    yearToDate: boolean
+}
 
 export namespace QueryModifiers {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -67,7 +66,4 @@ export namespace QueryModifiers {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

@@ -3,16 +3,15 @@
 /* eslint-disable */
 
 export type FileResourceOwner = {
-    co: string;
-    de: string;
-    domain: FileResourceOwner.domain;
-    id: string;
-    ou: string;
-    pe: string;
-};
+    co: string
+    de: string
+    domain: FileResourceOwner.domain
+    id: string
+    ou: string
+    pe: string
+}
 
 export namespace FileResourceOwner {
-
     export enum domain {
         DATA_VALUE = 'DATA_VALUE',
         PUSH_ANALYSIS = 'PUSH_ANALYSIS',
@@ -22,7 +21,4 @@ export namespace FileResourceOwner {
         ORG_UNIT = 'ORG_UNIT',
         CUSTOM_ICON = 'CUSTOM_ICON',
     }
-
-
 }
-

@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type MetadataAdjustParams = {
-    change: Record<string, any>;
-    targetId: string;
-};
-
+    change: Record<string, any>
+    targetId: string
+}

@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.visualization.SimpleVisualizationView`)
  */
 export type Ref_SimpleVisualizationView = {
-    id: string;
-};
-
+    id: string
+}

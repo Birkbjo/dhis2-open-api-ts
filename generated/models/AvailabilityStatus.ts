@@ -3,9 +3,8 @@
 /* eslint-disable */
 
 export type AvailabilityStatus = {
-    available: boolean;
-    message: string;
-    statusCode: number;
-    statusPhrase: string;
-};
-
+    available: boolean
+    message: string
+    statusCode: number
+    statusPhrase: string
+}

@@ -3,15 +3,14 @@
 /* eslint-disable */
 
 export type OrgUnitMergeQuery = {
-    dataApprovalMergeStrategy: OrgUnitMergeQuery.dataApprovalMergeStrategy;
-    dataValueMergeStrategy: OrgUnitMergeQuery.dataValueMergeStrategy;
-    deleteSources: boolean;
-    sources: Array<string>;
-    target: string;
-};
+    dataApprovalMergeStrategy: OrgUnitMergeQuery.dataApprovalMergeStrategy
+    dataValueMergeStrategy: OrgUnitMergeQuery.dataValueMergeStrategy
+    deleteSources: boolean
+    sources: Array<string>
+    target: string
+}
 
 export namespace OrgUnitMergeQuery {
-
     export enum dataApprovalMergeStrategy {
         LAST_UPDATED = 'LAST_UPDATED',
         DISCARD = 'DISCARD',
@@ -21,7 +20,4 @@ export namespace OrgUnitMergeQuery {
         LAST_UPDATED = 'LAST_UPDATED',
         DISCARD = 'DISCARD',
     }
-
-
 }
-

@@ -2,10 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type ImportConflicts = {
-    conflictCount: number;
-    conflicts: boolean;
-    conflictsDescription: string;
-    totalConflictOccurrenceCount: number;
-};
+import type { ImportConflict } from './ImportConflict'
 
+export type ImportConflicts = {
+    conflictCount: number
+    conflicts: Array<ImportConflict>
+    conflictsDescription: string
+    totalConflictOccurrenceCount: number
+}

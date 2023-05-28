@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type MinMaxValueParams = {
-    dataSets: Array<string>;
-    organisationUnit: string;
-};
-
+    dataSets: Array<string>
+    organisationUnit: string
+}

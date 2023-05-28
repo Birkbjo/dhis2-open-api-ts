@@ -1,16 +1,16 @@
-import { IdentifiableObject } from "./models/IdentifiableObject";
+import { IdentifiableObject } from './models/IdentifiableObject'
 // import { CategoryCombo, DataElement } from "../generated";
 
-type ModelReferenceCollection<T = IdentifiableObject> = Array<T>;
-type ModelReference = IdentifiableObject | ModelReferenceCollection;
+type ModelReferenceCollection<T = IdentifiableObject> = Array<T>
+type ModelReference = IdentifiableObject | ModelReferenceCollection
 
 type BaseGist<T> = {
-    apiEndpoints: GistApiEndpoints<T>;
-};
+    apiEndpoints: GistApiEndpoints<T>
+}
 type GistApiEndpoints<T> = {
     // filter keys that are references
-    [P in keyof T as T[P] extends ModelReference ? P : never]: string;
-};
+    [P in keyof T as T[P] extends ModelReference ? P : never]: string
+}
 /**
  * A utility type that takes a Model (eg. DataElement)
  * and returns the gist-api representation of that model
@@ -20,8 +20,8 @@ export type GistModel<T> = BaseGist<T> & {
         ? T[P] extends ModelReferenceCollection
             ? number // map array-references to number (gist shows total in collection)
             : string // map references to a string (gist shows id)
-        : T[P];
-};
+        : T[P]
+}
 
 // utility type GistModel can be used like this:
 // type DataElementGist = GistModel<
@@ -49,27 +49,27 @@ export type GistModel<T> = BaseGist<T> & {
 export type GetReferencedModels<T extends IdentifiableObject> = {
     [P in keyof T as T[P] extends ModelReference
         ? P
-        : never]: T[P] extends ModelReferenceCollection ? T[P][number] : T[P];
-};
+        : never]: T[P] extends ModelReferenceCollection ? T[P][number] : T[P]
+}
 
 /**
  * Constructs a type by picking the properties of T that are of type V
  */
 export type PickValue<T, V> = {
-    [P in keyof T as T[P] extends V ? P : never]: T[P];
-};
+    [P in keyof T as T[P] extends V ? P : never]: T[P]
+}
 
 export type PickReferenceProperties<T extends IdentifiableObject> = PickValue<
     T,
     ModelReference
->;
+>
 
 // helper type to get an union of all the values in a type
-type Values<T> = T[keyof T];
+type Values<T> = T[keyof T]
 
 export type GetReferencedModelsUnion<T extends IdentifiableObject> = Values<
     GetReferencedModels<T>
->;
+>
 
 // helper type for PickInModelReferences
 // takes a type and returns the "true" type of the model.
@@ -79,7 +79,7 @@ type GetModelType<T> = T extends ModelReference
     ? T extends Array<infer U>
         ? U
         : T
-    : never;
+    : never
 
 // helper type for PickInReferences
 // Wraps the type in ModelCollection if FullModel extends ModelReferenceCollection
@@ -88,7 +88,7 @@ type MaybeModelCollection<
     FullModel extends ModelReference
 > = FullModel extends ModelReferenceCollection
     ? ModelReferenceCollection<ModelType>
-    : ModelType;
+    : ModelType
 /**
  * Utility type that picks the properties (RefProps) from the referenced models (RefModelsUnion) in Model
  *
@@ -122,5 +122,5 @@ export type PickInModelReferences<
               >
             : // if not reference, do nothing
               Model[P]
-        : Model[P];
-};
+        : Model[P]
+}

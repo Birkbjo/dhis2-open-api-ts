@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { DashboardWidgetAppSettings } from './DashboardWidgetAppSettings';
+import type { DashboardWidgetAppSettings } from './DashboardWidgetAppSettings'
 
 export type AppSettings = {
-    dashboardWidget: DashboardWidgetAppSettings;
-};
-
+    dashboardWidget: DashboardWidgetAppSettings
+}

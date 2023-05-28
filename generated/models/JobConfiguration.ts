@@ -2,64 +2,79 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AggregateDataExchangeJobParameters } from './AggregateDataExchangeJobParameters';
-import type { AnalyticsJobParameters } from './AnalyticsJobParameters';
-import type { AttributeValue } from './AttributeValue';
-import type { ContinuousAnalyticsJobParameters } from './ContinuousAnalyticsJobParameters';
-import type { DataIntegrityJobParameters } from './DataIntegrityJobParameters';
-import type { DataSynchronizationJobParameters } from './DataSynchronizationJobParameters';
-import type { DisableInactiveUsersJobParameters } from './DisableInactiveUsersJobParameters';
-import type { EventProgramsDataSynchronizationJobParameters } from './EventProgramsDataSynchronizationJobParameters';
-import type { MetadataSyncJobParameters } from './MetadataSyncJobParameters';
-import type { MonitoringJobParameters } from './MonitoringJobParameters';
-import type { PredictorJobParameters } from './PredictorJobParameters';
-import type { PushAnalysisJobParameters } from './PushAnalysisJobParameters';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { SmsJobParameters } from './SmsJobParameters';
-import type { SqlViewUpdateParameters } from './SqlViewUpdateParameters';
-import type { TestJobParameters } from './TestJobParameters';
-import type { TrackerProgramsDataSynchronizationJobParameters } from './TrackerProgramsDataSynchronizationJobParameters';
-import type { TrackerTrigramIndexJobParameters } from './TrackerTrigramIndexJobParameters';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AggregateDataExchangeJobParameters } from './AggregateDataExchangeJobParameters'
+import type { AnalyticsJobParameters } from './AnalyticsJobParameters'
+import type { AttributeValue } from './AttributeValue'
+import type { ContinuousAnalyticsJobParameters } from './ContinuousAnalyticsJobParameters'
+import type { DataIntegrityJobParameters } from './DataIntegrityJobParameters'
+import type { DataSynchronizationJobParameters } from './DataSynchronizationJobParameters'
+import type { DisableInactiveUsersJobParameters } from './DisableInactiveUsersJobParameters'
+import type { EventProgramsDataSynchronizationJobParameters } from './EventProgramsDataSynchronizationJobParameters'
+import type { MetadataSyncJobParameters } from './MetadataSyncJobParameters'
+import type { MonitoringJobParameters } from './MonitoringJobParameters'
+import type { PredictorJobParameters } from './PredictorJobParameters'
+import type { PushAnalysisJobParameters } from './PushAnalysisJobParameters'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { SmsJobParameters } from './SmsJobParameters'
+import type { SqlViewUpdateParameters } from './SqlViewUpdateParameters'
+import type { TestJobParameters } from './TestJobParameters'
+import type { TrackerProgramsDataSynchronizationJobParameters } from './TrackerProgramsDataSynchronizationJobParameters'
+import type { TrackerTrigramIndexJobParameters } from './TrackerTrigramIndexJobParameters'
+import type { Translation } from './Translation'
 
 export type JobConfiguration = {
-    access: Access;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    configurable: boolean;
-    created: string;
-    createdBy: User;
-    cronExpression: string;
-    delay: number;
-    displayName: string;
-    enabled: boolean;
-    executedBy: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    jobParameters: (AnalyticsJobParameters | ContinuousAnalyticsJobParameters | MonitoringJobParameters | PredictorJobParameters | PushAnalysisJobParameters | SmsJobParameters | MetadataSyncJobParameters | EventProgramsDataSynchronizationJobParameters | TrackerProgramsDataSynchronizationJobParameters | DataSynchronizationJobParameters | DisableInactiveUsersJobParameters | TrackerTrigramIndexJobParameters | DataIntegrityJobParameters | AggregateDataExchangeJobParameters | SqlViewUpdateParameters | TestJobParameters);
-    jobStatus: JobConfiguration.jobStatus;
-    jobType: JobConfiguration.jobType;
-    lastExecuted: string;
-    lastExecutedStatus: JobConfiguration.lastExecutedStatus;
-    lastRuntimeExecution: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    leaderOnlyJob: boolean;
-    name: string;
-    nextExecutionTime: string;
-    schedulingType: JobConfiguration.schedulingType;
-    sharing: Sharing;
-    translations: Array<Translation>;
-    user: User;
-    userUid: string;
-};
+    access: Access
+    attributeValues: Array<AttributeValue>
+    code: string
+    configurable: boolean
+    created: string
+    createdBy: User
+    cronExpression: string
+    delay: number
+    displayName: string
+    enabled: boolean
+    executedBy: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    jobParameters:
+        | AnalyticsJobParameters
+        | ContinuousAnalyticsJobParameters
+        | MonitoringJobParameters
+        | PredictorJobParameters
+        | PushAnalysisJobParameters
+        | SmsJobParameters
+        | MetadataSyncJobParameters
+        | EventProgramsDataSynchronizationJobParameters
+        | TrackerProgramsDataSynchronizationJobParameters
+        | DataSynchronizationJobParameters
+        | DisableInactiveUsersJobParameters
+        | TrackerTrigramIndexJobParameters
+        | DataIntegrityJobParameters
+        | AggregateDataExchangeJobParameters
+        | SqlViewUpdateParameters
+        | TestJobParameters
+    jobStatus: JobConfiguration.jobStatus
+    jobType: JobConfiguration.jobType
+    lastExecuted: string
+    lastExecutedStatus: JobConfiguration.lastExecutedStatus
+    lastRuntimeExecution: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    leaderOnlyJob: boolean
+    name: string
+    nextExecutionTime: string
+    schedulingType: JobConfiguration.schedulingType
+    sharing: Sharing
+    translations: Array<Translation>
+    user: User
+    userUid: string
+}
 
 export namespace JobConfiguration {
-
     export enum jobStatus {
         RUNNING = 'RUNNING',
         COMPLETED = 'COMPLETED',
@@ -133,7 +148,4 @@ export namespace JobConfiguration {
         CRON = 'CRON',
         FIXED_DELAY = 'FIXED_DELAY',
     }
-
-
 }
-

@@ -2,29 +2,28 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { AppVersion } from './AppVersion';
-import type { Developer } from './Developer';
-import type { ImageResource } from './ImageResource';
-import type { Review } from './Review';
+import type { AppVersion } from './AppVersion'
+import type { Developer } from './Developer'
+import type { ImageResource } from './ImageResource'
+import type { Review } from './Review'
 
 export type WebApp = {
-    appType: WebApp.appType;
-    created: string;
-    description: string;
-    developer: Developer;
-    id: string;
-    images: Array<ImageResource>;
-    lastUpdated: string;
-    name: string;
-    owner: string;
-    reviews: Array<Review>;
-    sourceUrl: string;
-    status: WebApp.status;
-    versions: Array<AppVersion>;
-};
+    appType: WebApp.appType
+    created: string
+    description: string
+    developer: Developer
+    id: string
+    images: Array<ImageResource>
+    lastUpdated: string
+    name: string
+    owner: string
+    reviews: Array<Review>
+    sourceUrl: string
+    status: WebApp.status
+    versions: Array<AppVersion>
+}
 
 export namespace WebApp {
-
     export enum appType {
         APP = 'APP',
         RESOURCE = 'RESOURCE',
@@ -48,7 +47,4 @@ export namespace WebApp {
         NOT_APPROVED = 'NOT_APPROVED',
         DELETION_IN_PROGRESS = 'DELETION_IN_PROGRESS',
     }
-
-
 }
-

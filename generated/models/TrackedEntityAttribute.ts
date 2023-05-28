@@ -2,65 +2,64 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { ObjectStyle } from './ObjectStyle';
-import type { QueryModifiers } from './QueryModifiers';
-import type { LegendSet } from './LegendSet';
-import type { OptionSet } from './OptionSet';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { ObjectStyle } from './ObjectStyle'
+import type { QueryModifiers } from './QueryModifiers'
+import type { LegendSet } from './LegendSet'
+import type { OptionSet } from './OptionSet'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type TrackedEntityAttribute = {
-    access: Access;
-    aggregationType: TrackedEntityAttribute.aggregationType;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    confidential: boolean;
-    created: string;
-    createdBy: User;
-    description: string;
-    dimensionItem: string;
-    displayDescription: string;
-    displayFormName: string;
-    displayInListNoProgram: boolean;
-    displayName: string;
-    displayOnVisitSchedule: boolean;
-    displayShortName: string;
-    expression: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    fieldMask: string;
-    formName: string;
-    generated: boolean;
-    href: string;
-    id: string;
-    inherit: boolean;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    legendSets: Array<LegendSet>;
-    name: string;
-    optionSet: OptionSet;
-    optionSetValue: boolean;
-    orgunitScope: boolean;
-    pattern: string;
-    queryMods: QueryModifiers;
-    sharing: Sharing;
-    shortName: string;
-    skipSynchronization: boolean;
-    sortOrderInListNoProgram: number;
-    sortOrderInVisitSchedule: number;
-    style: ObjectStyle;
-    translations: Array<Translation>;
-    unique: boolean;
-    user: User;
-    valueType: TrackedEntityAttribute.valueType;
-};
+    access: Access
+    aggregationType: TrackedEntityAttribute.aggregationType
+    attributeValues: Array<AttributeValue>
+    code: string
+    confidential: boolean
+    created: string
+    createdBy: User
+    description: string
+    dimensionItem: string
+    displayDescription: string
+    displayFormName: string
+    displayInListNoProgram: boolean
+    displayName: string
+    displayOnVisitSchedule: boolean
+    displayShortName: string
+    expression: string
+    favorite: boolean
+    favorites: Array<string>
+    fieldMask: string
+    formName: string
+    generated: boolean
+    href: string
+    id: string
+    inherit: boolean
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    legendSets: Array<LegendSet>
+    name: string
+    optionSet: OptionSet
+    optionSetValue: boolean
+    orgunitScope: boolean
+    pattern: string
+    queryMods: QueryModifiers
+    sharing: Sharing
+    shortName: string
+    skipSynchronization: boolean
+    sortOrderInListNoProgram: number
+    sortOrderInVisitSchedule: number
+    style: ObjectStyle
+    translations: Array<Translation>
+    unique: boolean
+    user: User
+    valueType: TrackedEntityAttribute.valueType
+}
 
 export namespace TrackedEntityAttribute {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -115,7 +114,4 @@ export namespace TrackedEntityAttribute {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

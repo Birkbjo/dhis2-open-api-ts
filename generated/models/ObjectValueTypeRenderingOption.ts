@@ -3,14 +3,33 @@
 /* eslint-disable */
 
 export type ObjectValueTypeRenderingOption = {
-    clazz: string;
-    hasOptionSet: boolean;
-    renderingTypes: Array<'DEFAULT' | 'DROPDOWN' | 'VERTICAL_RADIOBUTTONS' | 'HORIZONTAL_RADIOBUTTONS' | 'VERTICAL_CHECKBOXES' | 'HORIZONTAL_CHECKBOXES' | 'SHARED_HEADER_RADIOBUTTONS' | 'ICONS_AS_BUTTONS' | 'SPINNER' | 'ICON' | 'TOGGLE' | 'VALUE' | 'SLIDER' | 'LINEAR_SCALE' | 'AUTOCOMPLETE' | 'QR_CODE' | 'BAR_CODE' | 'GS1_DATAMATRIX' | 'CANVAS'>;
-    valueType: ObjectValueTypeRenderingOption.valueType;
-};
+    clazz: string
+    hasOptionSet: boolean
+    renderingTypes: Array<
+        | 'DEFAULT'
+        | 'DROPDOWN'
+        | 'VERTICAL_RADIOBUTTONS'
+        | 'HORIZONTAL_RADIOBUTTONS'
+        | 'VERTICAL_CHECKBOXES'
+        | 'HORIZONTAL_CHECKBOXES'
+        | 'SHARED_HEADER_RADIOBUTTONS'
+        | 'ICONS_AS_BUTTONS'
+        | 'SPINNER'
+        | 'ICON'
+        | 'TOGGLE'
+        | 'VALUE'
+        | 'SLIDER'
+        | 'LINEAR_SCALE'
+        | 'AUTOCOMPLETE'
+        | 'QR_CODE'
+        | 'BAR_CODE'
+        | 'GS1_DATAMATRIX'
+        | 'CANVAS'
+    >
+    valueType: ObjectValueTypeRenderingOption.valueType
+}
 
 export namespace ObjectValueTypeRenderingOption {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -41,7 +60,4 @@ export namespace ObjectValueTypeRenderingOption {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

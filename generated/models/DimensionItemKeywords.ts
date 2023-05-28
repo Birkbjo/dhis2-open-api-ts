@@ -2,10 +2,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Keyword } from './Keyword';
+import type { Keyword } from './Keyword'
 
 export type DimensionItemKeywords = {
-    empty: boolean;
-    keywords: Array<Keyword>;
-};
-
+    empty: boolean
+    keywords: Array<Keyword>
+}

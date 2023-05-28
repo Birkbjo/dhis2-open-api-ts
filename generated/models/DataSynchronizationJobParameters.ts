@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type DataSynchronizationJobParameters = {
-    pageSize: number;
-};
-
+    pageSize: number
+}

@@ -2,41 +2,40 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { TrackedEntityAttribute } from './TrackedEntityAttribute';
-import type { TrackedEntityType } from './TrackedEntityType';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { TrackedEntityAttribute } from './TrackedEntityAttribute'
+import type { TrackedEntityType } from './TrackedEntityType'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type TrackedEntityTypeAttribute = {
-    access: Access;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    created: string;
-    createdBy: User;
-    displayInList: boolean;
-    displayName: string;
-    displayShortName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    mandatory: boolean;
-    searchable: boolean;
-    sharing: Sharing;
-    trackedEntityAttribute: TrackedEntityAttribute;
-    trackedEntityType: TrackedEntityType;
-    translations: Array<Translation>;
-    user: User;
-    valueType: TrackedEntityTypeAttribute.valueType;
-};
+    access: Access
+    attributeValues: Array<AttributeValue>
+    code: string
+    created: string
+    createdBy: User
+    displayInList: boolean
+    displayName: string
+    displayShortName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    mandatory: boolean
+    searchable: boolean
+    sharing: Sharing
+    trackedEntityAttribute: TrackedEntityAttribute
+    trackedEntityType: TrackedEntityType
+    translations: Array<Translation>
+    user: User
+    valueType: TrackedEntityTypeAttribute.valueType
+}
 
 export namespace TrackedEntityTypeAttribute {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -67,7 +66,4 @@ export namespace TrackedEntityTypeAttribute {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

@@ -3,18 +3,17 @@
 /* eslint-disable */
 
 export type Dxf2DeprecatedTrackerTrackedentity_Attribute = {
-    attribute: string;
-    code: string;
-    created: string;
-    displayName: string;
-    lastUpdated: string;
-    storedBy: string;
-    value: string;
-    valueType: Dxf2DeprecatedTrackerTrackedentity_Attribute.valueType;
-};
+    attribute: string
+    code: string
+    created: string
+    displayName: string
+    lastUpdated: string
+    storedBy: string
+    value: string
+    valueType: Dxf2DeprecatedTrackerTrackedentity_Attribute.valueType
+}
 
 export namespace Dxf2DeprecatedTrackerTrackedentity_Attribute {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -45,7 +44,4 @@ export namespace Dxf2DeprecatedTrackerTrackedentity_Attribute {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

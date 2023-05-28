@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { LockExceptionDto } from './LockExceptionDto';
+import type { LockExceptionDto } from './LockExceptionDto'
 
 export type LockExceptionsDto = {
-    lockExceptions: Array<LockExceptionDto>;
-};
-
+    lockExceptions: Array<LockExceptionDto>
+}

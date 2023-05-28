@@ -2,10 +2,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ExecutionPlan } from './ExecutionPlan';
+import type { ExecutionPlan } from './ExecutionPlan'
 
 export type PerformanceMetrics = {
-    executionPlans: Array<ExecutionPlan>;
-    totalTimeInMillis: number;
-};
-
+    executionPlans: Array<ExecutionPlan>
+    totalTimeInMillis: number
+}

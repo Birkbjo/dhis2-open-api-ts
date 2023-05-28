@@ -2,20 +2,19 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { UID_JobConfiguration } from './UID_JobConfiguration';
+import type { UID_JobConfiguration } from './UID_JobConfiguration'
 
 export type SchedulerEntryJob = {
-    cronExpression: string;
-    delay: number;
-    id: UID_JobConfiguration;
-    name: string;
-    nextExecutionTime: string;
-    status: SchedulerEntryJob.status;
-    type: SchedulerEntryJob.type;
-};
+    cronExpression: string
+    delay: number
+    id: UID_JobConfiguration
+    name: string
+    nextExecutionTime: string
+    status: SchedulerEntryJob.status
+    type: SchedulerEntryJob.type
+}
 
 export namespace SchedulerEntryJob {
-
     export enum status {
         RUNNING = 'RUNNING',
         COMPLETED = 'COMPLETED',
@@ -74,7 +73,4 @@ export namespace SchedulerEntryJob {
         ANALYTICSTABLE_UPDATE = 'ANALYTICSTABLE_UPDATE',
         PROGRAM_DATA_SYNC = 'PROGRAM_DATA_SYNC',
     }
-
-
 }
-

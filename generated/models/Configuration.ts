@@ -2,31 +2,30 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { DataElementGroup } from './DataElementGroup';
-import type { IndicatorGroup } from './IndicatorGroup';
-import type { OrganisationUnit } from './OrganisationUnit';
-import type { OrganisationUnitGroupSet } from './OrganisationUnitGroupSet';
-import type { OrganisationUnitLevel } from './OrganisationUnitLevel';
-import type { UserGroup } from './UserGroup';
-import type { UserRole } from './UserRole';
+import type { DataElementGroup } from './DataElementGroup'
+import type { IndicatorGroup } from './IndicatorGroup'
+import type { OrganisationUnit } from './OrganisationUnit'
+import type { OrganisationUnitGroupSet } from './OrganisationUnitGroupSet'
+import type { OrganisationUnitLevel } from './OrganisationUnitLevel'
+import type { UserGroup } from './UserGroup'
+import type { UserRole } from './UserRole'
 
 export type Configuration = {
-    corsWhitelist: Array<string>;
-    facilityOrgUnitGroupSet: OrganisationUnitGroupSet;
-    facilityOrgUnitLevel: OrganisationUnitLevel;
-    feedbackRecipients: UserGroup;
-    infrastructuralDataElements: DataElementGroup;
-    infrastructuralIndicators: IndicatorGroup;
-    infrastructuralPeriodType: Configuration.infrastructuralPeriodType;
-    offlineOrganisationUnitLevel: OrganisationUnitLevel;
-    selfRegistrationOrgUnit: OrganisationUnit;
-    selfRegistrationRole: UserRole;
-    systemId: string;
-    systemUpdateNotificationRecipients: UserGroup;
-};
+    corsWhitelist: Array<string>
+    facilityOrgUnitGroupSet: OrganisationUnitGroupSet
+    facilityOrgUnitLevel: OrganisationUnitLevel
+    feedbackRecipients: UserGroup
+    infrastructuralDataElements: DataElementGroup
+    infrastructuralIndicators: IndicatorGroup
+    infrastructuralPeriodType: Configuration.infrastructuralPeriodType
+    offlineOrganisationUnitLevel: OrganisationUnitLevel
+    selfRegistrationOrgUnit: OrganisationUnit
+    selfRegistrationRole: UserRole
+    systemId: string
+    systemUpdateNotificationRecipients: UserGroup
+}
 
 export namespace Configuration {
-
     export enum infrastructuralPeriodType {
         BI_MONTHLY = 'BiMonthly',
         BI_WEEKLY = 'BiWeekly',
@@ -49,7 +48,4 @@ export namespace Configuration {
         WEEKLY_WEDNESDAY = 'WeeklyWednesday',
         YEARLY = 'Yearly',
     }
-
-
 }
-

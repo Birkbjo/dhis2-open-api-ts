@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type SimpleImageResource = {
-    images: Record<string, string>;
-};
-
+    images: Record<string, string>
+}

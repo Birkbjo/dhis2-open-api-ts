@@ -2,37 +2,36 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type AnalyticsPeriodBoundary = {
-    access: Access;
-    analyticsPeriodBoundaryType: AnalyticsPeriodBoundary.analyticsPeriodBoundaryType;
-    attributeValues: Array<AttributeValue>;
-    boundaryTarget: string;
-    code: string;
-    created: string;
-    createdBy: User;
-    displayName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    name: string;
-    offsetPeriodType: AnalyticsPeriodBoundary.offsetPeriodType;
-    offsetPeriods: number;
-    sharing: Sharing;
-    translations: Array<Translation>;
-    user: User;
-};
+    access: Access
+    analyticsPeriodBoundaryType: AnalyticsPeriodBoundary.analyticsPeriodBoundaryType
+    attributeValues: Array<AttributeValue>
+    boundaryTarget: string
+    code: string
+    created: string
+    createdBy: User
+    displayName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    name: string
+    offsetPeriodType: AnalyticsPeriodBoundary.offsetPeriodType
+    offsetPeriods: number
+    sharing: Sharing
+    translations: Array<Translation>
+    user: User
+}
 
 export namespace AnalyticsPeriodBoundary {
-
     export enum analyticsPeriodBoundaryType {
         BEFORE_START_OF_REPORTING_PERIOD = 'BEFORE_START_OF_REPORTING_PERIOD',
         BEFORE_END_OF_REPORTING_PERIOD = 'BEFORE_END_OF_REPORTING_PERIOD',
@@ -62,7 +61,4 @@ export namespace AnalyticsPeriodBoundary {
         WEEKLY_WEDNESDAY = 'WeeklyWednesday',
         YEARLY = 'Yearly',
     }
-
-
 }
-

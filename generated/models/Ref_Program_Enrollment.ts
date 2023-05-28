@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.program.Enrollment`)
  */
 export type Ref_Program_Enrollment = {
-    id: string;
-};
-
+    id: string
+}

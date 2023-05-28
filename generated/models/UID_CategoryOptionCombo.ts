@@ -6,4 +6,4 @@
  * A UID for an CategoryOptionCombo object
  * (Java name `org.hisp.dhis.category.CategoryOptionCombo`)
  */
-export type UID_CategoryOptionCombo = string;
+export type UID_CategoryOptionCombo = string

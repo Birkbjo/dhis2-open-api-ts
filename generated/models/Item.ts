@@ -3,18 +3,17 @@
 /* eslint-disable */
 
 export type Item = {
-    complete: boolean;
-    completedTime: string;
-    description: string;
-    duration: number;
-    error: string;
-    onFailure: Item.onFailure;
-    status: Item.status;
-    summary: string;
-};
+    complete: boolean
+    completedTime: string
+    description: string
+    duration: number
+    error: string
+    onFailure: Item.onFailure
+    status: Item.status
+    summary: string
+}
 
 export namespace Item {
-
     export enum onFailure {
         PARENT = 'PARENT',
         FAIL = 'FAIL',
@@ -29,7 +28,4 @@ export namespace Item {
         ERROR = 'ERROR',
         CANCELLED = 'CANCELLED',
     }
-
-
 }
-

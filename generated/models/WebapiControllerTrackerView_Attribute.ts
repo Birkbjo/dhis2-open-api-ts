@@ -2,21 +2,20 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { UID_WebapiControllerTrackerView_Attribute } from './UID_WebapiControllerTrackerView_Attribute';
+import type { UID_WebapiControllerTrackerView_Attribute } from './UID_WebapiControllerTrackerView_Attribute'
 
 export type WebapiControllerTrackerView_Attribute = {
-    attribute: UID_WebapiControllerTrackerView_Attribute;
-    code: string;
-    createdAt: (string | number);
-    displayName: string;
-    storedBy: string;
-    updatedAt: (string | number);
-    value: string;
-    valueType: WebapiControllerTrackerView_Attribute.valueType;
-};
+    attribute: UID_WebapiControllerTrackerView_Attribute
+    code: string
+    createdAt: string | number
+    displayName: string
+    storedBy: string
+    updatedAt: string | number
+    value: string
+    valueType: WebapiControllerTrackerView_Attribute.valueType
+}
 
 export namespace WebapiControllerTrackerView_Attribute {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -47,7 +46,4 @@ export namespace WebapiControllerTrackerView_Attribute {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

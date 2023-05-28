@@ -3,9 +3,8 @@
 /* eslint-disable */
 
 export type SharingUserGroupAccess = {
-    access: string;
-    displayName: string;
-    id: string;
-    name: string;
-};
-
+    access: string
+    displayName: string
+    id: string
+    name: string
+}

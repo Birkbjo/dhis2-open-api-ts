@@ -2,49 +2,48 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { Program } from './Program';
-import type { TrackedEntityAttribute } from './TrackedEntityAttribute';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { Program } from './Program'
+import type { TrackedEntityAttribute } from './TrackedEntityAttribute'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type ProgramTrackedEntityAttribute = {
-    access: Access;
-    allowFutureDate: boolean;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    created: string;
-    createdBy: User;
-    displayInList: boolean;
-    displayName: string;
-    displayShortName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    mandatory: boolean;
-    program: Program;
-    renderOptionsAsRadio: boolean;
+    access: Access
+    allowFutureDate: boolean
+    attributeValues: Array<AttributeValue>
+    code: string
+    created: string
+    createdBy: User
+    displayInList: boolean
+    displayName: string
+    displayShortName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    mandatory: boolean
+    program: Program
+    renderOptionsAsRadio: boolean
     /**
- * The exact type is unknown.
- * (Java type was: `org.hisp.dhis.render.DeviceRenderTypeMap<org.hisp.dhis.render.type.ValueTypeRenderingObject>`)
- */
-renderType: any;
-    searchable: boolean;
-    sharing: Sharing;
-    sortOrder: number;
-    trackedEntityAttribute: TrackedEntityAttribute;
-    translations: Array<Translation>;
-    user: User;
-    valueType: ProgramTrackedEntityAttribute.valueType;
-};
+     * The exact type is unknown.
+     * (Java type was: `org.hisp.dhis.render.DeviceRenderTypeMap<org.hisp.dhis.render.type.ValueTypeRenderingObject>`)
+     */
+    renderType: any
+    searchable: boolean
+    sharing: Sharing
+    sortOrder: number
+    trackedEntityAttribute: TrackedEntityAttribute
+    translations: Array<Translation>
+    user: User
+    valueType: ProgramTrackedEntityAttribute.valueType
+}
 
 export namespace ProgramTrackedEntityAttribute {
-
     export enum valueType {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -75,7 +74,4 @@ export namespace ProgramTrackedEntityAttribute {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

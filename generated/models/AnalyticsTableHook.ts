@@ -2,37 +2,36 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type AnalyticsTableHook = {
-    access: Access;
-    analyticsTableType: AnalyticsTableHook.analyticsTableType;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    created: string;
-    createdBy: User;
-    displayName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    name: string;
-    phase: AnalyticsTableHook.phase;
-    resourceTableType: AnalyticsTableHook.resourceTableType;
-    sharing: Sharing;
-    sql: string;
-    translations: Array<Translation>;
-    user: User;
-};
+    access: Access
+    analyticsTableType: AnalyticsTableHook.analyticsTableType
+    attributeValues: Array<AttributeValue>
+    code: string
+    created: string
+    createdBy: User
+    displayName: string
+    favorite: boolean
+    favorites: Array<string>
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    name: string
+    phase: AnalyticsTableHook.phase
+    resourceTableType: AnalyticsTableHook.resourceTableType
+    sharing: Sharing
+    sql: string
+    translations: Array<Translation>
+    user: User
+}
 
 export namespace AnalyticsTableHook {
-
     export enum analyticsTableType {
         DATA_VALUE = 'DATA_VALUE',
         COMPLETENESS = 'COMPLETENESS',
@@ -67,7 +66,4 @@ export namespace AnalyticsTableHook {
         DATA_APPROVAL_REMAP_LEVEL = 'DATA_APPROVAL_REMAP_LEVEL',
         DATA_APPROVAL_MIN_LEVEL = 'DATA_APPROVAL_MIN_LEVEL',
     }
-
-
 }
-

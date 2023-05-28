@@ -2,62 +2,61 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { DimensionItemKeywords } from './DimensionItemKeywords';
-import type { EventRepetition } from './EventRepetition';
-import type { CategoryCombo } from './CategoryCombo';
-import type { CategoryOption } from './CategoryOption';
-import type { DimensionalItemObject } from './DimensionalItemObject';
-import type { LegendSet } from './LegendSet';
-import type { OptionSet } from './OptionSet';
-import type { ProgramStage } from './ProgramStage';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { DimensionItemKeywords } from './DimensionItemKeywords'
+import type { EventRepetition } from './EventRepetition'
+import type { CategoryCombo } from './CategoryCombo'
+import type { CategoryOption } from './CategoryOption'
+import type { DimensionalItemObject } from './DimensionalItemObject'
+import type { LegendSet } from './LegendSet'
+import type { OptionSet } from './OptionSet'
+import type { ProgramStage } from './ProgramStage'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type Category = {
-    access: Access;
-    aggregationType: Category.aggregationType;
-    allItems: boolean;
-    attributeValues: Array<AttributeValue>;
-    categoryCombos: Array<CategoryCombo>;
-    categoryOptions: Array<CategoryOption>;
-    code: string;
-    created: string;
-    createdBy: User;
-    dataDimension: boolean;
-    dataDimensionType: Category.dataDimensionType;
-    description: string;
-    dimension: string;
-    dimensionItemKeywords: DimensionItemKeywords;
-    displayDescription: string;
-    displayFormName: string;
-    displayName: string;
-    displayShortName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    filter: string;
-    formName: string;
-    href: string;
-    id: string;
-    items: Array<DimensionalItemObject>;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    name: string;
-    optionSet: OptionSet;
-    programStage: ProgramStage;
-    repetition: EventRepetition;
-    sharing: Sharing;
-    shortName: string;
-    translations: Array<Translation>;
-    user: User;
-    valueType: Category.valueType;
-};
+    access: Access
+    aggregationType: Category.aggregationType
+    allItems: boolean
+    attributeValues: Array<AttributeValue>
+    categoryCombos: Array<CategoryCombo>
+    categoryOptions: Array<CategoryOption>
+    code: string
+    created: string
+    createdBy: User
+    dataDimension: boolean
+    dataDimensionType: Category.dataDimensionType
+    description: string
+    dimension: string
+    dimensionItemKeywords: DimensionItemKeywords
+    displayDescription: string
+    displayFormName: string
+    displayName: string
+    displayShortName: string
+    favorite: boolean
+    favorites: Array<string>
+    filter: string
+    formName: string
+    href: string
+    id: string
+    items: Array<DimensionalItemObject>
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    name: string
+    optionSet: OptionSet
+    programStage: ProgramStage
+    repetition: EventRepetition
+    sharing: Sharing
+    shortName: string
+    translations: Array<Translation>
+    user: User
+    valueType: Category.valueType
+}
 
 export namespace Category {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -117,7 +116,4 @@ export namespace Category {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

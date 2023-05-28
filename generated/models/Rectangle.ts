@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type Rectangle = {
-    count: number;
-    extent: string;
-};
-
+    count: number
+    extent: string
+}

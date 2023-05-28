@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type RemoveByIdOperation = {
-    op: string;
-    path: string;
-};
-
+    op: string
+    path: string
+}

@@ -3,11 +3,10 @@
 /* eslint-disable */
 
 export type KafkaTarget = {
-    bootstrapServers: string;
-    clientId: string;
-    password: string;
-    topic: string;
-    type: string;
-    username: string;
-};
-
+    bootstrapServers: string
+    clientId: string
+    password: string
+    topic: string
+    type: string
+    username: string
+}

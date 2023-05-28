@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type PushAnalysisJobParameters = {
-    pushAnalysis: Array<Record<string, any>>;
-};
-
+    pushAnalysis: Array<Record<string, any>>
+}

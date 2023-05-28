@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type SchedulerQueue = {
-    cronExpression: string;
-    name: string;
-    sequence: Array<Record<string, any>>;
-};
-
+    cronExpression: string
+    name: string
+    sequence: Array<Record<string, any>>
+}

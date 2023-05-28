@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type StyleObject = {
-    key: string;
-    name: string;
-    path: string;
-};
-
+    key: string
+    name: string
+    path: string
+}

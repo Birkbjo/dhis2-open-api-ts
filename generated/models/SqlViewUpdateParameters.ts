@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type SqlViewUpdateParameters = {
-    sqlViews: Array<Record<string, any>>;
-};
-
+    sqlViews: Array<Record<string, any>>
+}

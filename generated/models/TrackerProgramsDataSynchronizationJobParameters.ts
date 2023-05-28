@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type TrackerProgramsDataSynchronizationJobParameters = {
-    pageSize: number;
-};
-
+    pageSize: number
+}

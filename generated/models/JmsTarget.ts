@@ -3,13 +3,12 @@
 /* eslint-disable */
 
 export type JmsTarget = {
-    address: string;
-    brokerUrl: string;
-    clientId: string;
-    groupId: string;
-    password: string;
-    type: string;
-    useQueue: boolean;
-    username: string;
-};
-
+    address: string
+    brokerUrl: string
+    clientId: string
+    groupId: string
+    password: string
+    type: string
+    useQueue: boolean
+    username: string
+}

@@ -2,88 +2,87 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { ObjectStyle } from './ObjectStyle';
-import type { ProgramTrackedEntityAttribute } from './ProgramTrackedEntityAttribute';
-import type { CategoryCombo } from './CategoryCombo';
-import type { DataEntryForm } from './DataEntryForm';
-import type { OrganisationUnit } from './OrganisationUnit';
-import type { ProgramIndicator } from './ProgramIndicator';
-import type { ProgramNotificationTemplate } from './ProgramNotificationTemplate';
-import type { ProgramRuleVariable } from './ProgramRuleVariable';
-import type { ProgramSection } from './ProgramSection';
-import type { ProgramStage } from './ProgramStage';
-import type { TrackedEntityType } from './TrackedEntityType';
-import type { User } from './User';
-import type { UserRole } from './UserRole';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { ObjectStyle } from './ObjectStyle'
+import type { ProgramTrackedEntityAttribute } from './ProgramTrackedEntityAttribute'
+import type { CategoryCombo } from './CategoryCombo'
+import type { DataEntryForm } from './DataEntryForm'
+import type { OrganisationUnit } from './OrganisationUnit'
+import type { ProgramIndicator } from './ProgramIndicator'
+import type { ProgramNotificationTemplate } from './ProgramNotificationTemplate'
+import type { ProgramRuleVariable } from './ProgramRuleVariable'
+import type { ProgramSection } from './ProgramSection'
+import type { ProgramStage } from './ProgramStage'
+import type { TrackedEntityType } from './TrackedEntityType'
+import type { User } from './User'
+import type { UserRole } from './UserRole'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type Program = {
-    access: Access;
-    accessLevel: Program.accessLevel;
-    attributeValues: Array<AttributeValue>;
-    categoryCombo: CategoryCombo;
-    code: string;
-    completeEventsExpiryDays: number;
-    created: string;
-    createdBy: User;
-    dataEntryForm: DataEntryForm;
-    description: string;
-    displayDescription: string;
-    displayEnrollmentDateLabel: string;
-    displayFormName: string;
-    displayFrontPageList: boolean;
-    displayIncidentDate: boolean;
-    displayIncidentDateLabel: string;
-    displayName: string;
-    displayShortName: string;
-    enrollmentDateLabel: string;
-    expiryDays: number;
-    expiryPeriodType: Program.expiryPeriodType;
-    favorite: boolean;
-    favorites: Array<string>;
-    featureType: Program.featureType;
-    formName: string;
-    href: string;
-    id: string;
-    ignoreOverdueEvents: boolean;
-    incidentDateLabel: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    maxTeiCountToReturn: number;
-    minAttributesRequiredToSearch: number;
-    name: string;
-    notificationTemplates: Array<ProgramNotificationTemplate>;
-    onlyEnrollOnce: boolean;
-    openDaysAfterCoEndDate: number;
-    organisationUnits: Array<OrganisationUnit>;
-    programIndicators: Array<ProgramIndicator>;
-    programRuleVariables: Array<ProgramRuleVariable>;
-    programSections: Array<ProgramSection>;
-    programStages: Array<ProgramStage>;
-    programTrackedEntityAttributes: Array<ProgramTrackedEntityAttribute>;
-    programType: Program.programType;
-    registration: boolean;
-    relatedProgram: Program;
-    selectEnrollmentDatesInFuture: boolean;
-    selectIncidentDatesInFuture: boolean;
-    sharing: Sharing;
-    shortName: string;
-    skipOffline: boolean;
-    style: ObjectStyle;
-    trackedEntityType: TrackedEntityType;
-    translations: Array<Translation>;
-    useFirstStageDuringRegistration: boolean;
-    user: User;
-    userRoles: Array<UserRole>;
-    version: number;
-    withoutRegistration: boolean;
-};
+    access: Access
+    accessLevel: Program.accessLevel
+    attributeValues: Array<AttributeValue>
+    categoryCombo: CategoryCombo
+    code: string
+    completeEventsExpiryDays: number
+    created: string
+    createdBy: User
+    dataEntryForm: DataEntryForm
+    description: string
+    displayDescription: string
+    displayEnrollmentDateLabel: string
+    displayFormName: string
+    displayFrontPageList: boolean
+    displayIncidentDate: boolean
+    displayIncidentDateLabel: string
+    displayName: string
+    displayShortName: string
+    enrollmentDateLabel: string
+    expiryDays: number
+    expiryPeriodType: Program.expiryPeriodType
+    favorite: boolean
+    favorites: Array<string>
+    featureType: Program.featureType
+    formName: string
+    href: string
+    id: string
+    ignoreOverdueEvents: boolean
+    incidentDateLabel: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    maxTeiCountToReturn: number
+    minAttributesRequiredToSearch: number
+    name: string
+    notificationTemplates: Array<ProgramNotificationTemplate>
+    onlyEnrollOnce: boolean
+    openDaysAfterCoEndDate: number
+    organisationUnits: Array<OrganisationUnit>
+    programIndicators: Array<ProgramIndicator>
+    programRuleVariables: Array<ProgramRuleVariable>
+    programSections: Array<ProgramSection>
+    programStages: Array<ProgramStage>
+    programTrackedEntityAttributes: Array<ProgramTrackedEntityAttribute>
+    programType: Program.programType
+    registration: boolean
+    relatedProgram: Program
+    selectEnrollmentDatesInFuture: boolean
+    selectIncidentDatesInFuture: boolean
+    sharing: Sharing
+    shortName: string
+    skipOffline: boolean
+    style: ObjectStyle
+    trackedEntityType: TrackedEntityType
+    translations: Array<Translation>
+    useFirstStageDuringRegistration: boolean
+    user: User
+    userRoles: Array<UserRole>
+    version: number
+    withoutRegistration: boolean
+}
 
 export namespace Program {
-
     export enum accessLevel {
         OPEN = 'OPEN',
         AUDITED = 'AUDITED',
@@ -126,7 +125,4 @@ export namespace Program {
         WITH_REGISTRATION = 'WITH_REGISTRATION',
         WITHOUT_REGISTRATION = 'WITHOUT_REGISTRATION',
     }
-
-
 }
-

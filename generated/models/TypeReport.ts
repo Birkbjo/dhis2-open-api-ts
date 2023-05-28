@@ -2,12 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ObjectReport } from './ObjectReport';
-import type { Stats } from './Stats';
+import type { ObjectReport } from './ObjectReport'
+import type { Stats } from './Stats'
 
 export type TypeReport = {
-    klass: string;
-    objectReports: Array<ObjectReport>;
-    stats: Stats;
-};
-
+    klass: string
+    objectReports: Array<ObjectReport>
+    stats: Stats
+}

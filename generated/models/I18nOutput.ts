@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type I18nOutput = {
-    translations: Record<string, string>;
-};
-
+    translations: Record<string, string>
+}

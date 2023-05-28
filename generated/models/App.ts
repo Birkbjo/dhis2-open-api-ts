@@ -2,41 +2,40 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { AppActivities } from './AppActivities';
-import type { AppDeveloper } from './AppDeveloper';
-import type { AppIcons } from './AppIcons';
-import type { AppSettings } from './AppSettings';
+import type { AppActivities } from './AppActivities'
+import type { AppDeveloper } from './AppDeveloper'
+import type { AppIcons } from './AppIcons'
+import type { AppSettings } from './AppSettings'
 
 export type App = {
-    activities: AppActivities;
-    appState: App.appState;
-    appStorageSource: App.appStorageSource;
-    appType: App.appType;
-    app_hub_id: string;
-    authorities: Array<string>;
-    baseUrl: string;
-    bundled: boolean;
-    core_app: boolean;
-    default_locale: string;
-    description: string;
-    developer: AppDeveloper;
-    folderName: string;
-    icons: AppIcons;
-    installs_allowed_from: Array<string>;
-    key: string;
-    launchUrl: string;
-    launch_path: string;
-    name: string;
-    pluginLaunchUrl: string;
-    plugin_launch_path: string;
-    plugin_type: string;
-    settings: AppSettings;
-    short_name: string;
-    version: string;
-};
+    activities: AppActivities
+    appState: App.appState
+    appStorageSource: App.appStorageSource
+    appType: App.appType
+    app_hub_id: string
+    authorities: Array<string>
+    baseUrl: string
+    bundled: boolean
+    core_app: boolean
+    default_locale: string
+    description: string
+    developer: AppDeveloper
+    folderName: string
+    icons: AppIcons
+    installs_allowed_from: Array<string>
+    key: string
+    launchUrl: string
+    launch_path: string
+    name: string
+    pluginLaunchUrl: string
+    plugin_launch_path: string
+    plugin_type: string
+    settings: AppSettings
+    short_name: string
+    version: string
+}
 
 export namespace App {
-
     export enum appState {
         OK = 'OK',
         INVALID_BUNDLED_APP_OVERRIDE = 'INVALID_BUNDLED_APP_OVERRIDE',
@@ -65,7 +64,4 @@ export namespace App {
         DASHBOARD_WIDGET = 'DASHBOARD_WIDGET',
         TRACKER_DASHBOARD_WIDGET = 'TRACKER_DASHBOARD_WIDGET',
     }
-
-
 }
-

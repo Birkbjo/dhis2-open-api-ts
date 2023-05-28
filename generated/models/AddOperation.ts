@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type AddOperation = {
-    op: string;
-    path: string;
-    value: Record<string, any>;
-};
-
+    op: string
+    path: string
+    value: Record<string, any>
+}

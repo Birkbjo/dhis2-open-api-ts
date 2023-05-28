@@ -2,17 +2,16 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Property } from './Property';
+import type { Property } from './Property'
 
 export type JobTypeInfo = {
-    jobParameters: Array<Property>;
-    jobType: JobTypeInfo.jobType;
-    name: string;
-    schedulingType: JobTypeInfo.schedulingType;
-};
+    jobParameters: Array<Property>
+    jobType: JobTypeInfo.jobType
+    name: string
+    schedulingType: JobTypeInfo.schedulingType
+}
 
 export namespace JobTypeInfo {
-
     export enum jobType {
         DATA_STATISTICS = 'DATA_STATISTICS',
         DATA_INTEGRITY = 'DATA_INTEGRITY',
@@ -66,7 +65,4 @@ export namespace JobTypeInfo {
         CRON = 'CRON',
         FIXED_DELAY = 'FIXED_DELAY',
     }
-
-
 }
-

@@ -3,18 +3,17 @@
 /* eslint-disable */
 
 export type WebMessage = {
-    code: number;
-    devMessage: string;
-    errorCode: WebMessage.errorCode;
-    httpStatus: string;
-    httpStatusCode: number;
-    message: string;
-    response: WebMessage;
-    status: WebMessage.status;
-};
+    code: number
+    devMessage: string
+    errorCode: WebMessage.errorCode
+    httpStatus: string
+    httpStatusCode: number
+    message: string
+    response: WebMessage
+    status: WebMessage.status
+}
 
 export namespace WebMessage {
-
     export enum errorCode {
         E1000 = 'E1000',
         E1001 = 'E1001',
@@ -437,7 +436,4 @@ export namespace WebMessage {
         WARNING = 'WARNING',
         ERROR = 'ERROR',
     }
-
-
 }
-

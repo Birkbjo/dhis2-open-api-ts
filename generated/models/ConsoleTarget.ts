@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type ConsoleTarget = {
-    clientId: string;
-    type: string;
-};
-
+    clientId: string
+    type: string
+}

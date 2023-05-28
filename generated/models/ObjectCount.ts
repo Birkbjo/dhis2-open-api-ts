@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type ObjectCount = {
-    objectCounts: Record<string, number>;
-};
-
+    objectCounts: Record<string, number>
+}

@@ -2,28 +2,27 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { DateFilterPeriod } from './DateFilterPeriod';
-import type { EventDataFilter } from './EventDataFilter';
+import type { DateFilterPeriod } from './DateFilterPeriod'
+import type { EventDataFilter } from './EventDataFilter'
 
 export type EventQueryCriteria = {
-    assignedUserMode: EventQueryCriteria.assignedUserMode;
-    assignedUsers: Array<string>;
-    completedDate: DateFilterPeriod;
-    dataFilters: Array<EventDataFilter>;
-    displayColumnOrder: Array<string>;
-    dueDate: DateFilterPeriod;
-    eventDate: DateFilterPeriod;
-    events: Array<string>;
-    followUp: boolean;
-    lastUpdatedDate: DateFilterPeriod;
-    order: string;
-    organisationUnit: string;
-    ouMode: EventQueryCriteria.ouMode;
-    status: EventQueryCriteria.status;
-};
+    assignedUserMode: EventQueryCriteria.assignedUserMode
+    assignedUsers: Array<string>
+    completedDate: DateFilterPeriod
+    dataFilters: Array<EventDataFilter>
+    displayColumnOrder: Array<string>
+    dueDate: DateFilterPeriod
+    eventDate: DateFilterPeriod
+    events: Array<string>
+    followUp: boolean
+    lastUpdatedDate: DateFilterPeriod
+    order: string
+    organisationUnit: string
+    ouMode: EventQueryCriteria.ouMode
+    status: EventQueryCriteria.status
+}
 
 export namespace EventQueryCriteria {
-
     export enum assignedUserMode {
         CURRENT = 'CURRENT',
         PROVIDED = 'PROVIDED',
@@ -49,7 +48,4 @@ export namespace EventQueryCriteria {
         OVERDUE = 'OVERDUE',
         SKIPPED = 'SKIPPED',
     }
-
-
 }
-

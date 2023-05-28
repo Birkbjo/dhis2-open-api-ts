@@ -2,50 +2,49 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { QueryModifiers } from './QueryModifiers';
-import type { CategoryCombo } from './CategoryCombo';
-import type { CategoryOption } from './CategoryOption';
-import type { LegendSet } from './LegendSet';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { QueryModifiers } from './QueryModifiers'
+import type { CategoryCombo } from './CategoryCombo'
+import type { CategoryOption } from './CategoryOption'
+import type { LegendSet } from './LegendSet'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type CategoryOptionCombo = {
-    access: Access;
-    aggregationType: CategoryOptionCombo.aggregationType;
-    attributeValues: Array<AttributeValue>;
-    categoryCombo: CategoryCombo;
-    categoryOptions: Array<CategoryOption>;
-    code: string;
-    created: string;
-    createdBy: User;
-    description: string;
-    dimensionItem: string;
-    dimensionItemType: CategoryOptionCombo.dimensionItemType;
-    displayDescription: string;
-    displayFormName: string;
-    displayName: string;
-    displayShortName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    formName: string;
-    href: string;
-    id: string;
-    ignoreApproval: boolean;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    legendSets: Array<LegendSet>;
-    queryMods: QueryModifiers;
-    sharing: Sharing;
-    translations: Array<Translation>;
-    user: User;
-};
+    access: Access
+    aggregationType: CategoryOptionCombo.aggregationType
+    attributeValues: Array<AttributeValue>
+    categoryCombo: CategoryCombo
+    categoryOptions: Array<CategoryOption>
+    code: string
+    created: string
+    createdBy: User
+    description: string
+    dimensionItem: string
+    dimensionItemType: CategoryOptionCombo.dimensionItemType
+    displayDescription: string
+    displayFormName: string
+    displayName: string
+    displayShortName: string
+    favorite: boolean
+    favorites: Array<string>
+    formName: string
+    href: string
+    id: string
+    ignoreApproval: boolean
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    legendSets: Array<LegendSet>
+    queryMods: QueryModifiers
+    sharing: Sharing
+    translations: Array<Translation>
+    user: User
+}
 
 export namespace CategoryOptionCombo {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -88,7 +87,4 @@ export namespace CategoryOptionCombo {
         EXPRESSION_DIMENSION_ITEM = 'EXPRESSION_DIMENSION_ITEM',
         SUBEXPRESSION_DIMENSION_ITEM = 'SUBEXPRESSION_DIMENSION_ITEM',
     }
-
-
 }
-

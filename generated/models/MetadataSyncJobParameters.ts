@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type MetadataSyncJobParameters = {
-    dataValuesPageSize: number;
-    eventProgramPageSize: number;
-    trackerProgramPageSize: number;
-};
-
+    dataValuesPageSize: number
+    eventProgramPageSize: number
+    trackerProgramPageSize: number
+}

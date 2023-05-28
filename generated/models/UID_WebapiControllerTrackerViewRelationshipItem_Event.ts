@@ -6,4 +6,4 @@
  * A UID for an WebapiControllerTrackerViewRelationshipItem-Event object
  * (Java name `org.hisp.dhis.webapi.controller.tracker.view.RelationshipItem$Event`)
  */
-export type UID_WebapiControllerTrackerViewRelationshipItem_Event = string;
+export type UID_WebapiControllerTrackerViewRelationshipItem_Event = string

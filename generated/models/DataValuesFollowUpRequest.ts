@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { DataValueFollowUpRequest } from './DataValueFollowUpRequest';
+import type { DataValueFollowUpRequest } from './DataValueFollowUpRequest'
 
 export type DataValuesFollowUpRequest = {
-    values: Array<DataValueFollowUpRequest>;
-};
-
+    values: Array<DataValueFollowUpRequest>
+}

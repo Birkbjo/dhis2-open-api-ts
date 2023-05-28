@@ -3,15 +3,14 @@
 /* eslint-disable */
 
 export type IdScheme = {
-    attribute: string;
-    identifiableProperty: IdScheme.identifiableProperty;
-    identifiableString: string;
-    notNull: boolean;
-    null: boolean;
-};
+    attribute: string
+    identifiableProperty: IdScheme.identifiableProperty
+    identifiableString: string
+    notNull: boolean
+    null: boolean
+}
 
 export namespace IdScheme {
-
     export enum identifiableProperty {
         ID = 'ID',
         UID = 'UID',
@@ -20,7 +19,4 @@ export namespace IdScheme {
         CODE = 'CODE',
         ATTRIBUTE = 'ATTRIBUTE',
     }
-
-
 }
-

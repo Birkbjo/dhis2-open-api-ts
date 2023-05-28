@@ -3,17 +3,16 @@
 /* eslint-disable */
 
 export type FontStyle = {
-    bold: boolean;
-    font: FontStyle.font;
-    fontSize: number;
-    italic: boolean;
-    textAlign: FontStyle.textAlign;
-    textColor: string;
-    underline: boolean;
-};
+    bold: boolean
+    font: FontStyle.font
+    fontSize: number
+    italic: boolean
+    textAlign: FontStyle.textAlign
+    textColor: string
+    underline: boolean
+}
 
 export namespace FontStyle {
-
     export enum font {
         ARIAL = 'ARIAL',
         SANS_SERIF = 'SANS_SERIF',
@@ -26,7 +25,4 @@ export namespace FontStyle {
         CENTER = 'CENTER',
         RIGHT = 'RIGHT',
     }
-
-
 }
-

@@ -3,17 +3,16 @@
 /* eslint-disable */
 
 export type OutlierDetectionMetadata = {
-    algorithm: OutlierDetectionMetadata.algorithm;
-    count: number;
-    dataEndDate: string;
-    dataStartDate: string;
-    maxResults: number;
-    orderBy: OutlierDetectionMetadata.orderBy;
-    threshold: number;
-};
+    algorithm: OutlierDetectionMetadata.algorithm
+    count: number
+    dataEndDate: string
+    dataStartDate: string
+    maxResults: number
+    orderBy: OutlierDetectionMetadata.orderBy
+    threshold: number
+}
 
 export namespace OutlierDetectionMetadata {
-
     export enum algorithm {
         Z_SCORE = 'Z_SCORE',
         MIN_MAX = 'MIN_MAX',
@@ -24,7 +23,4 @@ export namespace OutlierDetectionMetadata {
         MEAN_ABS_DEV = 'MEAN_ABS_DEV',
         Z_SCORE = 'Z_SCORE',
     }
-
-
 }
-

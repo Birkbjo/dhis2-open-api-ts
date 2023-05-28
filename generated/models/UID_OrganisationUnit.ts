@@ -6,4 +6,4 @@
  * A UID for an OrganisationUnit object
  * (Java name `org.hisp.dhis.organisationunit.OrganisationUnit`)
  */
-export type UID_OrganisationUnit = string;
+export type UID_OrganisationUnit = string

@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.eventvisualization.SimpleEventVisualizationView`)
  */
 export type Ref_SimpleEventVisualizationView = {
-    id: string;
-};
-
+    id: string
+}

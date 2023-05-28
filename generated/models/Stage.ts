@@ -2,23 +2,22 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Item } from './Item';
+import type { Item } from './Item'
 
 export type Stage = {
-    complete: boolean;
-    completedTime: string;
-    description: string;
-    duration: number;
-    error: string;
-    items: Array<Item>;
-    onFailure: Stage.onFailure;
-    status: Stage.status;
-    summary: string;
-    totalItems: number;
-};
+    complete: boolean
+    completedTime: string
+    description: string
+    duration: number
+    error: string
+    items: Array<Item>
+    onFailure: Stage.onFailure
+    status: Stage.status
+    summary: string
+    totalItems: number
+}
 
 export namespace Stage {
-
     export enum onFailure {
         PARENT = 'PARENT',
         FAIL = 'FAIL',
@@ -33,7 +32,4 @@ export namespace Stage {
         ERROR = 'ERROR',
         CANCELLED = 'CANCELLED',
     }
-
-
 }
-

@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.interpretation.InterpretationComment`)
  */
 export type Ref_InterpretationComment = {
-    id: string;
-};
-
+    id: string
+}

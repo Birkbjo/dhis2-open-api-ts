@@ -2,29 +2,28 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ObjectStyle } from './ObjectStyle';
-import type { IndicatorType } from './IndicatorType';
+import type { ObjectStyle } from './ObjectStyle'
+import type { IndicatorType } from './IndicatorType'
 
 export type MetadataItem = {
-    aggregationType: MetadataItem.aggregationType;
-    code: string;
-    description: string;
-    dimensionItemType: MetadataItem.dimensionItemType;
-    dimensionType: MetadataItem.dimensionType;
-    endDate: string;
-    expression: string;
-    indicatorType: IndicatorType;
-    legendSet: string;
-    name: string;
-    startDate: string;
-    style: ObjectStyle;
-    totalAggregationType: MetadataItem.totalAggregationType;
-    uid: string;
-    valueType: MetadataItem.valueType;
-};
+    aggregationType: MetadataItem.aggregationType
+    code: string
+    description: string
+    dimensionItemType: MetadataItem.dimensionItemType
+    dimensionType: MetadataItem.dimensionType
+    endDate: string
+    expression: string
+    indicatorType: IndicatorType
+    legendSet: string
+    name: string
+    startDate: string
+    style: ObjectStyle
+    totalAggregationType: MetadataItem.totalAggregationType
+    uid: string
+    valueType: MetadataItem.valueType
+}
 
 export namespace MetadataItem {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -124,7 +123,4 @@ export namespace MetadataItem {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

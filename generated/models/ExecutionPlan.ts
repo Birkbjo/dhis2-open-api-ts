@@ -3,10 +3,9 @@
 /* eslint-disable */
 
 export type ExecutionPlan = {
-    executionTime: number;
-    plan: Record<string, any>;
-    planningTime: number;
-    query: string;
-    timeInMillis: number;
-};
-
+    executionTime: number
+    plan: Record<string, any>
+    planningTime: number
+    query: string
+    timeInMillis: number
+}

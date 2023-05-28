@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.message.Message`)
  */
 export type Ref_Message = {
-    id: string;
-};
-
+    id: string
+}

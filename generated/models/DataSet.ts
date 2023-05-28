@@ -2,87 +2,86 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { DataElementOperand } from './DataElementOperand';
-import type { DataInputPeriod } from './DataInputPeriod';
-import type { DataSetElement } from './DataSetElement';
-import type { ObjectStyle } from './ObjectStyle';
-import type { QueryModifiers } from './QueryModifiers';
-import type { CategoryCombo } from './CategoryCombo';
-import type { DataApprovalWorkflow } from './DataApprovalWorkflow';
-import type { DataEntryForm } from './DataEntryForm';
-import type { Indicator } from './Indicator';
-import type { Interpretation } from './Interpretation';
-import type { LegendSet } from './LegendSet';
-import type { OrganisationUnit } from './OrganisationUnit';
-import type { Section } from './Section';
-import type { User } from './User';
-import type { UserGroup } from './UserGroup';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { DataElementOperand } from './DataElementOperand'
+import type { DataInputPeriod } from './DataInputPeriod'
+import type { DataSetElement } from './DataSetElement'
+import type { ObjectStyle } from './ObjectStyle'
+import type { QueryModifiers } from './QueryModifiers'
+import type { CategoryCombo } from './CategoryCombo'
+import type { DataApprovalWorkflow } from './DataApprovalWorkflow'
+import type { DataEntryForm } from './DataEntryForm'
+import type { Indicator } from './Indicator'
+import type { Interpretation } from './Interpretation'
+import type { LegendSet } from './LegendSet'
+import type { OrganisationUnit } from './OrganisationUnit'
+import type { Section } from './Section'
+import type { User } from './User'
+import type { UserGroup } from './UserGroup'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type DataSet = {
-    access: Access;
-    aggregationType: DataSet.aggregationType;
-    attributeValues: Array<AttributeValue>;
-    categoryCombo: CategoryCombo;
-    code: string;
-    compulsoryDataElementOperands: Array<DataElementOperand>;
-    compulsoryFieldsCompleteOnly: boolean;
-    created: string;
-    createdBy: User;
-    dataElementDecoration: boolean;
-    dataEntryForm: DataEntryForm;
-    dataInputPeriods: Array<DataInputPeriod>;
-    dataSetElements: Array<DataSetElement>;
-    description: string;
-    dimensionItem: string;
-    displayDescription: string;
-    displayFormName: string;
-    displayName: string;
-    displayShortName: string;
-    expiryDays: number;
-    favorite: boolean;
-    favorites: Array<string>;
-    fieldCombinationRequired: boolean;
-    formName: string;
-    formType: DataSet.formType;
-    href: string;
-    id: string;
-    indicators: Array<Indicator>;
-    interpretations: Array<Interpretation>;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    legendSets: Array<LegendSet>;
-    mobile: boolean;
-    name: string;
-    noValueRequiresComment: boolean;
-    notificationRecipients: UserGroup;
-    notifyCompletingUser: boolean;
-    openFuturePeriods: number;
-    openPeriodsAfterCoEndDate: number;
-    organisationUnits: Array<OrganisationUnit>;
-    periodType: DataSet.periodType;
-    queryMods: QueryModifiers;
-    renderAsTabs: boolean;
-    renderHorizontally: boolean;
-    sections: Array<Section>;
-    sharing: Sharing;
-    shortName: string;
-    skipOffline: boolean;
-    style: ObjectStyle;
-    timelyDays: number;
-    translations: Array<Translation>;
-    user: User;
-    validCompleteOnly: boolean;
-    version: number;
-    workflow: DataApprovalWorkflow;
-};
+    access: Access
+    aggregationType: DataSet.aggregationType
+    attributeValues: Array<AttributeValue>
+    categoryCombo: CategoryCombo
+    code: string
+    compulsoryDataElementOperands: Array<DataElementOperand>
+    compulsoryFieldsCompleteOnly: boolean
+    created: string
+    createdBy: User
+    dataElementDecoration: boolean
+    dataEntryForm: DataEntryForm
+    dataInputPeriods: Array<DataInputPeriod>
+    dataSetElements: Array<DataSetElement>
+    description: string
+    dimensionItem: string
+    displayDescription: string
+    displayFormName: string
+    displayName: string
+    displayShortName: string
+    expiryDays: number
+    favorite: boolean
+    favorites: Array<string>
+    fieldCombinationRequired: boolean
+    formName: string
+    formType: DataSet.formType
+    href: string
+    id: string
+    indicators: Array<Indicator>
+    interpretations: Array<Interpretation>
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    legendSets: Array<LegendSet>
+    mobile: boolean
+    name: string
+    noValueRequiresComment: boolean
+    notificationRecipients: UserGroup
+    notifyCompletingUser: boolean
+    openFuturePeriods: number
+    openPeriodsAfterCoEndDate: number
+    organisationUnits: Array<OrganisationUnit>
+    periodType: DataSet.periodType
+    queryMods: QueryModifiers
+    renderAsTabs: boolean
+    renderHorizontally: boolean
+    sections: Array<Section>
+    sharing: Sharing
+    shortName: string
+    skipOffline: boolean
+    style: ObjectStyle
+    timelyDays: number
+    translations: Array<Translation>
+    user: User
+    validCompleteOnly: boolean
+    version: number
+    workflow: DataApprovalWorkflow
+}
 
 export namespace DataSet {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -136,7 +135,4 @@ export namespace DataSet {
         WEEKLY_WEDNESDAY = 'WeeklyWednesday',
         YEARLY = 'Yearly',
     }
-
-
 }
-

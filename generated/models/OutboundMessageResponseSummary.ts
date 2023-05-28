@@ -3,18 +3,17 @@
 /* eslint-disable */
 
 export type OutboundMessageResponseSummary = {
-    batchType: OutboundMessageResponseSummary.batchType;
-    errorMessage: string;
-    failed: number;
-    pending: number;
-    responseMessage: string;
-    sent: number;
-    status: OutboundMessageResponseSummary.status;
-    total: number;
-};
+    batchType: OutboundMessageResponseSummary.batchType
+    errorMessage: string
+    failed: number
+    pending: number
+    responseMessage: string
+    sent: number
+    status: OutboundMessageResponseSummary.status
+    total: number
+}
 
 export namespace OutboundMessageResponseSummary {
-
     export enum batchType {
         SMS = 'SMS',
         EMAIL = 'EMAIL',
@@ -27,7 +26,4 @@ export namespace OutboundMessageResponseSummary {
         PENDING = 'PENDING',
         ABORTED = 'ABORTED',
     }
-
-
 }
-

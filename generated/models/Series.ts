@@ -3,13 +3,12 @@
 /* eslint-disable */
 
 export type Series = {
-    axis: number;
-    dimensionItem: string;
-    type: Series.type;
-};
+    axis: number
+    dimensionItem: string
+    type: Series.type
+}
 
 export namespace Series {
-
     export enum type {
         COLUMN = 'COLUMN',
         STACKED_COLUMN = 'STACKED_COLUMN',
@@ -28,7 +27,4 @@ export namespace Series {
         SINGLE_VALUE = 'SINGLE_VALUE',
         PIVOT_TABLE = 'PIVOT_TABLE',
     }
-
-
 }
-

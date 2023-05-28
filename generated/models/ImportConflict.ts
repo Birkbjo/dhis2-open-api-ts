@@ -3,16 +3,15 @@
 /* eslint-disable */
 
 export type ImportConflict = {
-    errorCode: ImportConflict.errorCode;
-    indexes: Array<number>;
-    object: string;
-    objects: Record<string, string>;
-    property: string;
-    value: string;
-};
+    errorCode: ImportConflict.errorCode
+    indexes: Array<number>
+    object: string
+    objects: Record<string, string>
+    property: string
+    value: string
+}
 
 export namespace ImportConflict {
-
     export enum errorCode {
         E1000 = 'E1000',
         E1001 = 'E1001',
@@ -429,7 +428,4 @@ export namespace ImportConflict {
         E7711 = 'E7711',
         E7712 = 'E7712',
     }
-
-
 }
-

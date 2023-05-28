@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type WebapiControllerDatastoreController_Pager = {
-    page: number;
-    pageSize: number;
-};
-
+    page: number
+    pageSize: number
+}

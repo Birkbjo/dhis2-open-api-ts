@@ -3,10 +3,9 @@
 /* eslint-disable */
 
 export type CompleteStatusDto = {
-    complete: boolean;
-    created: string;
-    createdBy: string;
-    lastUpdated: string;
-    lastUpdatedBy: string;
-};
-
+    complete: boolean
+    created: string
+    createdBy: string
+    lastUpdated: string
+    lastUpdatedBy: string
+}

@@ -3,16 +3,15 @@
 /* eslint-disable */
 
 export type DateFilterPeriod = {
-    endBuffer: number;
-    endDate: string;
-    period: DateFilterPeriod.period;
-    startBuffer: number;
-    startDate: string;
-    type: DateFilterPeriod.type;
-};
+    endBuffer: number
+    endDate: string
+    period: DateFilterPeriod.period
+    startBuffer: number
+    startDate: string
+    type: DateFilterPeriod.type
+}
 
 export namespace DateFilterPeriod {
-
     export enum period {
         TODAY = 'TODAY',
         YESTERDAY = 'YESTERDAY',
@@ -65,7 +64,4 @@ export namespace DateFilterPeriod {
         RELATIVE = 'RELATIVE',
         ABSOLUTE = 'ABSOLUTE',
     }
-
-
 }
-

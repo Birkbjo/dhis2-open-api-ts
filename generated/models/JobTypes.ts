@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { JobTypeInfo } from './JobTypeInfo';
+import type { JobTypeInfo } from './JobTypeInfo'
 
 export type JobTypes = {
-    jobTypes: Array<JobTypeInfo>;
-};
-
+    jobTypes: Array<JobTypeInfo>
+}

@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type Filter = {
-    dimension: string;
-    items: Array<string>;
-};
-
+    dimension: string
+    items: Array<string>
+}

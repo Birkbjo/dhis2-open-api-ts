@@ -3,23 +3,22 @@
 /* eslint-disable */
 
 export type MetadataImportParams = {
-    atomicMode: MetadataImportParams.atomicMode;
-    flushMode: MetadataImportParams.flushMode;
-    identifier: MetadataImportParams.identifier;
-    importMode: MetadataImportParams.importMode;
-    importReportMode: MetadataImportParams.importReportMode;
-    importStrategy: MetadataImportParams.importStrategy;
-    mergeMode: MetadataImportParams.mergeMode;
-    metadataSyncImport: boolean;
-    preheatMode: MetadataImportParams.preheatMode;
-    skipSharing: boolean;
-    skipTranslation: boolean;
-    skipValidation: boolean;
-    userOverrideMode: MetadataImportParams.userOverrideMode;
-};
+    atomicMode: MetadataImportParams.atomicMode
+    flushMode: MetadataImportParams.flushMode
+    identifier: MetadataImportParams.identifier
+    importMode: MetadataImportParams.importMode
+    importReportMode: MetadataImportParams.importReportMode
+    importStrategy: MetadataImportParams.importStrategy
+    mergeMode: MetadataImportParams.mergeMode
+    metadataSyncImport: boolean
+    preheatMode: MetadataImportParams.preheatMode
+    skipSharing: boolean
+    skipTranslation: boolean
+    skipValidation: boolean
+    userOverrideMode: MetadataImportParams.userOverrideMode
+}
 
 export namespace MetadataImportParams {
-
     export enum atomicMode {
         ALL = 'ALL',
         NONE = 'NONE',
@@ -78,7 +77,4 @@ export namespace MetadataImportParams {
         CURRENT = 'CURRENT',
         SELECTED = 'SELECTED',
     }
-
-
 }
-

@@ -2,18 +2,17 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { FilterPeriod } from './FilterPeriod';
+import type { FilterPeriod } from './FilterPeriod'
 
 export type Trackedentityfilter_EventFilter = {
-    assignedUserMode: Trackedentityfilter_EventFilter.assignedUserMode;
-    assignedUsers: Array<string>;
-    eventCreatedPeriod: FilterPeriod;
-    eventStatus: Trackedentityfilter_EventFilter.eventStatus;
-    programStage: string;
-};
+    assignedUserMode: Trackedentityfilter_EventFilter.assignedUserMode
+    assignedUsers: Array<string>
+    eventCreatedPeriod: FilterPeriod
+    eventStatus: Trackedentityfilter_EventFilter.eventStatus
+    programStage: string
+}
 
 export namespace Trackedentityfilter_EventFilter {
-
     export enum assignedUserMode {
         CURRENT = 'CURRENT',
         PROVIDED = 'PROVIDED',
@@ -30,7 +29,4 @@ export namespace Trackedentityfilter_EventFilter {
         OVERDUE = 'OVERDUE',
         SKIPPED = 'SKIPPED',
     }
-
-
 }
-

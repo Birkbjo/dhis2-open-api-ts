@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type Eventhook_Source = {
-    fields: string;
-    path: string;
-};
-
+    fields: string
+    path: string
+}

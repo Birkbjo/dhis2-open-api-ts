@@ -3,10 +3,9 @@
 /* eslint-disable */
 
 export type MonitoringJobParameters = {
-    persistResults: boolean;
-    relativeEnd: number;
-    relativeStart: number;
-    sendNotifications: boolean;
-    validationRuleGroups: Array<Record<string, any>>;
-};
-
+    persistResults: boolean
+    relativeEnd: number
+    relativeStart: number
+    sendNotifications: boolean
+    validationRuleGroups: Array<Record<string, any>>
+}

@@ -2,9 +2,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { FollowupParams } from './FollowupParams';
+import type { FollowupParams } from './FollowupParams'
 
 export type UpdateFollowUpForDataValuesRequest = {
-    followups: Array<FollowupParams>;
-};
-
+    followups: Array<FollowupParams>
+}

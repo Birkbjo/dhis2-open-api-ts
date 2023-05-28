@@ -3,10 +3,9 @@
 /* eslint-disable */
 
 export type LeaderNodeInfo = {
-    currentNodeId: string;
-    currentNodeUuid: string;
-    leader: boolean;
-    leaderNodeId: string;
-    leaderNodeUuid: string;
-};
-
+    currentNodeId: string
+    currentNodeUuid: string
+    leader: boolean
+    leaderNodeId: string
+    leaderNodeUuid: string
+}

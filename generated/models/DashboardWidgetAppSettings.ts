@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type DashboardWidgetAppSettings = {
-    hideTitle: boolean;
-};
-
+    hideTitle: boolean
+}

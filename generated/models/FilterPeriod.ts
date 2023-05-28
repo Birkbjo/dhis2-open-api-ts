@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type FilterPeriod = {
-    periodFrom: number;
-    periodTo: number;
-};
-
+    periodFrom: number
+    periodTo: number
+}

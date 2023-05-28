@@ -3,19 +3,18 @@
 /* eslint-disable */
 
 export type Notification = {
-    category: Notification.category;
-    completed: boolean;
-    data: Record<string, any>;
-    dataType: Notification.dataType;
-    id: string;
-    level: Notification.level;
-    message: string;
-    time: string;
-    uid: string;
-};
+    category: Notification.category
+    completed: boolean
+    data: Record<string, any>
+    dataType: Notification.dataType
+    id: string
+    level: Notification.level
+    message: string
+    time: string
+    uid: string
+}
 
 export namespace Notification {
-
     export enum category {
         DATA_STATISTICS = 'DATA_STATISTICS',
         DATA_INTEGRITY = 'DATA_INTEGRITY',
@@ -77,7 +76,4 @@ export namespace Notification {
         WARN = 'WARN',
         ERROR = 'ERROR',
     }
-
-
 }
-

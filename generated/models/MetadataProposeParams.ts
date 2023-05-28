@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type MetadataProposeParams = {
-    change: Record<string, any>;
-    comment: string;
-    targetId: string;
-};
-
+    change: Record<string, any>
+    comment: string
+    targetId: string
+}

@@ -3,27 +3,26 @@
 /* eslint-disable */
 
 export type SMPPGatewayConfig = {
-    bindType: SMPPGatewayConfig.bindType;
-    compressed: boolean;
-    host: string;
-    id: string;
-    isDefault: boolean;
-    maxSmsLength: string;
-    name: string;
-    numberPlanIndicator: SMPPGatewayConfig.numberPlanIndicator;
-    password: string;
-    port: number;
-    sendUrlParameters: boolean;
-    systemId: string;
-    systemType: string;
-    typeOfNumber: SMPPGatewayConfig.typeOfNumber;
-    uid: string;
-    urlTemplate: string;
-    username: string;
-};
+    bindType: SMPPGatewayConfig.bindType
+    compressed: boolean
+    host: string
+    id: string
+    isDefault: boolean
+    maxSmsLength: string
+    name: string
+    numberPlanIndicator: SMPPGatewayConfig.numberPlanIndicator
+    password: string
+    port: number
+    sendUrlParameters: boolean
+    systemId: string
+    systemType: string
+    typeOfNumber: SMPPGatewayConfig.typeOfNumber
+    uid: string
+    urlTemplate: string
+    username: string
+}
 
 export namespace SMPPGatewayConfig {
-
     export enum bindType {
         BIND_TX = 'BIND_TX',
         BIND_RX = 'BIND_RX',
@@ -52,7 +51,4 @@ export namespace SMPPGatewayConfig {
         ALPHANUMERIC = 'ALPHANUMERIC',
         ABBREVIATED = 'ABBREVIATED',
     }
-
-
 }
-

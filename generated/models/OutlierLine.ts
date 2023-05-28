@@ -3,7 +3,6 @@
 /* eslint-disable */
 
 export type OutlierLine = {
-    enabled: boolean;
-    value: number;
-};
-
+    enabled: boolean
+    value: number
+}

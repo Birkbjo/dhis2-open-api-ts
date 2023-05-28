@@ -2,153 +2,152 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { Axis } from './Axis';
-import type { AxisV2 } from './AxisV2';
-import type { CategoryDimension } from './CategoryDimension';
-import type { CategoryOptionGroupSetDimension } from './CategoryOptionGroupSetDimension';
-import type { DataDimensionItem } from './DataDimensionItem';
-import type { DataElementGroupSetDimension } from './DataElementGroupSetDimension';
-import type { Icon } from './Icon';
-import type { LegendDefinitions } from './LegendDefinitions';
-import type { OrganisationUnitGroupSetDimension } from './OrganisationUnitGroupSetDimension';
-import type { OutlierAnalysis } from './OutlierAnalysis';
-import type { DimensionalObject } from './DimensionalObject';
-import type { Interpretation } from './Interpretation';
-import type { OrganisationUnit } from './OrganisationUnit';
-import type { OrganisationUnitGroup } from './OrganisationUnitGroup';
-import type { User } from './User';
-import type { RelativePeriods } from './RelativePeriods';
-import type { ReportingParams } from './ReportingParams';
-import type { Series } from './Series';
-import type { SeriesKey } from './SeriesKey';
-import type { Sharing } from './Sharing';
-import type { TrackedEntityAttributeDimension } from './TrackedEntityAttributeDimension';
-import type { TrackedEntityDataElementDimension } from './TrackedEntityDataElementDimension';
-import type { TrackedEntityProgramIndicatorDimension } from './TrackedEntityProgramIndicatorDimension';
-import type { Translation } from './Translation';
-import type { VisualizationFontStyle } from './VisualizationFontStyle';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { Axis } from './Axis'
+import type { AxisV2 } from './AxisV2'
+import type { CategoryDimension } from './CategoryDimension'
+import type { CategoryOptionGroupSetDimension } from './CategoryOptionGroupSetDimension'
+import type { DataDimensionItem } from './DataDimensionItem'
+import type { DataElementGroupSetDimension } from './DataElementGroupSetDimension'
+import type { Icon } from './Icon'
+import type { LegendDefinitions } from './LegendDefinitions'
+import type { OrganisationUnitGroupSetDimension } from './OrganisationUnitGroupSetDimension'
+import type { OutlierAnalysis } from './OutlierAnalysis'
+import type { DimensionalObject } from './DimensionalObject'
+import type { Interpretation } from './Interpretation'
+import type { OrganisationUnit } from './OrganisationUnit'
+import type { OrganisationUnitGroup } from './OrganisationUnitGroup'
+import type { User } from './User'
+import type { RelativePeriods } from './RelativePeriods'
+import type { ReportingParams } from './ReportingParams'
+import type { Series } from './Series'
+import type { SeriesKey } from './SeriesKey'
+import type { Sharing } from './Sharing'
+import type { TrackedEntityAttributeDimension } from './TrackedEntityAttributeDimension'
+import type { TrackedEntityDataElementDimension } from './TrackedEntityDataElementDimension'
+import type { TrackedEntityProgramIndicatorDimension } from './TrackedEntityProgramIndicatorDimension'
+import type { Translation } from './Translation'
+import type { VisualizationFontStyle } from './VisualizationFontStyle'
 
 export type Visualization = {
-    access: Access;
-    aggregationType: Visualization.aggregationType;
-    attributeDimensions: Array<TrackedEntityAttributeDimension>;
-    attributeValues: Array<AttributeValue>;
-    axes: Array<AxisV2>;
-    baseLineLabel: string;
-    baseLineValue: number;
-    categoryDimensions: Array<CategoryDimension>;
-    categoryOptionGroupSetDimensions: Array<CategoryOptionGroupSetDimension>;
-    code: string;
-    colSubTotals: boolean;
-    colTotals: boolean;
-    colorSet: string;
-    columnDimensions: Array<string>;
-    columns: Array<DimensionalObject>;
-    completedOnly: boolean;
-    created: string;
-    createdBy: User;
-    cumulativeValues: boolean;
-    dataDimensionItems: Array<DataDimensionItem>;
-    dataElementDimensions: Array<TrackedEntityDataElementDimension>;
-    dataElementGroupSetDimensions: Array<DataElementGroupSetDimension>;
-    description: string;
-    digitGroupSeparator: Visualization.digitGroupSeparator;
-    displayBaseLineLabel: string;
-    displayDensity: Visualization.displayDensity;
-    displayDescription: string;
-    displayDomainAxisLabel: string;
-    displayFormName: string;
-    displayName: string;
-    displayRangeAxisLabel: string;
-    displayShortName: string;
-    displaySubtitle: string;
-    displayTargetLineLabel: string;
-    displayTitle: string;
-    domainAxisLabel: string;
-    endDate: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    filterDimensions: Array<string>;
-    filters: Array<DimensionalObject>;
-    fixColumnHeaders: boolean;
-    fixRowHeaders: boolean;
-    fontSize: Visualization.fontSize;
-    fontStyle: VisualizationFontStyle;
-    formName: string;
-    hideEmptyColumns: boolean;
-    hideEmptyRowItems: Visualization.hideEmptyRowItems;
-    hideEmptyRows: boolean;
-    hideLegend: boolean;
-    hideSubtitle: boolean;
-    hideTitle: boolean;
-    href: string;
-    icons: Array<Icon>;
-    id: string;
-    interpretations: Array<Interpretation>;
-    itemOrganisationUnitGroups: Array<OrganisationUnitGroup>;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legend: LegendDefinitions;
-    measureCriteria: string;
-    name: string;
-    noSpaceBetweenColumns: boolean;
-    numberType: Visualization.numberType;
-    optionalAxes: Array<Axis>;
-    orgUnitField: string;
-    organisationUnitGroupSetDimensions: Array<OrganisationUnitGroupSetDimension>;
-    organisationUnitLevels: Array<number>;
-    organisationUnits: Array<OrganisationUnit>;
-    outlierAnalysis: OutlierAnalysis;
-    parentGraphMap: Record<string, string>;
-    percentStackedValues: boolean;
-    periods: Array<string>;
-    programIndicatorDimensions: Array<TrackedEntityProgramIndicatorDimension>;
-    rangeAxisDecimals: number;
-    rangeAxisLabel: string;
-    rangeAxisMaxValue: number;
-    rangeAxisMinValue: number;
-    rangeAxisSteps: number;
-    regression: boolean;
-    regressionType: Visualization.regressionType;
-    relativePeriods: RelativePeriods;
-    reportingParams: ReportingParams;
-    rowDimensions: Array<string>;
-    rowSubTotals: boolean;
-    rowTotals: boolean;
-    rows: Array<DimensionalObject>;
-    series: Array<Series>;
-    seriesKey: SeriesKey;
-    sharing: Sharing;
-    shortName: string;
-    showData: boolean;
-    showDimensionLabels: boolean;
-    showHierarchy: boolean;
-    skipRounding: boolean;
-    sortOrder: number;
-    startDate: string;
-    subscribed: boolean;
-    subscribers: Array<string>;
-    subtitle: string;
-    targetLineLabel: string;
-    targetLineValue: number;
-    timeField: string;
-    title: string;
-    topLimit: number;
-    translations: Array<Translation>;
-    type: Visualization.type;
-    user: User;
-    userOrgUnitType: Visualization.userOrgUnitType;
-    userOrganisationUnit: boolean;
-    userOrganisationUnitChildren: boolean;
-    userOrganisationUnitGrandChildren: boolean;
-    visualizationPeriodName: string;
-    yearlySeries: Array<string>;
-};
+    access: Access
+    aggregationType: Visualization.aggregationType
+    attributeDimensions: Array<TrackedEntityAttributeDimension>
+    attributeValues: Array<AttributeValue>
+    axes: Array<AxisV2>
+    baseLineLabel: string
+    baseLineValue: number
+    categoryDimensions: Array<CategoryDimension>
+    categoryOptionGroupSetDimensions: Array<CategoryOptionGroupSetDimension>
+    code: string
+    colSubTotals: boolean
+    colTotals: boolean
+    colorSet: string
+    columnDimensions: Array<string>
+    columns: Array<DimensionalObject>
+    completedOnly: boolean
+    created: string
+    createdBy: User
+    cumulativeValues: boolean
+    dataDimensionItems: Array<DataDimensionItem>
+    dataElementDimensions: Array<TrackedEntityDataElementDimension>
+    dataElementGroupSetDimensions: Array<DataElementGroupSetDimension>
+    description: string
+    digitGroupSeparator: Visualization.digitGroupSeparator
+    displayBaseLineLabel: string
+    displayDensity: Visualization.displayDensity
+    displayDescription: string
+    displayDomainAxisLabel: string
+    displayFormName: string
+    displayName: string
+    displayRangeAxisLabel: string
+    displayShortName: string
+    displaySubtitle: string
+    displayTargetLineLabel: string
+    displayTitle: string
+    domainAxisLabel: string
+    endDate: string
+    favorite: boolean
+    favorites: Array<string>
+    filterDimensions: Array<string>
+    filters: Array<DimensionalObject>
+    fixColumnHeaders: boolean
+    fixRowHeaders: boolean
+    fontSize: Visualization.fontSize
+    fontStyle: VisualizationFontStyle
+    formName: string
+    hideEmptyColumns: boolean
+    hideEmptyRowItems: Visualization.hideEmptyRowItems
+    hideEmptyRows: boolean
+    hideLegend: boolean
+    hideSubtitle: boolean
+    hideTitle: boolean
+    href: string
+    icons: Array<Icon>
+    id: string
+    interpretations: Array<Interpretation>
+    itemOrganisationUnitGroups: Array<OrganisationUnitGroup>
+    lastUpdated: string
+    lastUpdatedBy: User
+    legend: LegendDefinitions
+    measureCriteria: string
+    name: string
+    noSpaceBetweenColumns: boolean
+    numberType: Visualization.numberType
+    optionalAxes: Array<Axis>
+    orgUnitField: string
+    organisationUnitGroupSetDimensions: Array<OrganisationUnitGroupSetDimension>
+    organisationUnitLevels: Array<number>
+    organisationUnits: Array<OrganisationUnit>
+    outlierAnalysis: OutlierAnalysis
+    parentGraphMap: Record<string, string>
+    percentStackedValues: boolean
+    periods: Array<string>
+    programIndicatorDimensions: Array<TrackedEntityProgramIndicatorDimension>
+    rangeAxisDecimals: number
+    rangeAxisLabel: string
+    rangeAxisMaxValue: number
+    rangeAxisMinValue: number
+    rangeAxisSteps: number
+    regression: boolean
+    regressionType: Visualization.regressionType
+    relativePeriods: RelativePeriods
+    reportingParams: ReportingParams
+    rowDimensions: Array<string>
+    rowSubTotals: boolean
+    rowTotals: boolean
+    rows: Array<DimensionalObject>
+    series: Array<Series>
+    seriesKey: SeriesKey
+    sharing: Sharing
+    shortName: string
+    showData: boolean
+    showDimensionLabels: boolean
+    showHierarchy: boolean
+    skipRounding: boolean
+    sortOrder: number
+    startDate: string
+    subscribed: boolean
+    subscribers: Array<string>
+    subtitle: string
+    targetLineLabel: string
+    targetLineValue: number
+    timeField: string
+    title: string
+    topLimit: number
+    translations: Array<Translation>
+    type: Visualization.type
+    user: User
+    userOrgUnitType: Visualization.userOrgUnitType
+    userOrganisationUnit: boolean
+    userOrganisationUnitChildren: boolean
+    userOrganisationUnitGrandChildren: boolean
+    visualizationPeriodName: string
+    yearlySeries: Array<string>
+}
 
 export namespace Visualization {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -237,7 +236,4 @@ export namespace Visualization {
         DATA_OUTPUT = 'DATA_OUTPUT',
         TEI_SEARCH = 'TEI_SEARCH',
     }
-
-
 }
-

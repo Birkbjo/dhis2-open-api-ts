@@ -2,66 +2,65 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { DataSetElement } from './DataSetElement';
-import type { FileTypeValueOptions } from './FileTypeValueOptions';
-import type { ObjectStyle } from './ObjectStyle';
-import type { QueryModifiers } from './QueryModifiers';
-import type { CategoryCombo } from './CategoryCombo';
-import type { DataElementGroup } from './DataElementGroup';
-import type { LegendSet } from './LegendSet';
-import type { OptionSet } from './OptionSet';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { DataSetElement } from './DataSetElement'
+import type { FileTypeValueOptions } from './FileTypeValueOptions'
+import type { ObjectStyle } from './ObjectStyle'
+import type { QueryModifiers } from './QueryModifiers'
+import type { CategoryCombo } from './CategoryCombo'
+import type { DataElementGroup } from './DataElementGroup'
+import type { LegendSet } from './LegendSet'
+import type { OptionSet } from './OptionSet'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type DataElement = {
-    access: Access;
-    aggregationLevels: Array<number>;
-    aggregationType: DataElement.aggregationType;
-    attributeValues: Array<AttributeValue>;
-    categoryCombo: CategoryCombo;
-    code: string;
-    commentOptionSet: OptionSet;
-    created: string;
-    createdBy: User;
-    dataElementGroups: Array<DataElementGroup>;
-    dataSetElements: Array<DataSetElement>;
-    description: string;
-    dimensionItem: string;
-    displayDescription: string;
-    displayFormName: string;
-    displayName: string;
-    displayShortName: string;
-    domainType: DataElement.domainType;
-    favorite: boolean;
-    favorites: Array<string>;
-    fieldMask: string;
-    formName: string;
-    href: string;
-    id: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    legendSets: Array<LegendSet>;
-    name: string;
-    optionSet: OptionSet;
-    optionSetValue: boolean;
-    queryMods: QueryModifiers;
-    sharing: Sharing;
-    shortName: string;
-    style: ObjectStyle;
-    translations: Array<Translation>;
-    url: string;
-    user: User;
-    valueType: DataElement.valueType;
-    valueTypeOptions: FileTypeValueOptions;
-    zeroIsSignificant: boolean;
-};
+    access: Access
+    aggregationLevels: Array<number>
+    aggregationType: DataElement.aggregationType
+    attributeValues: Array<AttributeValue>
+    categoryCombo: CategoryCombo
+    code: string
+    commentOptionSet: OptionSet
+    created: string
+    createdBy: User
+    dataElementGroups: Array<DataElementGroup>
+    dataSetElements: Array<DataSetElement>
+    description: string
+    dimensionItem: string
+    displayDescription: string
+    displayFormName: string
+    displayName: string
+    displayShortName: string
+    domainType: DataElement.domainType
+    favorite: boolean
+    favorites: Array<string>
+    fieldMask: string
+    formName: string
+    href: string
+    id: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    legendSets: Array<LegendSet>
+    name: string
+    optionSet: OptionSet
+    optionSetValue: boolean
+    queryMods: QueryModifiers
+    sharing: Sharing
+    shortName: string
+    style: ObjectStyle
+    translations: Array<Translation>
+    url: string
+    user: User
+    valueType: DataElement.valueType
+    valueTypeOptions: FileTypeValueOptions
+    zeroIsSignificant: boolean
+}
 
 export namespace DataElement {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -121,7 +120,4 @@ export namespace DataElement {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

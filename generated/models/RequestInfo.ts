@@ -3,6 +3,5 @@
 /* eslint-disable */
 
 export type RequestInfo = {
-    headerXRequestID: string;
-};
-
+    headerXRequestID: string
+}

@@ -3,17 +3,16 @@
 /* eslint-disable */
 
 export type Field = {
-    categoryOptionCombo: string;
-    comment: string;
-    dataElement: string;
-    label: string;
-    optionSet: string;
-    type: Field.type;
-    value: string;
-};
+    categoryOptionCombo: string
+    comment: string
+    dataElement: string
+    label: string
+    optionSet: string
+    type: Field.type
+    value: string
+}
 
 export namespace Field {
-
     export enum type {
         TEXT = 'TEXT',
         LONG_TEXT = 'LONG_TEXT',
@@ -44,7 +43,4 @@ export namespace Field {
         IMAGE = 'IMAGE',
         GEOJSON = 'GEOJSON',
     }
-
-
 }
-

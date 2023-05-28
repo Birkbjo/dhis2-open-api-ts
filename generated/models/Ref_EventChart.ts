@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.eventchart.EventChart`)
  */
 export type Ref_EventChart = {
-    id: string;
-};
-
+    id: string
+}

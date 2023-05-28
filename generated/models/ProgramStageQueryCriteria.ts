@@ -2,30 +2,29 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { AttributeValueFilter } from './AttributeValueFilter';
-import type { DateFilterPeriod } from './DateFilterPeriod';
-import type { EventDataFilter } from './EventDataFilter';
+import type { AttributeValueFilter } from './AttributeValueFilter'
+import type { DateFilterPeriod } from './DateFilterPeriod'
+import type { EventDataFilter } from './EventDataFilter'
 
 export type ProgramStageQueryCriteria = {
-    assignedUserMode: ProgramStageQueryCriteria.assignedUserMode;
-    assignedUsers: Array<string>;
-    attributeValueFilters: Array<AttributeValueFilter>;
-    dataFilters: Array<EventDataFilter>;
-    displayColumnOrder: Array<string>;
-    enrolledAt: DateFilterPeriod;
-    enrollmentOccurredAt: DateFilterPeriod;
-    enrollmentStatus: ProgramStageQueryCriteria.enrollmentStatus;
-    eventCreatedAt: DateFilterPeriod;
-    eventOccurredAt: DateFilterPeriod;
-    eventScheduledAt: DateFilterPeriod;
-    eventStatus: ProgramStageQueryCriteria.eventStatus;
-    order: string;
-    orgUnit: string;
-    ouMode: ProgramStageQueryCriteria.ouMode;
-};
+    assignedUserMode: ProgramStageQueryCriteria.assignedUserMode
+    assignedUsers: Array<string>
+    attributeValueFilters: Array<AttributeValueFilter>
+    dataFilters: Array<EventDataFilter>
+    displayColumnOrder: Array<string>
+    enrolledAt: DateFilterPeriod
+    enrollmentOccurredAt: DateFilterPeriod
+    enrollmentStatus: ProgramStageQueryCriteria.enrollmentStatus
+    eventCreatedAt: DateFilterPeriod
+    eventOccurredAt: DateFilterPeriod
+    eventScheduledAt: DateFilterPeriod
+    eventStatus: ProgramStageQueryCriteria.eventStatus
+    order: string
+    orgUnit: string
+    ouMode: ProgramStageQueryCriteria.ouMode
+}
 
 export namespace ProgramStageQueryCriteria {
-
     export enum assignedUserMode {
         CURRENT = 'CURRENT',
         PROVIDED = 'PROVIDED',
@@ -57,7 +56,4 @@ export namespace ProgramStageQueryCriteria {
         CAPTURE = 'CAPTURE',
         ALL = 'ALL',
     }
-
-
 }
-

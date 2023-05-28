@@ -2,44 +2,43 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Access } from './Access';
-import type { AttributeValue } from './AttributeValue';
-import type { QueryModifiers } from './QueryModifiers';
-import type { DataSet } from './DataSet';
-import type { LegendSet } from './LegendSet';
-import type { User } from './User';
-import type { Sharing } from './Sharing';
-import type { Translation } from './Translation';
+import type { Access } from './Access'
+import type { AttributeValue } from './AttributeValue'
+import type { QueryModifiers } from './QueryModifiers'
+import type { DataSet } from './DataSet'
+import type { LegendSet } from './LegendSet'
+import type { User } from './User'
+import type { Sharing } from './Sharing'
+import type { Translation } from './Translation'
 
 export type ReportingRate = {
-    access: Access;
-    aggregationType: ReportingRate.aggregationType;
-    attributeValues: Array<AttributeValue>;
-    code: string;
-    created: string;
-    createdBy: User;
-    dataSet: DataSet;
-    description: string;
-    displayDescription: string;
-    displayFormName: string;
-    displayName: string;
-    displayShortName: string;
-    favorite: boolean;
-    favorites: Array<string>;
-    formName: string;
-    href: string;
-    lastUpdated: string;
-    lastUpdatedBy: User;
-    legendSet: LegendSet;
-    metric: ReportingRate.metric;
-    queryMods: QueryModifiers;
-    sharing: Sharing;
-    translations: Array<Translation>;
-    user: User;
-};
+    access: Access
+    aggregationType: ReportingRate.aggregationType
+    attributeValues: Array<AttributeValue>
+    code: string
+    created: string
+    createdBy: User
+    dataSet: DataSet
+    description: string
+    displayDescription: string
+    displayFormName: string
+    displayName: string
+    displayShortName: string
+    favorite: boolean
+    favorites: Array<string>
+    formName: string
+    href: string
+    lastUpdated: string
+    lastUpdatedBy: User
+    legendSet: LegendSet
+    metric: ReportingRate.metric
+    queryMods: QueryModifiers
+    sharing: Sharing
+    translations: Array<Translation>
+    user: User
+}
 
 export namespace ReportingRate {
-
     export enum aggregationType {
         SUM = 'SUM',
         AVERAGE = 'AVERAGE',
@@ -71,7 +70,4 @@ export namespace ReportingRate {
         ACTUAL_REPORTS_ON_TIME = 'ACTUAL_REPORTS_ON_TIME',
         EXPECTED_REPORTS = 'EXPECTED_REPORTS',
     }
-
-
 }
-

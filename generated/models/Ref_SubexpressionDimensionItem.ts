@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.subexpression.SubexpressionDimensionItem`)
  */
 export type Ref_SubexpressionDimensionItem = {
-    id: string;
-};
-
+    id: string
+}

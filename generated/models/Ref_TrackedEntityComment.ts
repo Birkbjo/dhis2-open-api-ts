@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.trackedentitycomment.TrackedEntityComment`)
  */
 export type Ref_TrackedEntityComment = {
-    id: string;
-};
-
+    id: string
+}

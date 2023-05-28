@@ -2,12 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User } from './User';
+import type { User } from './User'
 
 export type UserMessage = {
-    followUp: boolean;
-    key: string;
-    read: boolean;
-    user: User;
-};
-
+    followUp: boolean
+    key: string
+    read: boolean
+    user: User
+}

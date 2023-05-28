@@ -7,6 +7,5 @@
  * (Java name `org.hisp.dhis.eventreport.EventReport`)
  */
 export type Ref_EventReport = {
-    id: string;
-};
-
+    id: string
+}

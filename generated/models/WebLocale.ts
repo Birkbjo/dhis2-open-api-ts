@@ -3,8 +3,7 @@
 /* eslint-disable */
 
 export type WebLocale = {
-    displayName: string;
-    locale: string;
-    name: string;
-};
-
+    displayName: string
+    locale: string
+    name: string
+}
