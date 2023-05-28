@@ -1,7 +1,7 @@
 import * as OpenAPI from "openapi-typescript-codegen";
 import { parseArgs } from "node:util";
 import fs from "fs";
-import { TSTransformer, TransformerObject } from "./transformer";
+import { TSTransformer } from "./transformer";
 import {
     replaceRefsWithModelType,
     removeUnusedFiles,
@@ -12,9 +12,31 @@ import {
     addGeneratedByComment,
     formatFiles,
 } from "./transformers";
+import path from "path";
 
 const getOpenApiSchemaFileName = (version: string): string =>
     `openapi-dhis2-${version}.json`;
+
+const resolveLatestOpenApiJson = (): Record<string, any> | null => {
+    try {
+        const fileNames = fs
+            .readdirSync(".")
+            .filter(
+                (fileName) =>
+                    fileName.startsWith("openapi") && fileName.endsWith(".json")
+            )
+            .sort();
+        const latestSchema = fileNames.pop();
+
+        if (!latestSchema) {
+            return null;
+        }
+        const fileContent = fs.readFileSync(latestSchema, "utf-8");
+        return JSON.parse(fileContent);
+    } catch {
+        return null;
+    }
+};
 
 function fetchOpenAPI(url: string): Promise<any> {
     console.log("fetching", url);
@@ -48,25 +70,24 @@ async function getOpenApi(
     url: string,
     options: GetOpenApiSchemaOptions = { force: false }
 ): Promise<CachedResult> {
-    const fileNames = fs
-        .readdirSync(".")
-        .filter(
-            (fileName) =>
-                fileName.startsWith("openapi") && fileName.endsWith(".json")
-        )
-        .sort();
+    const latestSchema = resolveLatestOpenApiJson();
 
-    const latestSchema = fileNames.pop();
     let result;
-    let cached = false;
     if (options.force || !latestSchema) {
         result = await fetchOpenAPI(url);
     } else {
-        const schemas = fs.readFileSync(latestSchema, "utf-8");
-        result = await new Promise((resolve) => resolve(JSON.parse(schemas)));
-        cached = true;
+        result = latestSchema;
     }
-    return { cached, result };
+    return { cached: !!latestSchema, result };
+}
+
+function cleanOutput(output) {
+    const outputpath = path.resolve(output);
+    const files = fs.readdirSync(outputpath);
+    const hasIndex = files.includes("index.ts");
+    if (hasIndex) {
+        fs.rmSync(outputpath, { recursive: true });
+    }
 }
 
 async function main() {
@@ -91,25 +112,32 @@ async function main() {
             short: "c",
             default: false,
         },
+        output: {
+            type: "string",
+            short: "o",
+            default: "./generated",
+        },
     } as const;
 
     const { values } = parseArgs({ options });
     if (!values.url) throw new Error("No url provided");
+    if (!values.output) throw new Error("No output provided");
 
-    const { cached, result: openApiSchema } = await getOpenApi(values.url, {
+    if (values.clean) {
+        cleanOutput(values.output);
+    }
+    const { result: openApiSchema } = await getOpenApi(values.url, {
         force: values.force,
     });
 
-    if (!cached || values.force) {
-        console.log("Generating types");
-        await OpenAPI.generate({
-            input: openApiSchema,
-            output: "./generated",
-            exportCore: false,
-            exportServices: false,
-        });
-        console.log("Generated types from OpenAPI schema");
-    }
+    console.log("Generating types");
+    await OpenAPI.generate({
+        input: openApiSchema,
+        output: values.output,
+        exportCore: false,
+        exportServices: false,
+    });
+    console.log("Generated types from OpenAPI schema");
 
     if (!values["no-transform"]) {
         const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
