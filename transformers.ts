@@ -209,10 +209,7 @@ export function includeCustomTypes(project: Project) {
         );
         // update custom types imports
         sf.getImportDeclarations().forEach((importDecl) => {
-            const moduleSpecifier = importDecl.getModuleSpecifierValue();
-            importDecl.setModuleSpecifier(
-                moduleSpecifier.replace("../generated", ".")
-            );
+            importDecl.setModuleSpecifier("./"); // import from index
         });
         exportedDeclarations.push({
             isTypeOnly: true,
