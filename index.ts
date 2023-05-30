@@ -11,6 +11,8 @@ import {
     renameExports,
     addGeneratedByComment,
     formatFiles,
+    mergeToOutputFile,
+    rename,
 } from "./transformers";
 import path from "path";
 
@@ -143,16 +145,20 @@ async function main() {
         const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
         const renames: RenameExport[] = [{ from: /MeDto/, to: "CurrentUser" }];
         const transformers = [
-            includeCustomTypes,
             replaceRefsWithModelType,
             removeUnusedFiles(removeFilePatterns),
             setPropertiesRequired,
-            renameExports(renames),
+            // renameExports(renames),
+            rename(renames),
             addGeneratedByComment(),
+            mergeToOutputFile({
+                outputPath: path.join(values.output, "models.ts"),
+            }),
+            includeCustomTypes,
             formatFiles,
         ];
         const transformer = new TSTransformer(
-            "./generated/index.ts",
+            path.join(values.output, "index.ts"),
             transformers
         );
         transformer.runTransformers();

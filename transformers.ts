@@ -237,6 +237,37 @@ export function renameExports(patterns: RenameExport[]): Transformer {
     };
 }
 
+export function rename(patterns: RenameExport[]): Transformer {
+    return function renameTransformer(project: Project) {
+        const renames: (() => void)[] = [];
+        patterns.forEach((p) => {
+            const file = project
+                .getSourceFiles()
+                .find((sf) => p.from.test(sf.getBaseName()));
+            if (!file) {
+                return;
+            }
+            const fileName = file.getBaseNameWithoutExtension();
+            const exportedNodes = Array.from(
+                file.getExportedDeclarations().entries()
+            );
+            exportedNodes
+                .filter(([name]) => name === fileName)
+                .forEach(([, nodes]) => {
+                    nodes.forEach((node: any) => {
+                        if (typeof node.rename === "function") {
+                            // much faster to rename after analysis
+                            const rename = () => node.rename(p.to);
+                            renames.push(rename);
+                        }
+                    });
+                });
+        });
+
+        renames.forEach((rename) => rename());
+    };
+}
+
 export async function formatFiles(project: Project) {
     const files = project.getSourceFiles();
     files.forEach(async (sf) => {
@@ -244,6 +275,37 @@ export async function formatFiles(project: Project) {
         const formattedText = prettier.format(fileText, prettierConfig);
         sf.replaceWithText(formattedText);
     });
+}
+
+type MergeToOutputFileOptions = {
+    outputPath: string;
+    deleteRest?: boolean;
+};
+const defaultMergeToOutputFileOptions: MergeToOutputFileOptions = {
+    outputPath: "models.ts",
+    deleteRest: true,
+};
+
+export function mergeToOutputFile(options = defaultMergeToOutputFileOptions) {
+    return function mergeToOutputFileTransformer(project: Project) {
+        const indexFile = project.getSourceFileOrThrow("index.ts");
+        const files = project.getSourceFiles().filter((f) => f !== indexFile);
+
+        const outputFile = project.createSourceFile(options.outputPath, "", {
+            overwrite: true,
+        });
+
+        const filesToDelete: SourceFile[] = [];
+        const text = files.map((sf) => {
+            options.deleteRest && filesToDelete.push(sf);
+            const fileText = sf.getText();
+            const importRegex = /import.*from.*\n/g;
+            return fileText.replace(importRegex, "");
+        });
+
+        outputFile.replaceWithText(text.join(""));
+        filesToDelete.forEach((f) => f.delete());
+    };
 }
 
 /** Helpers */
