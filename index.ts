@@ -143,18 +143,21 @@ async function main() {
 
     if (!values["no-transform"]) {
         const removeFilePatterns = [/UID_/, /Ref_/, /PropertyNames_/, /Webapi/];
+
         const renames: RenameExport[] = [{ from: /MeDto/, to: "CurrentUser" }];
+        // note that order matters
+        // some transformers depend on the output of others
         const transformers = [
             replaceRefsWithModelType,
             removeUnusedFiles(removeFilePatterns),
             setPropertiesRequired,
             // renameExports(renames),
             rename(renames),
-            addGeneratedByComment(),
             mergeToOutputFile({
                 outputPath: path.join(values.output, "models.ts"),
             }),
             includeCustomTypes,
+            addGeneratedByComment({ allFiles: true }),
             formatFiles,
         ];
         const transformer = new TSTransformer(
