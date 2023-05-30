@@ -7,8 +7,8 @@ type ModelReference = IdentifiableObject | ModelReferenceCollection;
 type BaseGist<T> = {
     apiEndpoints: GistApiEndpoints<T>;
 };
-type GistApiEndpoints<T> = {
-    // filter keys that are references
+export type GistApiEndpoints<T> = {
+    // filter keys that are references and map them to string
     [P in keyof T as T[P] extends ModelReference ? P : never]: string;
 };
 /**
@@ -21,6 +21,24 @@ export type GistModel<T> = BaseGist<T> & {
             ? number // map array-references to number (gist shows total in collection)
             : string // map references to a string (gist shows id)
         : T[P];
+};
+
+export type GistParams = {
+    absoluteUrls?: boolean;
+    auto?: "XL" | "L" | "M" | "S" | "XS";
+    describe?: boolean;
+    fields?: string;
+    filter?: string;
+    headless?: boolean;
+    inverse?: boolean;
+    locale?: string;
+    order?: string;
+    page?: number;
+    pageSize?: number;
+    references?: boolean;
+    rootJunction?: "AND" | "OR";
+    total?: boolean;
+    translate?: boolean;
 };
 
 // utility type GistModel can be used like this:
@@ -67,6 +85,7 @@ export type PickReferenceProperties<T extends IdentifiableObject> = PickValue<
 // helper type to get an union of all the values in a type
 type Values<T> = T[keyof T];
 
+//helper type to get an union of all the referenced models
 export type GetReferencedModelsUnion<T extends IdentifiableObject> = Values<
     GetReferencedModels<T>
 >;
@@ -108,7 +127,8 @@ export type PickInModelReferences<
     RefModelsUnion extends GetReferencedModelsUnion<Model> = GetReferencedModelsUnion<Model>
 > = {
     [P in keyof Model]: Model[P] extends ModelReference
-        ? // this is needed to be able to use RefModelsUnion to filter which properties the type should appy to
+        ? // GetModelType is needed to be able to use RefModelsUnion to filter which properties the type should appy to
+          // because modelcollections would not extend RefModelsUnion otherwise
           GetModelType<Model[P]> extends RefModelsUnion
             ? // first extract the correct model-type from the union of referenced models
               // then pick the keys from that type
