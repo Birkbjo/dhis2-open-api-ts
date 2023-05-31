@@ -1,4 +1,5 @@
-import { IdentifiableObject } from "../generated/models/IdentifiableObject";
+// import { DataElement } from "../generated";
+import { IdentifiableObject } from "../generated";
 // import { CategoryCombo, DataElement } from "../generated";
 
 type ModelReferenceCollection<T = IdentifiableObject> = Array<T>;
@@ -21,6 +22,76 @@ export type GistModel<T> = BaseGist<T> & {
             ? number // map array-references to number (gist shows total in collection)
             : string // map references to a string (gist shows id)
         : T[P];
+};
+
+export type GistModelCollection<T> = GistModel<T>[];
+
+// a modelcollection with the keyprop
+// need it's own type because the key is based on the resource
+export type GistModelCollectionPart<
+    T extends IdentifiableObject,
+    Resource extends string
+> = {
+    [K in Resource]: GistModel<T>[];
+};
+
+export type GistCollectionResponse<
+    T extends IdentifiableObject,
+    Resource extends string
+> = {
+    pager: GistPager;
+} & GistModelCollectionPart<T, Resource>;
+
+export type GistObjectResponse<T extends IdentifiableObject> = GistModel<T>;
+
+export type GistResponse<
+    T extends IdentifiableObject,
+    R extends string = string
+> = GistCollectionResponse<T, R> | GistObjectResponse<T>;
+
+/**
+ * Utility type that takes a ReferenceKey of a GistResponse and returns a GistResponse of the referenced key
+ *
+ * This can be useful when you want to get the referenced object from a GistResponse
+ *
+ * Example:
+ *
+ * type DataElementGistResponse = GistCollectionResponse<DataElement, 'dataElements'>;
+ *
+ * type CatComboGistResponse = GetGistResponseForReference<'categoryCombo', DataElementGistResponse>;
+ *
+ * TODO: cleanup, split up and use utility types
+ */
+export type GetGistResponseForReference<
+    ReferenceKey extends string,
+    GR
+> = GR extends GistCollectionResponse<infer RootGistModel, infer R> //extends GistResponse<IdentifiableObject, string>> = string
+    ? ReferenceKey extends keyof RootGistModel
+        ? RootGistModel[ReferenceKey] extends ModelReferenceCollection<
+              infer ReferencedModel extends IdentifiableObject
+          >
+            ? GistCollectionResponse<ReferencedModel, ReferenceKey>
+            : RootGistModel[ReferenceKey] extends IdentifiableObject
+            ? GistObjectResponse<RootGistModel[ReferenceKey]>
+            : unknown
+        : never
+    : GR extends GistObjectResponse<infer GistModel>
+    ? ReferenceKey extends keyof GistModel
+        ? GistModel[ReferenceKey] extends ModelReferenceCollection<
+              infer ReferencedModel extends IdentifiableObject
+          >
+            ? GistCollectionResponse<ReferencedModel, ReferenceKey>
+            : GistModel[ReferenceKey] extends IdentifiableObject
+            ? GistObjectResponse<GistModel[ReferenceKey]>
+            : unknown
+        : never
+    : never;
+
+export type GistPager = {
+    page: number;
+    pageSize: number;
+    prevPage?: string;
+    nextPage?: string;
 };
 
 export type GistParams = {
