@@ -13,6 +13,7 @@ import fs from "fs";
 import type { TSTransformer, Transformer } from "./transformer";
 import * as prettier from "prettier";
 import prettierConfig from "./generated.prettierrc.js";
+import { isTypeAliasDeclaration } from "typescript";
 
 const REF = "Ref_";
 const replaceRef = (name: string) => name.replace(REF, "");
@@ -156,21 +157,48 @@ export function removeUnusedFiles(
     };
 }
 
-export function setPropertiesRequired(project: Project) {
-    const files = project.getSourceFiles();
+type SetPropertiesRequiredOptions = {
+    excludeTypeNames?: RegExp[];
+};
 
-    files.forEach((sf) => {
-        const typeAliases = sf
-            .getTypeAliases()
-            .filter((t) => t.getType().isObject());
+const defaultSetPropertiesRequiredOptions: SetPropertiesRequiredOptions = {};
+export function setPropertiesRequired(
+    options = defaultSetPropertiesRequiredOptions
+) {
+    return function setPropertiesRequiredTransformer(project: Project) {
+        const files = project.getSourceFiles();
 
-        // could not find an easy way to update properties using ts-morph
-        // so use the ts compiler api directly
-        // https://ts-morph.com/manipulation/transforms
-        typeAliases.forEach((ta) => {
-            ta.transform((traversal) => {
-                const node = traversal.visitChildren();
-                if (ts.isPropertySignature(node)) {
+        files.forEach((sf) => {
+            const typeAliases = sf
+                .getTypeAliases()
+                .filter((t) => t.getType().isObject());
+
+            // could not find an easy way to update properties using ts-morph
+            // so use the ts compiler api directly
+            // https://ts-morph.com/manipulation/transforms
+            typeAliases.forEach((ta) => {
+                ta.transform((traversal) => {
+                    const node = traversal.visitChildren();
+                    if (!ts.isPropertySignature(node)) {
+                        return node;
+                    }
+                    const parent = node.parent;
+                    let typeName: string;
+                    if (parent.kind === ts.SyntaxKind.InterfaceDeclaration) {
+                        typeName = parent.name.getText();
+                    } else {
+                        // in case of type alias, a TypeLiteral is parent, so get parents parent
+                        const typeAliasDeclaration = parent.parent;
+                        if (isTypeAliasDeclaration(typeAliasDeclaration)) {
+                            typeName = typeAliasDeclaration.name.getText();
+                        }
+                    }
+
+                    if (
+                        options.excludeTypeNames?.some((p) => p.test(typeName))
+                    ) {
+                        return node;
+                    }
                     return traversal.factory.updatePropertySignature(
                         node,
                         [],
@@ -178,11 +206,10 @@ export function setPropertiesRequired(project: Project) {
                         undefined, // removes question token
                         node.type
                     );
-                }
-                return node;
+                });
             });
         });
-    });
+    };
 }
 
 /**
