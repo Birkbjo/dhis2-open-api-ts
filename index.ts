@@ -150,7 +150,7 @@ async function main() {
         const transformers = [
             replaceRefsWithModelType,
             removeUnusedFiles(removeFilePatterns),
-            setPropertiesRequired({ excludeTypeNames: [/GistPager/] }),
+            setPropertiesRequired({ excludeTypeNames: [/Pager/] }),
             // renameExports(renames),
             rename(renames),
             mergeToOutputFile({

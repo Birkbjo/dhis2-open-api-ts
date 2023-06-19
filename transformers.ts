@@ -184,6 +184,9 @@ export function setPropertiesRequired(
                     }
                     const parent = node.parent;
                     let typeName: string;
+                    if (!parent) {
+                        return node;
+                    }
                     if (parent.kind === ts.SyntaxKind.InterfaceDeclaration) {
                         typeName = parent.name.getText();
                     } else {
