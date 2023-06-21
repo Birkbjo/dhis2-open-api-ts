@@ -7,9 +7,10 @@ import { IdentifiableObject, GistPager } from "../generated";
 type ModelReferenceCollection<T = IdentifiableObject> = Array<T>;
 type ModelReference = IdentifiableObject | ModelReferenceCollection;
 
-type BaseGist<T> = {
+type BaseGist<T> = IdentifiableObject & {
     apiEndpoints: GistApiEndpoints<T>;
 };
+
 export type GistApiEndpoints<T> = {
     // filter keys that are references and map them to string
     [P in keyof T as T[P] extends ModelReference ? P : never]: string;
